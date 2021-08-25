@@ -1,0 +1,247 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AMC_Test
+{
+    public class ERR_Q
+    {
+        private List<ERR_> lERR_LIST = new List<ERR_>();
+
+        public ERR_Q()
+        {
+            //Read_Err_list();
+        }
+
+            
+        public struct ERR_
+        {
+            public  int ERR_CODE;
+            public string ERR_MSG;
+            public int ERR_LV;
+        };
+
+        public enum ERR_CODE
+        {
+            NONE_ERROR = 0,
+            AMC_SERVER_DISCONNECT,
+            AMC_SERVER_SEND_STB_ERROR,
+
+            MAN_IN_ERR = 1000,
+            MAN_IN_CONVEYOR_TIME_OUT,
+            MAN_IN_GRIPER_TIME_OUT,
+            MAN_IN_TRAY_FULL,
+
+            MAN_OUT_ERR = 2000,
+            MAN_OUT_CONVEYOR_TIME_OUT,
+
+            AUTO_OUT_ERR = 3000,
+            AUTO_OUT_MOUTH_ERR,
+
+            LD_ERR =4000,
+            LD_ESTOP = 4001,
+
+            AMC_ERR = 5000,
+            AMC_SEFTY_SENSOR = 5001,
+            AMC_LINEAR_MOTOR_ERR = 5100,
+            AMC_DELTHAHEADING_FAIL = 5200,
+            AMC_MOVE_FAIL,
+
+            AMB_ERR = 6000,
+            AMB_LATCH_FAIL,
+        };
+
+
+        public struct LD_Status
+        {
+            public string LD_ST;
+            public string LD_CHARGE;
+            public LD_Location LD_LOC;
+            public string LD_TEMP;
+            public string LD_LDS1;
+            public string LD_LDS2;
+            public string LD_LDS1_DISTANCE;
+            public string LD_LDS2_DISTANCE;
+            public double LD_LDS1_Angle;
+            public double LD_LDS2_Angle;
+            public double LD_LDS_Angle;
+            public double LD_LDS_Angle2;
+            public double LD_LDS_DIS_DIFF;
+
+            public double LD_LDS_CORREC_CNT;
+            public double LD_LDS_CORREC_ANG;
+
+            public bool Is_Deltaheading_Comp;
+        };
+
+        public struct LD_Location
+        {
+            public int LD_X;
+            public int LD_Y;
+            public int LD_A;
+        };
+
+        public struct stErr
+        {
+            public DateTime TIME;
+            public string ERR_NUM;
+            public string SCR;
+            public string DEST;
+            public LD_Status ST;
+            public string AMC_NAME;
+            public string MSG;
+            public int CODE;
+            public int LEVEL;
+
+            public void INIT()
+            {
+            }
+        };
+
+        
+
+
+        public string[] LINEAR_MOTOR_DRV_ERR_CODE =
+        {
+            "I/O(User 설정)", "위치 편차","DRIVER 온도", "과전압", "부족 전압", "과부하 시간", "속도", "운전 기동 실패", "ZHOME 기동 실패", "Preset 요청 중", "전자 Fear 설정 이상", "Round 설정 이상", "RS-485 통신 이상","정 회전 방향 운전 금지 상태", "역 회전 방향 운전 금지 상태", "적산 부하 0 ", "적산 부하 1", "TRIP Meter", "ODO Meter", "운전 기동 제한 Mode", "I/O Test Mode", "Config 요구", "재기동 요구"
+        };
+
+        private List<stErr> ERR_LIST = new List<stErr>();
+
+        public void Delete_ERR(string ERR_msg, DateTime cmd_time)
+        {
+
+        }
+
+        public void Insert_ERR(int ERR_CODE)
+        {
+            stErr err = new stErr();
+
+            err.INIT();
+            err.TIME = DateTime.Now;
+            err.CODE = ERR_CODE;
+
+
+            for(int  i = 0;i < lERR_LIST.Count; i++)
+            {
+                if(lERR_LIST[i].ERR_CODE == ERR_CODE)
+                {
+                    err.LEVEL = lERR_LIST[i].ERR_LV;
+                    err.MSG = lERR_LIST[i].ERR_MSG;
+                }
+            }
+
+            ERR_LIST.Add(err);
+        }
+
+        public int MAX_ERR_LV()
+        {
+            int lv = 0;
+
+            for(int  i = 0; i < ERR_LIST.Count;i++)
+            {
+                if (lv < ERR_LIST[i].LEVEL)
+                    lv = ERR_LIST[i].LEVEL;
+            }
+
+
+            return lv;
+        }
+
+        public int Get_ERR_LV(int ERR_CODE)
+        {
+            int lv = 0; ;
+
+            for(int i = 0; i < ERR_LIST.Count; i++)
+            {
+                if (ERR_LIST[i].CODE == ERR_CODE)
+                    lv = ERR_LIST[i].LEVEL;
+            }
+
+            return lv;
+        }
+
+
+        public string Get_now_err_msg()
+        {
+            if (ERR_LIST.Count == 0)
+                return "";
+
+            return ERR_LIST[0].MSG;
+        }
+
+
+        public void Insert_ERR(ushort ERR_msg)
+        {
+            stErr err = new stErr();
+
+            err.INIT();
+            err.TIME = DateTime.Now;
+            err.MSG = Get_Linear_Err_text(ERR_msg);
+
+            ERR_LIST.Add(err);
+        }
+
+        private String Get_Linear_Err_text(ushort err)
+        {
+            for(int i= 0; i< 32; i++)
+            {
+                if((err>i) & 0x01 == 0x01)
+                {
+                    return LINEAR_MOTOR_DRV_ERR_CODE[i];
+                }
+            }
+            return "EMPTY";
+        }
+
+
+        public stErr Check_ERR()
+        {
+            if(ERR_LIST.Count >0)
+            {
+                return ERR_LIST[0];
+            }
+
+            stErr a = new stErr();
+
+            return a;
+        }
+
+        public bool Is_EMPTY()
+        {
+            if (ERR_LIST.Count == 0)
+                return true;
+            else
+                return false;
+        }
+        public void Err_Remove()
+        {
+            if(ERR_LIST.Count >= 1)
+                ERR_LIST.Remove(ERR_LIST[0]);
+        }
+
+        public void Read_Err_list()
+        {
+            string err_str = System.IO.File.ReadAllText(System.Environment.CurrentDirectory + "\\Setting\\ERR_LIST.txt");
+
+            string[] err_list1 = err_str.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+            for(int i = 0; i < err_list1.Length; i++)
+            {
+                string[] temp = err_list1[i].Split('\t');
+                ERR_ err_Temp;
+
+                err_Temp.ERR_CODE = int.Parse(temp[1]);
+                err_Temp.ERR_LV = int.Parse(temp[2]);
+                err_Temp.ERR_MSG = temp[3];
+
+
+                lERR_LIST.Add(err_Temp);
+            }
+
+        }
+
+    }
+}

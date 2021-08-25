@@ -1,0 +1,828 @@
+========================================================
+=                                                                                                            =
+=                                   AMC SYSTEM Log File 2021-01-25                                 =
+=                                                                                                            =
+========================================================
+2021-01-25 10:57:13:507 The socket is connecting, cannot connect again!
+2021-01-25 10:57:15:782 AMC Server 응답 없습니다.
+2021-01-25 10:57:16:549 The socket is connecting, cannot connect again!
+2021-01-25 10:57:21:506 AMC Server 응답 없습니다.
+2021-01-25 10:57:22:677 The socket is connecting, cannot connect again!
+2021-01-25 10:57:24:877 AMC Server 응답 없습니다.
+2021-01-25 10:57:25:755 The socket is connecting, cannot connect again!
+2021-01-25 10:57:27:108 AMC Server 응답 없습니다.
+2021-01-25 10:57:28:167 The socket is connecting, cannot connect again!
+2021-01-25 10:57:30:45 AMC Server 응답 없습니다.
+2021-01-25 10:57:31:893 The socket is connecting, cannot connect again!
+2021-01-25 10:57:33:862 AMC Server 응답 없습니다.
+2021-01-25 10:57:34:925 The socket is connecting, cannot connect again!
+2021-01-25 10:57:36:166 AMC Server 응답 없습니다.
+2021-01-25 10:57:37:26 The socket is connecting, cannot connect again!
+2021-01-25 10:57:39:588 AMC Server 응답 없습니다.
+2021-01-25 10:57:41:076 The socket is connecting, cannot connect again!
+2021-01-25 10:57:42:97 AMC Server 응답 없습니다.
+2021-01-25 10:57:44:05 The socket is connecting, cannot connect again!
+2021-01-25 10:57:45:252 AMC Server 응답 없습니다.
+2021-01-25 10:57:46:315 The socket is connecting, cannot connect again!
+2021-01-25 10:57:48:658 AMC Server 응답 없습니다.
+2021-01-25 10:57:50:321 The socket is connecting, cannot connect again!
+2021-01-25 10:57:52:046 AMC Server 응답 없습니다.
+2021-01-25 10:57:53:151 The socket is connecting, cannot connect again!
+2021-01-25 10:57:54:333 AMC Server 응답 없습니다.
+2021-01-25 10:57:55:511 The socket is connecting, cannot connect again!
+2021-01-25 10:57:57:911 AMC Server 응답 없습니다.
+2021-01-25 10:57:59:497 The socket is connecting, cannot connect again!
+2021-01-25 10:58:00:173 AMC Server 응답 없습니다.
+2021-01-25 10:58:02:478 The socket is connecting, cannot connect again!
+2021-01-25 10:58:04:081 AMC Server 응답 없습니다.
+2021-01-25 10:58:05:294 The socket is connecting, cannot connect again!
+2021-01-25 10:58:06:486 AMC Server 응답 없습니다.
+2021-01-25 10:58:07:616 The socket is connecting, cannot connect again!
+2021-01-25 10:58:10:013 AMC Server 응답 없습니다.
+2021-01-25 10:58:12:041 The socket is connecting, cannot connect again!
+2021-01-25 10:58:12:272 AMC Server 응답 없습니다.
+2021-01-25 10:58:14:555 The socket is connecting, cannot connect again!
+2021-01-25 10:58:15:715 AMC Server 응답 없습니다.
+2021-01-25 10:58:16:78 The socket is connecting, cannot connect again!
+2021-01-25 10:58:21:407 AMC Server 응답 없습니다.
+2021-01-25 10:58:23:635 The socket is connecting, cannot connect again!
+2021-01-25 10:58:24:809 AMC Server 응답 없습니다.
+2021-01-25 10:58:25:912 The socket is connecting, cannot connect again!
+2021-01-25 10:58:27:129 AMC Server 응답 없습니다.
+2021-01-25 10:58:27:33 The socket is connecting, cannot connect again!
+2021-01-25 10:58:30:501 AMC Server 응답 없습니다.
+2021-01-25 10:58:32:74 The socket is connecting, cannot connect again!
+2021-01-25 10:58:33:938 AMC Server 응답 없습니다.
+2021-01-25 10:58:35:04 The socket is connecting, cannot connect again!
+2021-01-25 10:58:36:205 AMC Server 응답 없습니다.
+2021-01-25 10:58:36:506 The socket is connecting, cannot connect again!
+2021-01-25 10:58:39:646 AMC Server 응답 없습니다.
+2021-01-25 10:58:59:529 The socket is connecting, cannot connect again!
+2021-01-25 10:59:00:658 AMC Server 응답 없습니다.
+2021-01-25 10:59:03:033 The socket is connecting, cannot connect again!
+2021-01-25 10:59:30:798 AMC Server 응답 없습니다.
+2021-01-25 10:59:31:915 The socket is connecting, cannot connect again!
+2021-01-25 10:59:33:227 AMC Server 응답 없습니다.
+2021-01-25 10:59:33:548 The socket is connecting, cannot connect again!
+2021-01-25 10:59:36:679 AMC Server 응답 없습니다.
+2021-01-25 10:59:38:875 The socket is connecting, cannot connect again!
+2021-01-25 10:59:42:346 AMC Server 응답 없습니다.
+2021-01-25 10:59:42:751 The socket is connecting, cannot connect again!
+2021-01-25 10:59:45:727 AMC Server 응답 없습니다.
+2021-01-25 10:59:45:859 The socket is connecting, cannot connect again!
+2021-01-25 10:59:51:4 AMC Server 응답 없습니다.
+2021-01-25 10:59:52:01 The socket is connecting, cannot connect again!
+2021-01-25 10:59:54:796 AMC Server 응답 없습니다.
+2021-01-25 10:59:55:125 The socket is connecting, cannot connect again!
+2021-01-25 10:59:57:182 AMC Server 응답 없습니다.
+2021-01-25 10:59:58:302 The socket is connecting, cannot connect again!
+2021-01-25 11:00:00:644 AMC Server 응답 없습니다.
+2021-01-25 11:00:01:23 The socket is connecting, cannot connect again!
+2021-01-25 11:00:06:412 AMC Server 응답 없습니다.
+2021-01-25 11:00:07:543 The socket is connecting, cannot connect again!
+2021-01-25 11:00:09:867 AMC Server 응답 없습니다.
+2021-01-25 11:00:10:355 The socket is connecting, cannot connect again!
+2021-01-25 11:00:12:14 AMC Server 응답 없습니다.
+2021-01-25 11:00:13:221 The socket is connecting, cannot connect again!
+2021-01-25 11:00:15:583 AMC Server 응답 없습니다.
+2021-01-25 11:00:16:666 The socket is connecting, cannot connect again!
+2021-01-25 11:00:19:019 AMC Server 응답 없습니다.
+2021-01-25 11:00:19:472 The socket is connecting, cannot connect again!
+2021-01-25 11:00:21:239 AMC Server 응답 없습니다.
+2021-01-25 11:00:22:307 The socket is connecting, cannot connect again!
+2021-01-25 11:00:24:637 AMC Server 응답 없습니다.
+2021-01-25 11:00:25:739 The socket is connecting, cannot connect again!
+2021-01-25 11:00:27:109 AMC Server 응답 없습니다.
+2021-01-25 11:00:28:608 The socket is connecting, cannot connect again!
+2021-01-25 11:00:30:426 AMC Server 응답 없습니다.
+2021-01-25 11:00:31:547 The socket is connecting, cannot connect again!
+2021-01-25 11:01:13:042 AMC Server 응답 없습니다.
+2021-01-25 11:01:14:182 The socket is connecting, cannot connect again!
+2021-01-25 11:01:15:39 AMC Server 응답 없습니다.
+2021-01-25 11:01:15:77 The socket is connecting, cannot connect again!
+2021-01-25 11:01:18:877 AMC Server 응답 없습니다.
+2021-01-25 11:01:21:1 The socket is connecting, cannot connect again!
+2021-01-25 11:01:21:208 AMC Server 응답 없습니다.
+2021-01-25 11:01:21:94 The socket is connecting, cannot connect again!
+2021-01-25 11:01:24:568 AMC Server 응답 없습니다.
+2021-01-25 11:01:25:043 The socket is connecting, cannot connect again!
+2021-01-25 11:01:27:999 AMC Server 응답 없습니다.
+2021-01-25 11:01:28:133 The socket is connecting, cannot connect again!
+2021-01-25 11:01:30:193 AMC Server 응답 없습니다.
+2021-01-25 11:01:31:295 The socket is connecting, cannot connect again!
+2021-01-25 11:01:33:745 AMC Server 응답 없습니다.
+2021-01-25 11:01:34:239 The socket is connecting, cannot connect again!
+2021-01-25 11:01:36:11 AMC Server 응답 없습니다.
+2021-01-25 11:01:37:25 The socket is connecting, cannot connect again!
+2021-01-25 11:01:39:672 AMC Server 응답 없습니다.
+2021-01-25 11:01:40:387 The socket is connecting, cannot connect again!
+2021-01-25 11:01:45:339 AMC Server 응답 없습니다.
+2021-01-25 11:01:46:432 The socket is connecting, cannot connect again!
+2021-01-25 11:01:51:411 AMC Server 응답 없습니다.
+2021-01-25 11:02:19:073 The socket is connecting, cannot connect again!
+2021-01-25 11:02:40:852 bg_st Restart
+2021-01-25 11:02:44:632 The socket is connecting, cannot connect again!
+2021-01-25 11:03:03:629 AMC Server 응답 없습니다.
+2021-01-25 11:03:05:886 The socket is connecting, cannot connect again!
+2021-01-25 11:03:09:358 AMC Server 응답 없습니다.
+2021-01-25 11:03:10:452 The socket is connecting, cannot connect again!
+2021-01-25 11:03:12:829 AMC Server 응답 없습니다.
+2021-01-25 11:03:15:04 The socket is connecting, cannot connect again!
+2021-01-25 11:03:15:179 AMC Server 응답 없습니다.
+2021-01-25 11:03:17:397 The socket is connecting, cannot connect again!
+2021-01-25 11:03:18:576 AMC Server 응답 없습니다.
+2021-01-25 11:04:00:342 bg_st Restart
+2021-01-25 11:04:04:113 The socket is connecting, cannot connect again!
+2021-01-25 11:05:58:252 bg_st Restart
+2021-01-25 11:06:02:028 The socket is connecting, cannot connect again!
+2021-01-25 11:06:33:721 AMC Server 응답 없습니다.
+2021-01-25 11:06:34:827 The socket is connecting, cannot connect again!
+2021-01-25 11:06:36:109 AMC Server 응답 없습니다.
+2021-01-25 11:06:37:265 The socket is connecting, cannot connect again!
+2021-01-25 11:06:39:849 AMC Server 응답 없습니다.
+2021-01-25 11:06:41:787 The socket is connecting, cannot connect again!
+2021-01-25 11:06:42:248 AMC Server 응답 없습니다.
+2021-01-25 11:06:44:442 The socket is connecting, cannot connect again!
+2021-01-25 11:06:45:663 AMC Server 응답 없습니다.
+2021-01-25 11:06:46:747 The socket is connecting, cannot connect again!
+2021-01-25 11:06:51:643 AMC Server 응답 없습니다.
+2021-01-25 11:06:53:884 The socket is connecting, cannot connect again!
+2021-01-25 11:06:55:053 AMC Server 응답 없습니다.
+2021-01-25 11:06:56:122 The socket is connecting, cannot connect again!
+2021-01-25 11:06:57:37 AMC Server 응답 없습니다.
+2021-01-25 11:06:58:465 The socket is connecting, cannot connect again!
+2021-01-25 11:07:00:848 AMC Server 응답 없습니다.
+2021-01-25 11:07:03:254 The socket is connecting, cannot connect again!
+2021-01-25 11:07:03:41 AMC Server 응답 없습니다.
+2021-01-25 11:07:05:646 The socket is connecting, cannot connect again!
+2021-01-25 11:07:06:833 AMC Server 응답 없습니다.
+2021-01-25 11:07:07:91 The socket is connecting, cannot connect again!
+2021-01-25 11:07:09:169 AMC Server 응답 없습니다.
+2021-01-25 11:07:09:394 The socket is connecting, cannot connect again!
+2021-01-25 11:07:12:651 AMC Server 응답 없습니다.
+2021-01-25 11:07:14:878 The socket is connecting, cannot connect again!
+2021-01-25 11:07:16:053 AMC Server 응답 없습니다.
+2021-01-25 11:07:17:162 The socket is connecting, cannot connect again!
+2021-01-25 11:07:18:335 AMC Server 응답 없습니다.
+2021-01-25 11:07:18:633 The socket is connecting, cannot connect again!
+2021-01-25 11:07:21:786 AMC Server 응답 없습니다.
+2021-01-25 11:07:24:003 The socket is connecting, cannot connect again!
+2021-01-25 11:07:24:107 AMC Server 응답 없습니다.
+2021-01-25 11:08:48:306 bg_st Restart
+2021-01-25 11:08:51:875 The socket is connecting, cannot connect again!
+2021-01-25 11:09:15:776 AMC Server 응답 없습니다.
+2021-01-25 11:09:16:268 The socket is connecting, cannot connect again!
+2021-01-25 11:09:18:097 AMC Server 응답 없습니다.
+2021-01-25 11:09:19:364 The socket is connecting, cannot connect again!
+2021-01-25 11:09:21:442 AMC Server 응답 없습니다.
+2021-01-25 11:09:22:438 The socket is connecting, cannot connect again!
+2021-01-25 11:09:24:891 AMC Server 응답 없습니다.
+2021-01-25 11:09:25:524 The socket is connecting, cannot connect again!
+2021-01-25 11:09:27:234 AMC Server 응답 없습니다.
+2021-01-25 11:09:28:601 The socket is connecting, cannot connect again!
+2021-01-25 11:09:30:595 AMC Server 응답 없습니다.
+2021-01-25 11:09:31:73 The socket is connecting, cannot connect again!
+2021-01-25 11:09:36:39 AMC Server 응답 없습니다.
+2021-01-25 11:09:37:884 The socket is connecting, cannot connect again!
+2021-01-25 11:09:39:766 AMC Server 응답 없습니다.
+2021-01-25 11:09:40:871 The socket is connecting, cannot connect again!
+2021-01-25 11:09:42:16 AMC Server 응답 없습니다.
+2021-01-25 11:09:43:269 The socket is connecting, cannot connect again!
+2021-01-25 11:09:45:763 AMC Server 응답 없습니다.
+2021-01-25 11:09:47:062 The socket is connecting, cannot connect again!
+2021-01-25 11:09:48:072 AMC Server 응답 없습니다.
+2021-01-25 11:09:50:163 The socket is connecting, cannot connect again!
+2021-01-25 11:09:51:469 AMC Server 응답 없습니다.
+2021-01-25 11:09:52:548 The socket is connecting, cannot connect again!
+2021-01-25 11:09:54:919 AMC Server 응답 없습니다.
+2021-01-25 11:09:56:292 The socket is connecting, cannot connect again!
+2021-01-25 11:09:57:192 AMC Server 응답 없습니다.
+2021-01-25 11:09:59:386 The socket is connecting, cannot connect again!
+2021-01-25 11:10:00:688 AMC Server 응답 없습니다.
+2021-01-25 11:10:01:927 The socket is connecting, cannot connect again!
+2021-01-25 11:10:03:213 AMC Server 응답 없습니다.
+2021-01-25 11:10:04:33 The socket is connecting, cannot connect again!
+2021-01-25 11:10:06:721 AMC Server 응답 없습니다.
+2021-01-25 11:10:08:797 The socket is connecting, cannot connect again!
+2021-01-25 11:10:12:379 AMC Server 응답 없습니다.
+2021-01-25 11:10:13:483 The socket is connecting, cannot connect again!
+2021-01-25 11:10:15:883 AMC Server 응답 없습니다.
+2021-01-25 11:10:18:015 The socket is connecting, cannot connect again!
+2021-01-25 11:10:18:211 AMC Server 응답 없습니다.
+2021-01-25 11:10:20:4 The socket is connecting, cannot connect again!
+2021-01-25 11:10:21:602 AMC Server 응답 없습니다.
+2021-01-25 11:10:22:719 The socket is connecting, cannot connect again!
+2021-01-25 11:10:25:047 AMC Server 응답 없습니다.
+2021-01-25 11:10:27:239 The socket is connecting, cannot connect again!
+2021-01-25 11:10:27:372 AMC Server 응답 없습니다.
+2021-01-25 11:10:29:572 The socket is connecting, cannot connect again!
+2021-01-25 11:10:30:748 AMC Server 응답 없습니다.
+2021-01-25 11:10:31:862 The socket is connecting, cannot connect again!
+2021-01-25 11:10:33:06 AMC Server 응답 없습니다.
+2021-01-25 11:10:33:437 The socket is connecting, cannot connect again!
+2021-01-25 11:10:36:514 AMC Server 응답 없습니다.
+2021-01-25 11:10:38:781 The socket is connecting, cannot connect again!
+2021-01-25 11:10:39:981 AMC Server 응답 없습니다.
+2021-01-25 11:10:41:094 The socket is connecting, cannot connect again!
+2021-01-25 11:10:42:277 AMC Server 응답 없습니다.
+2021-01-25 11:10:42:614 The socket is connecting, cannot connect again!
+2021-01-25 11:10:45:67 AMC Server 응답 없습니다.
+2021-01-25 11:10:45:749 The socket is connecting, cannot connect again!
+2021-01-25 11:10:49:072 AMC Server 응답 없습니다.
+2021-01-25 11:10:50:188 The socket is connecting, cannot connect again!
+2021-01-25 11:10:51:45 AMC Server 응답 없습니다.
+2021-01-25 11:10:51:87 The socket is connecting, cannot connect again!
+2021-01-25 11:10:54:97 AMC Server 응답 없습니다.
+2021-01-25 11:10:57:146 The socket is connecting, cannot connect again!
+2021-01-25 11:10:57:261 AMC Server 응답 없습니다.
+2021-01-25 11:10:58:018 The socket is connecting, cannot connect again!
+2021-01-25 11:11:00:645 AMC Server 응답 없습니다.
+2021-01-25 11:11:01:119 The socket is connecting, cannot connect again!
+2021-01-25 11:11:09:298 AMC Server 응답 없습니다.
+2021-01-25 11:11:10:409 The socket is connecting, cannot connect again!
+2021-01-25 11:11:12:793 AMC Server 응답 없습니다.
+2021-01-25 11:11:15:048 The socket is connecting, cannot connect again!
+2021-01-25 11:11:15:211 AMC Server 응답 없습니다.
+2021-01-25 11:11:15:584 The socket is connecting, cannot connect again!
+2021-01-25 11:11:18:684 AMC Server 응답 없습니다.
+2021-01-25 11:11:19:862 The socket is connecting, cannot connect again!
+2021-01-25 11:11:21:131 AMC Server 응답 없습니다.
+2021-01-25 11:11:21:72 The socket is connecting, cannot connect again!
+2021-01-25 11:11:24:559 AMC Server 응답 없습니다.
+2021-01-25 11:11:24:815 The socket is connecting, cannot connect again!
+2021-01-25 11:11:27:927 AMC Server 응답 없습니다.
+2021-01-25 11:11:29:025 The socket is connecting, cannot connect again!
+2021-01-25 11:11:30:412 AMC Server 응답 없습니다.
+2021-01-25 11:11:31:001 The socket is connecting, cannot connect again!
+2021-01-25 11:11:36:384 AMC Server 응답 없습니다.
+2021-01-25 11:11:37:256 The socket is connecting, cannot connect again!
+2021-01-25 11:11:39:787 AMC Server 응답 없습니다.
+2021-01-25 11:13:29:417 The socket is connecting, cannot connect again!
+2021-01-25 11:13:31:057 AMC Server 응답 없습니다.
+2021-01-25 11:13:33:48 The socket is connecting, cannot connect again!
+2021-01-25 11:13:42:149 AMC Server 응답 없습니다.
+2021-01-25 11:13:44:481 The socket is connecting, cannot connect again!
+2021-01-25 14:28:27:874 bg_st Restart
+2021-01-25 14:28:32:371 The socket is connecting, cannot connect again!
+2021-01-25 14:28:33:6 AMC Server 응답 없습니다.
+2021-01-25 14:28:35:343 The socket is connecting, cannot connect again!
+2021-01-25 14:28:36:939 AMC Server 응답 없습니다.
+2021-01-25 14:28:38:056 The socket is connecting, cannot connect again!
+2021-01-25 14:28:39:246 AMC Server 응답 없습니다.
+2021-01-25 14:28:42:873 The socket is connecting, cannot connect again!
+2021-01-25 14:29:32:129 bg_st Restart
+2021-01-25 14:29:36:435 The socket is connecting, cannot connect again!
+2021-01-25 14:30:00:573 AMC Server 응답 없습니다.
+2021-01-25 14:30:00:903 The socket is connecting, cannot connect again!
+2021-01-25 14:30:06:314 AMC Server 응답 없습니다.
+2021-01-25 14:30:06:992 The socket is connecting, cannot connect again!
+2021-01-25 14:30:13:2 AMC Server 응답 없습니다.
+2021-01-25 14:30:17:057 The socket is connecting, cannot connect again!
+2021-01-25 14:34:43:007 bg_st Restart
+2021-01-25 14:34:47:411 The socket is connecting, cannot connect again!
+2021-01-25 14:35:07:782 AMC Server 응답 없습니다.
+2021-01-25 14:35:21:253 The socket is connecting, cannot connect again!
+2021-01-25 14:35:39:113 AMC Server 응답 없습니다.
+2021-01-25 14:37:20:806 bg_st Restart
+2021-01-25 14:37:25:59 The socket is connecting, cannot connect again!
+2021-01-25 14:41:55:356 bg_st Restart
+2021-01-25 14:41:59:15 The socket is connecting, cannot connect again!
+2021-01-25 14:42:45:295 bg_st Restart
+2021-01-25 14:42:49:392 The socket is connecting, cannot connect again!
+2021-01-25 14:43:58:367 bg_st Restart
+2021-01-25 14:44:02:784 The socket is connecting, cannot connect again!
+2021-01-25 14:45:16:984 bg_st Restart
+2021-01-25 14:45:22:345 The socket is connecting, cannot connect again!
+2021-01-25 14:45:45:563 AMC Server 응답 없습니다.
+2021-01-25 14:45:46:665 The socket is connecting, cannot connect again!
+2021-01-25 14:45:49:023 AMC Server 응답 없습니다.
+2021-01-25 14:45:50:19 The socket is connecting, cannot connect again!
+2021-01-25 14:45:51:716 AMC Server 응답 없습니다.
+2021-01-25 14:48:10:874 bg_st Restart
+2021-01-25 14:48:14:525 The socket is connecting, cannot connect again!
+2021-01-25 14:48:37:001 AMC Server 응답 없습니다.
+2021-01-25 14:48:38:125 The socket is connecting, cannot connect again!
+2021-01-25 14:49:21:122 bg_st Restart
+2021-01-25 14:49:26:11 The socket is connecting, cannot connect again!
+2021-01-25 14:52:40:129 bg_st Restart
+2021-01-25 14:52:43:808 The socket is connecting, cannot connect again!
+2021-01-25 14:53:06:458 AMC Server 응답 없습니다.
+2021-01-25 14:53:07:561 The socket is connecting, cannot connect again!
+2021-01-25 14:53:09:937 AMC Server 응답 없습니다.
+2021-01-25 14:53:11:233 The socket is connecting, cannot connect again!
+2021-01-25 14:53:12:215 AMC Server 응답 없습니다.
+2021-01-25 14:53:14:388 The socket is connecting, cannot connect again!
+2021-01-25 14:53:15:686 AMC Server 응답 없습니다.
+2021-01-25 14:53:16:893 The socket is connecting, cannot connect again!
+2021-01-25 14:53:18:15 AMC Server 응답 없습니다.
+2021-01-25 14:53:19:309 The socket is connecting, cannot connect again!
+2021-01-25 14:53:21:72 AMC Server 응답 없습니다.
+2021-01-25 14:53:23:66 The socket is connecting, cannot connect again!
+2021-01-25 14:53:24:295 AMC Server 응답 없습니다.
+2021-01-25 14:53:26:559 The socket is connecting, cannot connect again!
+2021-01-25 14:53:27:734 AMC Server 응답 없습니다.
+2021-01-25 14:53:28:84 The socket is connecting, cannot connect again!
+2021-01-25 14:53:30:14 AMC Server 응답 없습니다.
+2021-01-25 14:53:49:135 The socket is connecting, cannot connect again!
+2021-01-25 14:54:06:895 AMC Server 응답 없습니다.
+2021-01-25 14:54:08:004 The socket is connecting, cannot connect again!
+2021-01-25 14:54:09:226 AMC Server 응답 없습니다.
+2021-01-25 14:54:10:357 The socket is connecting, cannot connect again!
+2021-01-25 14:54:12:786 AMC Server 응답 없습니다.
+2021-01-25 14:54:14:888 The socket is connecting, cannot connect again!
+2021-01-25 14:54:15:16 AMC Server 응답 없습니다.
+2021-01-25 14:54:17:171 삭제된 개체에 액세스할 수 없습니다.
+2021-01-25 14:54:17:171 개체 이름: 'Form1'
+2021-01-25 14:54:17:411 창 핸들을 만들기 전까지 컨트롤에서 Invoke 또는 BeginInvoke를 호출할 수 없습니다.
+2021-01-25 14:57:02:977 bg_st Restart
+2021-01-25 14:57:06:708 The socket is connecting, cannot connect again!
+2021-01-25 14:57:27:54 AMC Server 응답 없습니다.
+2021-01-25 14:57:27:956 The socket is connecting, cannot connect again!
+2021-01-25 14:57:30:966 AMC Server 응답 없습니다.
+2021-01-25 14:57:31:083 The socket is connecting, cannot connect again!
+2021-01-25 14:57:33:191 AMC Server 응답 없습니다.
+2021-01-25 14:57:34:296 The socket is connecting, cannot connect again!
+2021-01-25 14:57:36:709 AMC Server 응답 없습니다.
+2021-01-25 14:57:37:198 The socket is connecting, cannot connect again!
+2021-01-25 14:57:42:455 AMC Server 응답 없습니다.
+2021-01-25 14:57:43:586 The socket is connecting, cannot connect again!
+2021-01-25 14:57:46:026 AMC Server 응답 없습니다.
+2021-01-25 14:57:46:364 The socket is connecting, cannot connect again!
+2021-01-25 14:57:48:307 AMC Server 응답 없습니다.
+2021-01-25 14:57:49:414 The socket is connecting, cannot connect again!
+2021-01-25 14:57:51:847 AMC Server 응답 없습니다.
+2021-01-25 14:57:52:591 The socket is connecting, cannot connect again!
+2021-01-25 14:57:54:147 AMC Server 응답 없습니다.
+2021-01-25 14:57:55:725 The socket is connecting, cannot connect again!
+2021-01-25 14:57:57:534 AMC Server 응답 없습니다.
+2021-01-25 14:57:58:615 The socket is connecting, cannot connect again!
+2021-01-25 14:58:01:022 AMC Server 응답 없습니다.
+2021-01-25 14:58:02:129 The socket is connecting, cannot connect again!
+2021-01-25 14:58:03:37 AMC Server 응답 없습니다.
+2021-01-25 14:58:04:882 The socket is connecting, cannot connect again!
+2021-01-25 14:58:06:755 AMC Server 응답 없습니다.
+2021-01-25 14:58:07:822 The socket is connecting, cannot connect again!
+2021-01-25 14:58:09:112 AMC Server 응답 없습니다.
+2021-01-25 14:58:10:222 The socket is connecting, cannot connect again!
+2021-01-25 14:58:12:628 AMC Server 응답 없습니다.
+2021-01-25 14:58:14:165 The socket is connecting, cannot connect again!
+2021-01-25 14:58:16:031 AMC Server 응답 없습니다.
+2021-01-25 14:58:17:141 The socket is connecting, cannot connect again!
+2021-01-25 14:58:18:332 AMC Server 응답 없습니다.
+2021-01-25 14:58:19:427 The socket is connecting, cannot connect again!
+2021-01-25 14:58:21:89 AMC Server 응답 없습니다.
+2021-01-25 14:58:23:326 The socket is connecting, cannot connect again!
+2021-01-25 14:58:24:252 AMC Server 응답 없습니다.
+2021-01-25 14:58:26:422 The socket is connecting, cannot connect again!
+2021-01-25 14:58:27:622 AMC Server 응답 없습니다.
+2021-01-25 14:58:28:83 The socket is connecting, cannot connect again!
+2021-01-25 14:58:30:1 AMC Server 응답 없습니다.
+2021-01-25 14:58:31:21 The socket is connecting, cannot connect again!
+2021-01-25 14:58:33:616 AMC Server 응답 없습니다.
+2021-01-25 14:58:35:671 The socket is connecting, cannot connect again!
+2021-01-25 14:58:37:008 AMC Server 응답 없습니다.
+2021-01-25 14:58:38:078 The socket is connecting, cannot connect again!
+2021-01-25 14:58:39:227 AMC Server 응답 없습니다.
+2021-01-25 14:58:40:344 The socket is connecting, cannot connect again!
+2021-01-25 14:58:42:683 AMC Server 응답 없습니다.
+2021-01-25 14:58:44:911 The socket is connecting, cannot connect again!
+2021-01-25 14:58:48:365 AMC Server 응답 없습니다.
+2021-01-25 14:58:49:464 The socket is connecting, cannot connect again!
+2021-01-25 14:58:51:838 AMC Server 응답 없습니다.
+2021-01-25 14:58:57:564 The socket is connecting, cannot connect again!
+2021-01-25 14:58:57:57 The socket is connecting, cannot connect again!
+2021-01-25 14:59:25:161 AMC Server 응답 없습니다.
+2021-01-25 14:59:29:271 The socket is connecting, cannot connect again!
+2021-01-25 14:59:30:477 AMC Server 응답 없습니다.
+2021-01-25 14:59:31:586 The socket is connecting, cannot connect again!
+2021-01-25 14:59:36:477 AMC Server 응답 없습니다.
+2021-01-25 14:59:38:508 The socket is connecting, cannot connect again!
+2021-01-25 14:59:39:899 AMC Server 응답 없습니다.
+2021-01-25 14:59:40:978 The socket is connecting, cannot connect again!
+2021-01-25 14:59:42:164 AMC Server 응답 없습니다.
+2021-01-25 14:59:43:263 The socket is connecting, cannot connect again!
+2021-01-25 14:59:45:692 AMC Server 응답 없습니다.
+2021-01-25 14:59:47:737 The socket is connecting, cannot connect again!
+2021-01-25 14:59:49:054 AMC Server 응답 없습니다.
+2021-01-25 14:59:50:132 The socket is connecting, cannot connect again!
+2021-01-25 14:59:51:309 AMC Server 응답 없습니다.
+2021-01-25 14:59:52:379 The socket is connecting, cannot connect again!
+2021-01-25 14:59:54:766 AMC Server 응답 없습니다.
+2021-01-25 14:59:56:939 The socket is connecting, cannot connect again!
+2021-01-25 14:59:57:065 AMC Server 응답 없습니다.
+2021-01-25 14:59:59:36 The socket is connecting, cannot connect again!
+2021-01-25 15:00:00:598 AMC Server 응답 없습니다.
+2021-01-25 15:00:01:786 The socket is connecting, cannot connect again!
+2021-01-25 15:00:03:174 AMC Server 응답 없습니다.
+2021-01-25 15:00:04:299 The socket is connecting, cannot connect again!
+2021-01-25 15:00:06:673 AMC Server 응답 없습니다.
+2021-01-25 15:00:08:87 The socket is connecting, cannot connect again!
+2021-01-25 15:00:10:082 AMC Server 응답 없습니다.
+2021-01-25 15:00:11:158 The socket is connecting, cannot connect again!
+2021-01-25 15:00:12:4 AMC Server 응답 없습니다.
+2021-01-25 15:00:13:469 The socket is connecting, cannot connect again!
+2021-01-25 15:00:15:858 AMC Server 응답 없습니다.
+2021-01-25 15:00:18:131 The socket is connecting, cannot connect again!
+2021-01-25 15:00:18:248 AMC Server 응답 없습니다.
+2021-01-25 15:00:18:479 The socket is connecting, cannot connect again!
+2021-01-25 15:00:21:712 AMC Server 응답 없습니다.
+2021-01-25 15:00:22:803 The socket is connecting, cannot connect again!
+2021-01-25 15:00:27:453 AMC Server 응답 없습니다.
+2021-01-25 15:00:27:67 The socket is connecting, cannot connect again!
+2021-01-25 15:00:30:883 AMC Server 응답 없습니다.
+2021-01-25 15:00:32:035 The socket is connecting, cannot connect again!
+2021-01-25 15:00:33:22 AMC Server 응답 없습니다.
+2021-01-25 15:00:33:762 The socket is connecting, cannot connect again!
+2021-01-25 15:00:36:718 AMC Server 응답 없습니다.
+2021-01-25 15:00:36:914 The socket is connecting, cannot connect again!
+2021-01-25 15:00:39:131 AMC Server 응답 없습니다.
+2021-01-25 15:00:40:26 The socket is connecting, cannot connect again!
+2021-01-25 15:00:42:674 AMC Server 응답 없습니다.
+2021-01-25 15:00:43:013 The socket is connecting, cannot connect again!
+2021-01-25 15:00:48:442 AMC Server 응답 없습니다.
+2021-01-25 15:00:49:22 The socket is connecting, cannot connect again!
+2021-01-25 15:00:51:98 AMC Server 응답 없습니다.
+2021-01-25 15:00:52:34 The socket is connecting, cannot connect again!
+2021-01-25 15:00:54:178 AMC Server 응답 없습니다.
+2021-01-25 15:00:55:286 The socket is connecting, cannot connect again!
+2021-01-25 15:00:57:797 AMC Server 응답 없습니다.
+2021-01-25 15:00:58:61 The socket is connecting, cannot connect again!
+2021-01-25 15:01:00:231 AMC Server 응답 없습니다.
+2021-01-25 15:01:01:763 The socket is connecting, cannot connect again!
+2021-01-25 15:01:03:729 AMC Server 응답 없습니다.
+2021-01-25 15:01:04:939 The socket is connecting, cannot connect again!
+2021-01-25 15:01:06:294 AMC Server 응답 없습니다.
+2021-01-25 15:01:07:452 The socket is connecting, cannot connect again!
+2021-01-25 15:01:10:117 AMC Server 응답 없습니다.
+2021-01-25 15:01:11:374 The socket is connecting, cannot connect again!
+2021-01-25 15:01:12:777 AMC Server 응답 없습니다.
+2021-01-25 15:01:14:172 The socket is connecting, cannot connect again!
+2021-01-25 15:01:15:148 AMC Server 응답 없습니다.
+2021-01-25 15:01:17:283 The socket is connecting, cannot connect again!
+2021-01-25 15:01:18:547 AMC Server 응답 없습니다.
+2021-01-25 15:01:19:67 The socket is connecting, cannot connect again!
+2021-01-25 15:01:24:35 AMC Server 응답 없습니다.
+2021-01-25 15:01:26:528 The socket is connecting, cannot connect again!
+2021-01-25 15:01:27:761 AMC Server 응답 없습니다.
+2021-01-25 15:01:28:858 The socket is connecting, cannot connect again!
+2021-01-25 15:01:30:166 AMC Server 응답 없습니다.
+2021-01-25 15:01:31:295 The socket is connecting, cannot connect again!
+2021-01-25 15:01:33:707 AMC Server 응답 없습니다.
+2021-01-25 15:01:35:742 The socket is connecting, cannot connect again!
+2021-01-25 15:01:39:351 AMC Server 응답 없습니다.
+2021-01-25 15:01:40:454 The socket is connecting, cannot connect again!
+2021-01-25 15:01:42:853 AMC Server 응답 없습니다.
+2021-01-25 15:01:44:958 The socket is connecting, cannot connect again!
+2021-01-25 15:01:45:185 AMC Server 응답 없습니다.
+2021-01-25 15:01:47:605 The socket is connecting, cannot connect again!
+2021-01-25 15:01:48:982 AMC Server 응답 없습니다.
+2021-01-25 15:01:50:121 The socket is connecting, cannot connect again!
+2021-01-25 15:01:51:371 AMC Server 응답 없습니다.
+2021-01-25 15:01:52:453 The socket is connecting, cannot connect again!
+2021-01-25 15:01:54:803 AMC Server 응답 없습니다.
+2021-01-25 15:01:57:003 The socket is connecting, cannot connect again!
+2021-01-25 15:01:57:134 AMC Server 응답 없습니다.
+2021-01-25 15:01:57:198 The socket is connecting, cannot connect again!
+2021-01-25 15:02:00:639 AMC Server 응답 없습니다.
+2021-01-25 15:02:01:809 The socket is connecting, cannot connect again!
+2021-01-25 15:02:03:071 AMC Server 응답 없습니다.
+2021-01-25 15:02:03:304 The socket is connecting, cannot connect again!
+2021-01-25 15:02:06:511 AMC Server 응답 없습니다.
+2021-01-25 15:02:08:786 The socket is connecting, cannot connect again!
+2021-01-25 15:02:09:997 AMC Server 응답 없습니다.
+2021-01-25 15:02:11:134 The socket is connecting, cannot connect again!
+2021-01-25 15:02:12:401 AMC Server 응답 없습니다.
+2021-01-25 15:02:12:508 The socket is connecting, cannot connect again!
+2021-01-25 15:02:15:844 AMC Server 응답 없습니다.
+2021-01-25 15:02:18:226 The socket is connecting, cannot connect again!
+2021-01-25 15:02:18:465 AMC Server 응답 없습니다.
+2021-01-25 15:02:18:79 The socket is connecting, cannot connect again!
+2021-01-25 15:02:21:965 AMC Server 응답 없습니다.
+2021-01-25 15:02:23:048 The socket is connecting, cannot connect again!
+2021-01-25 15:02:24:255 AMC Server 응답 없습니다.
+2021-01-25 15:02:25:017 The socket is connecting, cannot connect again!
+2021-01-25 15:02:27:653 AMC Server 응답 없습니다.
+2021-01-25 15:02:28:12 The socket is connecting, cannot connect again!
+2021-01-25 15:02:31:117 AMC Server 응답 없습니다.
+2021-01-25 15:02:31:277 The socket is connecting, cannot connect again!
+2021-01-25 15:02:33:475 AMC Server 응답 없습니다.
+2021-01-25 15:02:34:376 The socket is connecting, cannot connect again!
+2021-01-25 15:02:36:937 AMC Server 응답 없습니다.
+2021-01-25 15:02:37:487 The socket is connecting, cannot connect again!
+2021-01-25 15:02:39:259 AMC Server 응답 없습니다.
+2021-01-25 15:02:40:682 The socket is connecting, cannot connect again!
+2021-01-25 15:02:42:848 AMC Server 응답 없습니다.
+2021-01-25 15:02:43:783 The socket is connecting, cannot connect again!
+2021-01-25 15:02:45:154 AMC Server 응답 없습니다.
+2021-01-25 15:02:46:316 The socket is connecting, cannot connect again!
+2021-01-25 15:02:48:678 AMC Server 응답 없습니다.
+2021-01-25 15:02:49:961 The socket is connecting, cannot connect again!
+2021-01-25 15:02:51:131 AMC Server 응답 없습니다.
+2021-01-25 15:02:53:078 The socket is connecting, cannot connect again!
+2021-01-25 15:02:54:591 AMC Server 응답 없습니다.
+2021-01-25 15:02:55:696 The socket is connecting, cannot connect again!
+2021-01-25 15:03:00:386 AMC Server 응답 없습니다.
+2021-01-25 15:03:02:353 The socket is connecting, cannot connect again!
+2021-01-25 15:03:03:859 AMC Server 응답 없습니다.
+2021-01-25 15:03:05:006 The socket is connecting, cannot connect again!
+2021-01-25 15:03:13:514 AMC Server 응답 없습니다.
+2021-01-25 15:03:26:803 The socket is connecting, cannot connect again!
+2021-01-25 15:10:08:976 bg_st Restart
+2021-01-25 15:10:12:782 The socket is connecting, cannot connect again!
+2021-01-25 15:12:47:63 AMC Server 응답 없습니다.
+2021-01-25 15:12:51:253 The socket is connecting, cannot connect again!
+2021-01-25 15:13:39:228 AMC Server 응답 없습니다.
+2021-01-25 15:13:58:388 The socket is connecting, cannot connect again!
+2021-01-25 15:15:54:376 AMC Server 응답 없습니다.
+2021-01-25 15:15:55:482 The socket is connecting, cannot connect again!
+2021-01-25 15:15:57:868 AMC Server 응답 없습니다.
+2021-01-25 15:15:58:992 The socket is connecting, cannot connect again!
+2021-01-25 15:16:00:475 AMC Server 응답 없습니다.
+2021-01-25 15:16:01:879 The socket is connecting, cannot connect again!
+2021-01-25 15:16:06:386 AMC Server 응답 없습니다.
+2021-01-25 15:16:07:487 The socket is connecting, cannot connect again!
+2021-01-25 15:16:09:897 AMC Server 응답 없습니다.
+2021-01-25 15:16:11:1 The socket is connecting, cannot connect again!
+2021-01-25 15:16:12:187 AMC Server 응답 없습니다.
+2021-01-25 15:16:14:199 The socket is connecting, cannot connect again!
+2021-01-25 15:16:15:509 AMC Server 응답 없습니다.
+2021-01-25 15:16:16:614 The socket is connecting, cannot connect again!
+2021-01-25 15:16:19:001 AMC Server 응답 없습니다.
+2021-01-25 15:16:20:372 The socket is connecting, cannot connect again!
+2021-01-25 15:16:21:237 AMC Server 응답 없습니다.
+2021-01-25 15:16:23:469 The socket is connecting, cannot connect again!
+2021-01-25 15:16:24:705 AMC Server 응답 없습니다.
+2021-01-25 15:16:25:773 The socket is connecting, cannot connect again!
+2021-01-25 15:16:30:324 AMC Server 응답 없습니다.
+2021-01-25 15:16:32:693 The socket is connecting, cannot connect again!
+2021-01-25 15:16:33:897 AMC Server 응답 없습니다.
+2021-01-25 15:16:34:453 삭제된 개체에 액세스할 수 없습니다.
+2021-01-25 15:16:34:453 개체 이름: 'Form1'
+2021-01-25 15:21:04:83 bg_st Restart
+2021-01-25 15:21:08:578 The socket is connecting, cannot connect again!
+2021-01-25 15:21:24:74 AMC Server 응답 없습니다.
+2021-01-25 15:21:25:911 The socket is connecting, cannot connect again!
+2021-01-25 15:21:27:125 AMC Server 응답 없습니다.
+2021-01-25 15:21:28:194 The socket is connecting, cannot connect again!
+2021-01-25 15:21:30:602 AMC Server 응답 없습니다.
+2021-01-25 15:21:32:254 The socket is connecting, cannot connect again!
+2021-01-25 15:21:33:993 AMC Server 응답 없습니다.
+2021-01-25 15:21:35:069 The socket is connecting, cannot connect again!
+2021-01-25 15:21:36:236 AMC Server 응답 없습니다.
+2021-01-25 15:21:37:306 The socket is connecting, cannot connect again!
+2021-01-25 15:21:39:705 AMC Server 응답 없습니다.
+2021-01-25 15:21:41:383 The socket is connecting, cannot connect again!
+2021-01-25 15:21:45:517 AMC Server 응답 없습니다.
+2021-01-25 15:21:46:681 The socket is connecting, cannot connect again!
+2021-01-25 15:21:51:405 AMC Server 응답 없습니다.
+2021-01-25 15:21:53:605 The socket is connecting, cannot connect again!
+2021-01-25 15:21:54:863 AMC Server 응답 없습니다.
+2021-01-25 15:21:55:968 The socket is connecting, cannot connect again!
+2021-01-25 15:21:57:153 AMC Server 응답 없습니다.
+2021-01-25 15:21:58:262 The socket is connecting, cannot connect again!
+2021-01-25 15:22:00:606 AMC Server 응답 없습니다.
+2021-01-25 15:22:02:831 The socket is connecting, cannot connect again!
+2021-01-25 15:22:06:336 AMC Server 응답 없습니다.
+2021-01-25 15:22:07:448 The socket is connecting, cannot connect again!
+2021-01-25 15:22:09:843 AMC Server 응답 없습니다.
+2021-01-25 15:22:12:052 The socket is connecting, cannot connect again!
+2021-01-25 15:22:12:202 AMC Server 응답 없습니다.
+2021-01-25 15:22:14:433 The socket is connecting, cannot connect again!
+2021-01-25 15:22:15:684 AMC Server 응답 없습니다.
+2021-01-25 15:22:16:803 The socket is connecting, cannot connect again!
+2021-01-25 15:22:18:109 AMC Server 응답 없습니다.
+2021-01-25 15:22:18:225 The socket is connecting, cannot connect again!
+2021-01-25 15:22:21:567 AMC Server 응답 없습니다.
+2021-01-25 15:22:23:802 The socket is connecting, cannot connect again!
+2021-01-25 15:22:24:995 AMC Server 응답 없습니다.
+2021-01-25 15:22:26:098 The socket is connecting, cannot connect again!
+2021-01-25 15:22:27:291 AMC Server 응답 없습니다.
+2021-01-25 15:22:27:438 The socket is connecting, cannot connect again!
+2021-01-25 15:22:30:826 AMC Server 응답 없습니다.
+2021-01-25 15:22:33:103 The socket is connecting, cannot connect again!
+2021-01-25 15:22:33:236 AMC Server 응답 없습니다.
+2021-01-25 15:22:33:6 The socket is connecting, cannot connect again!
+2021-01-25 15:22:36:662 AMC Server 응답 없습니다.
+2021-01-25 15:22:36:735 The socket is connecting, cannot connect again!
+2021-01-25 15:22:42:407 AMC Server 응답 없습니다.
+2021-01-25 15:22:42:942 The socket is connecting, cannot connect again!
+2021-01-25 15:22:45:832 AMC Server 응답 없습니다.
+2021-01-25 15:22:46:077 The socket is connecting, cannot connect again!
+2021-01-25 15:22:48:157 AMC Server 응답 없습니다.
+2021-01-25 15:22:49:209 The socket is connecting, cannot connect again!
+2021-01-25 15:22:51:743 AMC Server 응답 없습니다.
+2021-01-25 15:22:52:332 The socket is connecting, cannot connect again!
+2021-01-25 15:22:54:073 AMC Server 응답 없습니다.
+2021-01-25 15:22:55:445 The socket is connecting, cannot connect again!
+2021-01-25 15:22:57:501 AMC Server 응답 없습니다.
+2021-01-25 15:22:58:568 The socket is connecting, cannot connect again!
+2021-01-25 15:23:00:936 AMC Server 응답 없습니다.
+2021-01-25 15:23:01:708 The socket is connecting, cannot connect again!
+2021-01-25 15:23:03:231 AMC Server 응답 없습니다.
+2021-01-25 15:23:04:838 The socket is connecting, cannot connect again!
+2021-01-25 15:23:06:609 AMC Server 응답 없습니다.
+2021-01-25 15:23:07:737 The socket is connecting, cannot connect again!
+2021-01-25 15:23:09:171 AMC Server 응답 없습니다.
+2021-01-25 15:23:10:29 The socket is connecting, cannot connect again!
+2021-01-25 15:23:12:827 AMC Server 응답 없습니다.
+2021-01-25 15:23:14:156 The socket is connecting, cannot connect again!
+2021-01-25 15:23:15:286 AMC Server 응답 없습니다.
+2021-01-25 15:23:17:291 The socket is connecting, cannot connect again!
+2021-01-25 15:23:18:82 AMC Server 응답 없습니다.
+2021-01-25 15:23:19:927 The socket is connecting, cannot connect again!
+2021-01-25 15:23:21:182 AMC Server 응답 없습니다.
+2021-01-25 15:23:22:271 The socket is connecting, cannot connect again!
+2021-01-25 15:23:24:832 AMC Server 응답 없습니다.
+2021-01-25 15:23:26:467 The socket is connecting, cannot connect again!
+2021-01-25 15:23:27:122 AMC Server 응답 없습니다.
+2021-01-25 15:23:29:377 The socket is connecting, cannot connect again!
+2021-01-25 15:23:30:594 AMC Server 응답 없습니다.
+2021-01-25 15:23:31:679 The socket is connecting, cannot connect again!
+2021-01-25 15:23:34:041 AMC Server 응답 없습니다.
+2021-01-25 15:23:35:637 The socket is connecting, cannot connect again!
+2021-01-25 15:23:36:304 AMC Server 응답 없습니다.
+2021-01-25 15:23:38:504 The socket is connecting, cannot connect again!
+2021-01-25 15:23:39:655 AMC Server 응답 없습니다.
+2021-01-25 15:23:40:724 The socket is connecting, cannot connect again!
+2021-01-25 15:23:45:456 AMC Server 응답 없습니다.
+2021-01-25 15:23:47:744 The socket is connecting, cannot connect again!
+2021-01-25 15:23:49:035 AMC Server 응답 없습니다.
+2021-01-25 15:23:50:217 The socket is connecting, cannot connect again!
+2021-01-25 15:23:51:443 AMC Server 응답 없습니다.
+2021-01-25 15:23:52:54 The socket is connecting, cannot connect again!
+2021-01-25 15:23:54:925 AMC Server 응답 없습니다.
+2021-01-25 15:23:57:068 The socket is connecting, cannot connect again!
+2021-01-25 15:23:57:343 AMC Server 응답 없습니다.
+2021-01-25 15:23:59:602 The socket is connecting, cannot connect again!
+2021-01-25 15:24:00:807 AMC Server 응답 없습니다.
+2021-01-25 15:24:01:933 The socket is connecting, cannot connect again!
+2021-01-25 15:24:03:216 AMC Server 응답 없습니다.
+2021-01-25 15:24:04:356 The socket is connecting, cannot connect again!
+2021-01-25 15:24:06:7 AMC Server 응답 없습니다.
+2021-01-25 15:24:08:948 The socket is connecting, cannot connect again!
+2021-01-25 15:24:09:19 AMC Server 응답 없습니다.
+2021-01-25 15:24:09:333 The socket is connecting, cannot connect again!
+2021-01-25 15:24:12:678 AMC Server 응답 없습니다.
+2021-01-25 15:24:13:812 The socket is connecting, cannot connect again!
+2021-01-25 15:24:18:364 AMC Server 응답 없습니다.
+2021-01-25 15:24:18:504 The socket is connecting, cannot connect again!
+2021-01-25 15:24:21:767 AMC Server 응답 없습니다.
+2021-01-25 15:24:22:829 The socket is connecting, cannot connect again!
+2021-01-25 15:24:27:386 AMC Server 응답 없습니다.
+2021-01-25 15:24:27:64 The socket is connecting, cannot connect again!
+2021-01-25 15:24:30:711 AMC Server 응답 없습니다.
+2021-01-25 15:24:31:827 The socket is connecting, cannot connect again!
+2021-01-25 15:24:36:392 AMC Server 응답 없습니다.
+2021-01-25 15:24:36:838 The socket is connecting, cannot connect again!
+2021-01-25 15:24:39:812 AMC Server 응답 없습니다.
+2021-01-25 15:24:39:931 The socket is connecting, cannot connect again!
+2021-01-25 15:24:42:111 AMC Server 응답 없습니다.
+2021-01-25 15:24:43:021 The socket is connecting, cannot connect again!
+2021-01-25 15:24:45:553 AMC Server 응답 없습니다.
+2021-01-25 15:24:46:121 The socket is connecting, cannot connect again!
+2021-01-25 15:24:48:98 AMC Server 응답 없습니다.
+2021-01-25 15:24:49:269 The socket is connecting, cannot connect again!
+2021-01-25 15:24:51:183 AMC Server 응답 없습니다.
+2021-01-25 15:24:52:279 The socket is connecting, cannot connect again!
+2021-01-25 15:24:54:703 AMC Server 응답 없습니다.
+2021-01-25 15:24:55:42 The socket is connecting, cannot connect again!
+2021-01-25 15:25:00:303 AMC Server 응답 없습니다.
+2021-01-25 15:25:01:43 The socket is connecting, cannot connect again!
+2021-01-25 15:25:03:831 AMC Server 응답 없습니다.
+2021-01-25 15:25:04:613 The socket is connecting, cannot connect again!
+2021-01-25 15:25:06:155 AMC Server 응답 없습니다.
+2021-01-25 15:25:07:726 The socket is connecting, cannot connect again!
+2021-01-25 15:25:09:546 AMC Server 응답 없습니다.
+2021-01-25 15:25:10:605 The socket is connecting, cannot connect again!
+2021-01-25 15:25:12:951 AMC Server 응답 없습니다.
+2021-01-25 15:25:14:052 The socket is connecting, cannot connect again!
+2021-01-25 15:25:15:341 AMC Server 응답 없습니다.
+2021-01-25 15:25:16:891 The socket is connecting, cannot connect again!
+2021-01-25 15:25:18:808 AMC Server 응답 없습니다.
+2021-01-25 15:25:19:916 The socket is connecting, cannot connect again!
+2021-01-25 15:25:21:162 AMC Server 응답 없습니다.
+2021-01-25 15:25:22:251 The socket is connecting, cannot connect again!
+2021-01-25 15:25:24:585 AMC Server 응답 없습니다.
+2021-01-25 15:25:26:088 The socket is connecting, cannot connect again!
+2021-01-25 15:25:28: AMC Server 응답 없습니다.
+2021-01-25 15:25:29:129 The socket is connecting, cannot connect again!
+2021-01-25 15:25:30:34 AMC Server 응답 없습니다.
+2021-01-25 15:25:31:469 The socket is connecting, cannot connect again!
+2021-01-25 15:25:33:805 AMC Server 응답 없습니다.
+2021-01-25 15:25:35:351 The socket is connecting, cannot connect again!
+2021-01-25 15:25:36:087 AMC Server 응답 없습니다.
+2021-01-25 15:25:38:297 The socket is connecting, cannot connect again!
+2021-01-25 15:25:39:487 AMC Server 응답 없습니다.
+2021-01-25 15:25:40:577 The socket is connecting, cannot connect again!
+2021-01-25 15:25:42:966 AMC Server 응답 없습니다.
+2021-01-25 15:25:44:505 The socket is connecting, cannot connect again!
+2021-01-25 15:25:45:227 AMC Server 응답 없습니다.
+2021-01-25 15:25:47:454 The socket is connecting, cannot connect again!
+2021-01-25 15:25:48:639 AMC Server 응답 없습니다.
+2021-01-25 15:25:49:775 The socket is connecting, cannot connect again!
+2021-01-25 15:25:51:114 AMC Server 응답 없습니다.
+2021-01-25 15:25:52:235 The socket is connecting, cannot connect again!
+2021-01-25 15:25:54:653 AMC Server 응답 없습니다.
+2021-01-25 15:25:56:689 The socket is connecting, cannot connect again!
+2021-01-25 15:25:58:027 AMC Server 응답 없습니다.
+2021-01-25 15:25:59:182 The socket is connecting, cannot connect again!
+2021-01-25 15:26:00:35 AMC Server 응답 없습니다.
+2021-01-25 15:26:01:462 The socket is connecting, cannot connect again!
+2021-01-25 15:26:03:832 AMC Server 응답 없습니다.
+2021-01-25 15:26:06:152 The socket is connecting, cannot connect again!
+2021-01-25 15:26:06:408 AMC Server 응답 없습니다.
+2021-01-25 15:26:08:705 The socket is connecting, cannot connect again!
+2021-01-25 15:26:09:916 AMC Server 응답 없습니다.
+2021-01-25 15:26:11:008 The socket is connecting, cannot connect again!
+2021-01-25 15:26:12:363 AMC Server 응답 없습니다.
+2021-01-25 15:26:13:468 The socket is connecting, cannot connect again!
+2021-01-25 15:26:15:934 AMC Server 응답 없습니다.
+2021-01-25 15:26:18:137 The socket is connecting, cannot connect again!
+2021-01-25 15:26:18:257 AMC Server 응답 없습니다.
+2021-01-25 15:26:18:503 The socket is connecting, cannot connect again!
+2021-01-25 15:26:21:754 AMC Server 응답 없습니다.
+2021-01-25 15:26:22:855 The socket is connecting, cannot connect again!
+2021-01-25 15:26:24:128 AMC Server 응답 없습니다.
+2021-01-25 15:26:24:657 The socket is connecting, cannot connect again!
+2021-01-25 15:26:27:535 AMC Server 응답 없습니다.
+2021-01-25 15:26:27:766 The socket is connecting, cannot connect again!
+2021-01-25 15:26:30:983 AMC Server 응답 없습니다.
+2021-01-25 15:26:32:082 The socket is connecting, cannot connect again!
+2021-01-25 15:26:33:303 AMC Server 응답 없습니다.
+2021-01-25 15:26:33:877 The socket is connecting, cannot connect again!
+2021-01-25 15:26:36:778 AMC Server 응답 없습니다.
+2021-01-25 15:26:37:021 The socket is connecting, cannot connect again!
+2021-01-25 15:26:39:251 삭제된 개체에 액세스할 수 없습니다.
+2021-01-25 15:26:39:251 개체 이름: 'Form1'
+2021-01-25 15:26:39:466 창 핸들을 만들기 전까지 컨트롤에서 Invoke 또는 BeginInvoke를 호출할 수 없습니다.
+2021-01-25 15:35:38:375 bg_st Restart
+2021-01-25 15:35:43:023 The socket is connecting, cannot connect again!
+2021-01-25 15:36:07:048 AMC Server 응답 없습니다.
+2021-01-25 15:36:07:137 The socket is connecting, cannot connect again!
+2021-01-25 15:36:09:503 AMC Server 응답 없습니다.
+2021-01-25 15:36:10:628 The socket is connecting, cannot connect again!
+2021-01-25 15:36:12:481 AMC Server 응답 없습니다.
+2021-01-25 15:36:13:646 The socket is connecting, cannot connect again!
+2021-01-25 15:36:15:182 AMC Server 응답 없습니다.
+2021-01-25 15:36:16:31 The socket is connecting, cannot connect again!
+2021-01-25 15:36:18:739 AMC Server 응답 없습니다.
+2021-01-25 15:36:19:294 The socket is connecting, cannot connect again!
+2021-01-25 15:36:21:099 AMC Server 응답 없습니다.
+2021-01-25 15:36:22:217 The socket is connecting, cannot connect again!
+2021-01-25 15:36:24:657 AMC Server 응답 없습니다.
+2021-01-25 15:36:25:512 The socket is connecting, cannot connect again!
+2021-01-25 15:36:28:031 AMC Server 응답 없습니다.
+2021-01-25 15:36:28:591 The socket is connecting, cannot connect again!
+2021-01-25 15:37:22:425 bg_st Restart
+2021-01-25 15:37:26:941 The socket is connecting, cannot connect again!
+2021-01-25 15:38:08:197 bg_st Restart
+2021-01-25 15:38:12:559 The socket is connecting, cannot connect again!
+2021-01-25 17:25:33:634 bg_st Restart
+2021-01-25 17:25:34:115 bg_st Restart
+2021-01-25 17:25:40:11 The socket is connecting, cannot connect again!
+2021-01-25 17:25:42:264 The socket is connecting, cannot connect again!
+2021-01-25 17:25:44:454 The socket is connecting, cannot connect again!
+2021-01-25 17:25:46:66 The socket is connecting, cannot connect again!
+2021-01-25 17:25:47:626 The socket is connecting, cannot connect again!
+2021-01-25 17:25:48:927 AMC Server 응답 없습니다.
+2021-01-25 17:25:50:142 The socket is connecting, cannot connect again!
+2021-01-25 17:25:50:755 The socket is connecting, cannot connect again!
+2021-01-25 17:25:51:239 AMC Server 응답 없습니다.
+2021-01-25 17:25:52:365 The socket is connecting, cannot connect again!
+2021-01-25 17:25:53:862 The socket is connecting, cannot connect again!
+2021-01-25 17:25:54:531 AMC Server 응답 없습니다.
+2021-01-25 17:25:56:654 The socket is connecting, cannot connect again!
+2021-01-25 17:25:56:952 The socket is connecting, cannot connect again!
+2021-01-25 17:25:57:748 AMC Server 응답 없습니다.
+2021-01-25 17:25:58:867 The socket is connecting, cannot connect again!
+2021-01-25 17:26:00:205 The socket is connecting, cannot connect again!
+2021-01-25 17:26:02:086 The socket is connecting, cannot connect again!
+2021-01-25 17:26:03:185 AMC Server 응답 없습니다.
+2021-01-25 17:26:03:356 The socket is connecting, cannot connect again!
+2021-01-25 17:26:06:396 The socket is connecting, cannot connect again!
+2021-01-25 17:26:06:514 The socket is connecting, cannot connect again!
+2021-01-25 17:26:21:21 AMC Server 응답 없습니다.
+2021-01-25 17:26:22:054 The socket is connecting, cannot connect again!
+2021-01-25 17:26:24:394 The socket is connecting, cannot connect again!
+2021-01-25 17:26:24:46 AMC Server 응답 없습니다.
+2021-01-25 17:26:25:175 The socket is connecting, cannot connect again!
+2021-01-25 17:26:26:583 The socket is connecting, cannot connect again!
+2021-01-25 17:26:27:666 AMC Server 응답 없습니다.
+2021-01-25 17:26:28:291 The socket is connecting, cannot connect again!
+2021-01-25 17:26:30:863 The socket is connecting, cannot connect again!
+2021-01-25 17:26:30:947 AMC Server 응답 없습니다.
+2021-01-25 17:26:31:411 The socket is connecting, cannot connect again!
+2021-01-25 17:26:33:123 The socket is connecting, cannot connect again!
+2021-01-25 17:26:33:192 AMC Server 응답 없습니다.
+2021-01-25 17:26:34:538 The socket is connecting, cannot connect again!
+2021-01-25 17:26:36:362 AMC Server 응답 없습니다.
+2021-01-25 17:26:37:465 The socket is connecting, cannot connect again!
+2021-01-25 17:26:37:661 The socket is connecting, cannot connect again!
+2021-01-25 17:26:39:607 The socket is connecting, cannot connect again!
+2021-01-25 17:26:39:683 AMC Server 응답 없습니다.
+2021-01-25 17:26:40:786 The socket is connecting, cannot connect again!
+2021-01-25 17:26:41:928 The socket is connecting, cannot connect again!
+2021-01-25 17:26:43:787 The socket is connecting, cannot connect again!
+2021-01-25 17:26:44:14 The socket is connecting, cannot connect again!
+2021-01-25 17:26:44:312 삭제된 개체에 액세스할 수 없습니다.
+2021-01-25 17:26:44:312 개체 이름: 'Form1'

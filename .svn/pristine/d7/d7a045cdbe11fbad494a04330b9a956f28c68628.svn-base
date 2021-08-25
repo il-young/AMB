@@ -1,0 +1,21 @@
+NONE_ERROR	0	0	No error.	No Solution.
+AMC_SERVER_DISCONNECT	1	3	AMC server 접속이 끊겼습니다.	1.AMC Server 상태를 확인해 주세요.
+AMC_SERVER_SEND_STB_ERROR	2	3	AMC server 와 STB 접솝이 끊겼습니다.	1.STB 와 AMC Server와의 연결 상태를 확인 해 주세요.
+MAN_IN_ERR	1000	3	Undefine tray manual in error	Check AMC.
+MAN_IN_CONVEYOR_TIME_OUT	1001	3	Tray Manual Input 중 Tray가 다음 센서에 인식되지 않았습니다.	1.Conveyor를 확인 해 주세요.:2.Stopper 상태를 확인해 주세요.:3.Reset 버튼을 눌러 주세요.
+MAN_IN_GRIPER_TIME_OUT	1002	3	Tray manual in griper 동작 시간 초과.	1.Tray 정렬 그리퍼 동작 상태를 확인해 주세요.
+MAN_IN_TRAY_FULL	1003	3	Tray 가득참.	1.Tray가 가득 찼습니다.:2.Tray를 더이상 수납 할 수 없습니다.:3.마지막 Tray를 제거 후 Reset 버튼을 눌러 주세요.
+MAN_OUT_ERR	2000	3	Undefine manual out error.	Check conveyor.
+MAN_OUT_CONVEYOR_TIME_OUT	2001	3	Tray manual out 중 시간 초과.	1.Tray 감지 센서가 감지 되지 않았습니다.:2.Conveyor를 확인해 주세요.
+AUTO_OUT_ERR	3000	3	Undefine tray auto out 중 에러 발생.	1.AMC 상태를 체크해 주세요:2.AMC Server가 정상 동작 중인지 확인 해 주세요.:3.Conveyor 및 Gripper 상태를 확인해 주세요.:4.명령을 다시 진행 해 주세요.
+AUTO_OUT_MOUTH_ERR	3001	3	Mouth sensor가 감지 되지 않았습니다.	1.STB의 Mouth를 동작 상태를 확인해 주세요.:2.AMC의 Mouth 센서를 확인 해 주세요(DI 13).
+LD_ERR	4000	3	Undefine LD error.	Check LD.
+LD_ESTOP	4001	3	EMO 버튼이 눌렸습니다.	1.EMO를 시계 방향으로 돌려서 해제 해 주세요.:2.화면 오른쪽의 On 버튼을 눌러 Vehicle을 활성화 해 주세요.:3.명령을 다시 내려 주세요.
+LD_ROBOT_LOST	4002	3	Vehicle이 위치를 잃어 버렸습니다.	1.근처 바닥의 Label을 확인 해 주세요.:2.EMO 스위치를 누른 후 노란색 Break 버튼을 누른 상태로 바닥 라벨 방향 뒤쪽으로 이동해 주세요.:3."Solution"을 더블 클릭 해 주세요.:4.새로 뜨는 창에서 이동한 위치의 라벨을 찾아서 선택 후 OK 버튼을 눌러 주세요.:5.목적지 버튼을 눌러 주세요. 
+AMC_ERR	5000	3	Undefine AMC error.	Check AMC.
+AMC_SEFTY_SENSOR	5001	2	Light cutain이 감지 되었습니다.	1.Lighr cutain 사이에 감지된 물체를 치워 주세요.:2.Light cutain 옆 LED 동작 상태를 확인 해 주세요.
+AMC_LINEAR_MOTOR_ERR	5100	3	AMC linearmotor가 감지 되었습니다.	1.AMC 앞의 EMO 버튼을 눌러 주세요.:2.앞의 EMO 버튼을 시계 방향으로 돌려 해제 해 주세요.:3.화면의 Reset 버튼을 눌러 주세요.
+AMC_DELTHAHEADING_FAIL	5200	3	DELTHAHEADING 실패.	1.STB와 각도 보정에 실패 했습니다.:2.Goal Point에 보내 주세요.
+AMC_MOVE_FAIL	5201	3	Goal Point로 이동 실패.	1.Vehicle 주변의 장애물을 점검해 주세요..
+AMB_ERR	6000	3	AMB ERROR.	Check AMB.
+AMB_LATCH_FAIL	6001	3	Cart latch 실패.	1.Unlacth 버튼을 눌러 주세요.:2.Cart를 제거 해 주세요.:3.Latch 버튼을 눌러 동작을 확인해 주세요.:3.Unlath 버튼을 눌러 주세요.:4.정상 동작시 Cart를 다시 Vehicle 위에 올려 모니터 쪽으로 끝까지 밀어 주세요.:5.Latch 버튼을 눌러 Latch 동작을 확인해 주세요.

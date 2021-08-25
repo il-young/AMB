@@ -1,0 +1,23 @@
+D:\Project\AMB\Source\AMC Test\bin\Debug\AMC Test.exe.config
+D:\Project\AMB\Source\AMC Test\bin\Debug\AMC Test.exe.manifest
+D:\Project\AMB\Source\AMC Test\bin\Debug\AMC Test.application
+D:\Project\AMB\Source\AMC Test\bin\Debug\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\bin\Debug\AMC Test.pdb
+D:\Project\AMB\Source\AMC Test\bin\Debug\Cognex.DataMan.CogNamer.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\Debug\nesslab.reader.api.dll
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.AMC_Monitor.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.Form1.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.HMI_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.frmReconnecting.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.MainForm.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.Properties.Resources.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.RFID_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.Save_Screen_frm.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMB.csproj.GenerateResource.cache
+D:\Project\AMB\Source\AMC Test\obj\remote\AMB.csproj.CoreCompileInputs.cache
+D:\Project\AMB\Source\AMC Test\obj\remote\AMB.csprojAssemblyReference.cache
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC Test.pdb
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.Board.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.frmLocalize.resources
+D:\Project\AMB\Source\AMC Test\obj\remote\AMC_Test.frm_Alarm.resources

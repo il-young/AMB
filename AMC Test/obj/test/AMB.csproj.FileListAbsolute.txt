@@ -1,0 +1,45 @@
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.AMC_Monitor.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.Form1.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.HMI_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.frmReconnecting.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.MainForm.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.Properties.Resources.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.RFID_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMC_Test.Save_Screen_frm.resources
+D:\Project\AMB\Source\AMC Test\obj\test\AMB.csproj.GenerateResource.cache
+D:\Project\AMB\Source\AMC Test\obj\test\AMB.csproj.CoreCompileInputs.cache
+D:\Project\AMB\Source\AMC Test\bin\test\AMC Test.exe.config
+D:\Project\AMB\Source\AMC Test\bin\test\AMC Test.exe.manifest
+D:\Project\AMB\Source\AMC Test\bin\test\AMC Test.application
+D:\Project\AMB\Source\AMC Test\bin\test\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\bin\test\AMC Test.pdb
+D:\Project\AMB\Source\AMC Test\bin\test\AdvancedHMIControls.dll
+D:\Project\AMB\Source\AMC Test\bin\test\AdvancedHMIDrivers.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Cognex.DataMan.CogNamer.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Cognex.DataMan.SDK.Discovery.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Cognex.DataMan.SDK.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Cognex.DataMan.SDK.Utils.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\test\log4net.dll
+D:\Project\AMB\Source\AMC Test\bin\test\MfgControl.AdvancedHMI.Controls.dll
+D:\Project\AMB\Source\AMC Test\bin\test\MfgControl.AdvancedHMI.Drivers.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Modbus.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Modbus.Extensions.dll
+D:\Project\AMB\Source\AMC Test\bin\test\nesslab.reader.api.dll
+D:\Project\AMB\Source\AMC Test\bin\test\OpcComRcw.dll
+D:\Project\AMB\Source\AMC Test\bin\test\OpcNetApi.Com.dll
+D:\Project\AMB\Source\AMC Test\bin\test\OpcNetApi.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SocketGlobal.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.ClientEngine.Common.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.ClientEngine.Core.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.ClientEngine.Protocol.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.ClientEngine.Proxy.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.Common.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.Facility.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.SocketBase.dll
+D:\Project\AMB\Source\AMC Test\bin\test\SuperSocket.SocketEngine.dll
+D:\Project\AMB\Source\AMC Test\bin\test\Unme.Common.dll
+D:\Project\AMB\Source\AMC Test\obj\test\AMC Test.exe.manifest
+D:\Project\AMB\Source\AMC Test\obj\test\AMC Test.application
+D:\Project\AMB\Source\AMC Test\obj\test\AMB.csproj.CopyComplete
+D:\Project\AMB\Source\AMC Test\obj\test\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\obj\test\AMC Test.pdb

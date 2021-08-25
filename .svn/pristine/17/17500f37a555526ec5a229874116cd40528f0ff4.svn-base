@@ -1,0 +1,239 @@
+========================================================
+=                                                                                                            =
+=                                      AMC Log File 2019-11-20                                    =
+=                                                                                                            =
+========================================================
+2019-11-20 11:21:38:856 Welcome to the server.
+2019-11-20 11:21:38:876 You can type 'help' at any time for the following help list.
+2019-11-20 11:21:38:885 Commands:
+2019-11-20 11:21:38:892 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-20 11:21:38:9 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-20 11:21:38:907 analogInputList          Lists the named analog inputs
+2019-11-20 11:21:38:915 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-20 11:21:38:924 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-20 11:21:38:934 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-20 11:21:38:943 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-20 11:21:38:952 applicationFaultClear          Clears an application fault [afc]
+2019-11-20 11:21:38:961 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-20 11:21:38:971 applicationFaultSet          Sets an application fault [afs]
+2019-11-20 11:21:38:981    arclSendText          Sends the given message to all ARCL clients
+2019-11-20 11:21:38:992   centralServer          Gets information about the central server connection
+2019-11-20 11:21:39:01 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-20 11:21:39:026      createInfo          creates a piece of information
+2019-11-20 11:21:39:034            dock          Sends the robot to the dock
+2019-11-20 11:21:39:046          doTask          does a task
+2019-11-20 11:21:39:055   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-20 11:21:39:063            echo          with no args gets echo, with args sets echo
+2019-11-20 11:21:39:071    enableMotors          Enables the motors so the robot can drive again
+2019-11-20 11:21:39:082    engageCancel          cancel engage state (without disengaging)
+2019-11-20 11:21:39:095 engageQueryState          query the engage state of a robot
+2019-11-20 11:21:39:106    executeMacro          executes a given macro
+2019-11-20 11:21:39:118 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-20 11:21:39:129        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-20 11:21:39:142 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-20 11:21:39:16 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-20 11:21:39:177 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-20 11:21:39:19 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-20 11:21:39:204 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-20 11:21:39:221 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-20 11:21:39:238     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-20 11:21:39:249       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-20 11:21:39:261 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-20 11:21:39:273 getConfigSectionList          Gets the list of sections in the config
+2019-11-20 11:21:39:284 getConfigSectionValues          Gets the values in a section of the config
+2019-11-20 11:21:39:292 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-20 11:21:39:303 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-20 11:21:39:316 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-20 11:21:39:327 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-20 11:21:39:341 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2019-11-20 11:21:39:351 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2019-11-20 11:21:39:364 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2019-11-20 11:21:39:378     getDateTime          gets the date and time
+2019-11-20 11:21:39:391        getGoals          gets a list of goals in the map (for use with goto)
+2019-11-20 11:21:39:406         getInfo          Gets a piece of information
+2019-11-20 11:21:39:42     getInfoList          Gets the list of info available from 'getInfo'
+2019-11-20 11:21:39:434       getMacros          gets a list of macros in the map (for use with executeMacro)
+2019-11-20 11:21:39:452 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2019-11-20 11:21:39:465  getPoseEncoder          Gets the encoder pose of the robot
+2019-11-20 11:21:39:477       getRoutes          gets the routes the robot has
+2019-11-20 11:21:39:49              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2019-11-20 11:21:39:502 goalDistanceRemaining          Gets the distance remaining to robots goals
+2019-11-20 11:21:39:513 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2019-11-20 11:21:39:526            help          gives the listing of available commands (optionally with prefix)
+2019-11-20 11:21:39:536       inputList          Lists the named digital inputs [inL]
+2019-11-20 11:21:39:549      inputQuery          Queries the state of a named digital input [inQ]
+2019-11-20 11:21:39:563  localizeAtGoal          Localizes to a given goal [lag]
+2019-11-20 11:21:39:576             log          Logs the message to the normal log file
+2019-11-20 11:21:39:589   mapObjectInfo          Gets the information about a map object specified by name.
+2019-11-20 11:21:39:603   mapObjectList          Gets a list the map objects of a given type.
+2019-11-20 11:21:39:615 mapObjectTypeInfo          Gets information about a particular type of map object.
+2019-11-20 11:21:39:627 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2019-11-20 11:21:39:642 mapObjectUpdate          Creates or updates a map object with the specified data.
+2019-11-20 11:21:39:679        modeLock          Locks the current mode
+2019-11-20 11:21:39:698       modeQuery          Queries the current mode and it's lock status
+2019-11-20 11:21:39:71      modeUnlock          Unlocks the current mode
+2019-11-20 11:21:39:722  newConfigParam          Adds a new param to the config (shows up in MP)
+2019-11-20 11:21:39:731 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2019-11-20 11:21:39:742 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2019-11-20 11:21:39:753 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2019-11-20 11:21:39:765        odometer          Shows the robot trip odometer
+2019-11-20 11:21:39:778   odometerReset          Resets the robot trip odometer
+2019-11-20 11:21:39:791   oneLineStatus          Gets the status of the robot on one line
+2019-11-20 11:21:39:808      outputList          Lists the named outputs [outL]
+2019-11-20 11:21:39:823       outputOff          Turns off a named digital output [outOff]
+2019-11-20 11:21:39:836        outputOn          Turns on a named digital output [outOn]
+2019-11-20 11:21:39:852     outputQuery          Queries the state of a named output [outQ]
+2019-11-20 11:21:39:868          patrol          patrols the given route
+2019-11-20 11:21:39:884      patrolOnce          Patrols the given route once, starts at optional index
+2019-11-20 11:21:39:897    patrolResume          Resumes the last patrol
+2019-11-20 11:21:39:908 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2019-11-20 11:21:39:917   pauseTaskFail          Fails the pause task (if it's active)
+2019-11-20 11:21:39:927  pauseTaskState          Gets the state of the pause task
+2019-11-20 11:21:39:94            play          Plays the given wave file already on the robot
+2019-11-20 11:21:39:953     popupSimple          Creates a simple popup
+2019-11-20 11:21:39:966 queryDockStatus          Gets the docking status
+2019-11-20 11:21:39:982     queryMotors          Queries the state of the motors
+2019-11-20 11:21:39:994            quit          closes this connection to the server
+2019-11-20 11:21:40:012             say          Says the given string
+2019-11-20 11:21:40:024        shutdown          shuts down the robot
+2019-11-20 11:21:40:036          status          Gets the status of the robot
+2019-11-20 11:21:40:052            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2019-11-20 11:21:40:06            stop          Stops the robot
+2019-11-20 11:21:40:071 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2019-11-20 11:21:40:084 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2019-11-20 11:21:40:093 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2019-11-20 11:21:40:102 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2019-11-20 11:21:40:113 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2019-11-20 11:21:40:124       tripReset          Resets the trip values in the Data Store [tr]
+2019-11-20 11:21:40:134          undock          Undocks the robot (done automatically too)
+2019-11-20 11:21:40:143      updateInfo          updates a piece of information
+2019-11-20 11:21:40:155  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2019-11-20 11:21:40:164    waitTaskFail          Fails the wait task (if it's active)
+2019-11-20 11:21:40:21   waitTaskState          Gets the state of the wait task
+2019-11-20 11:21:40:226 End of commands
+2019-11-20 11:21:40:24 Unknown command 1111
+2019-11-20 11:21:40:253 Unknown command 1111
+2019-11-20 11:21:40:269 Unknown command 1111
+2019-11-20 11:21:40:281 Unknown command 1111
+2019-11-20 11:21:40:293 Unknown command 1111
+2019-11-20 11:21:40:307 Unknown command 1111
+2019-11-20 11:21:40:318 Unknown command 1111
+2019-11-20 11:21:40:329 Unknown command 1111
+2019-11-20 11:21:40:343 Unknown command 1111
+2019-11-20 11:22:24:679 Welcome to the server.
+2019-11-20 11:22:24:695 You can type 'help' at any time for the following help list.
+2019-11-20 11:22:24:71 Commands:
+2019-11-20 11:22:24:721 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-20 11:22:24:734 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-20 11:22:24:744 analogInputList          Lists the named analog inputs
+2019-11-20 11:22:24:757 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-20 11:22:24:767 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-20 11:22:24:777 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-20 11:22:24:787 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-20 11:22:24:8 applicationFaultClear          Clears an application fault [afc]
+2019-11-20 11:22:24:811 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-20 11:22:24:827 applicationFaultSet          Sets an application fault [afs]
+2019-11-20 11:22:24:835    arclSendText          Sends the given message to all ARCL clients
+2019-11-20 11:22:24:844   centralServer          Gets information about the central server connection
+2019-11-20 11:22:24:855 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-20 11:22:24:863      createInfo          creates a piece of information
+2019-11-20 11:22:24:87            dock          Sends the robot to the dock
+2019-11-20 11:22:24:88          doTask          does a task
+2019-11-20 11:22:24:89   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-20 11:22:24:898            echo          with no args gets echo, with args sets echo
+2019-11-20 11:22:24:905    enableMotors          Enables the motors so the robot can drive again
+2019-11-20 11:22:24:914    engageCancel          cancel engage state (without disengaging)
+2019-11-20 11:22:24:924 engageQueryState          query the engage state of a robot
+2019-11-20 11:22:24:933    executeMacro          executes a given macro
+2019-11-20 11:22:24:946 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-20 11:22:24:957        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-20 11:22:24:968 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-20 11:22:24:978 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-20 11:22:24:999 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-20 11:22:25:013 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-20 11:22:25:025 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-20 11:22:25:039 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-20 11:22:25:054     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-20 11:22:25:069       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-20 11:22:25:08 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-20 11:22:25:092 getConfigSectionList          Gets the list of sections in the config
+2019-11-20 11:22:25:1 getConfigSectionValues          Gets the values in a section of the config
+2019-11-20 11:22:25:11 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-20 11:22:25:118 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-20 11:22:25:128 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-20 11:22:25:138 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-20 11:22:25:146 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2019-11-20 11:22:25:16 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2019-11-20 11:22:25:17 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2019-11-20 11:22:25:186     getDateTime          gets the date and time
+2019-11-20 11:22:25:207        getGoals          gets a list of goals in the map (for use with goto)
+2019-11-20 11:22:25:218         getInfo          Gets a piece of information
+2019-11-20 11:22:25:227     getInfoList          Gets the list of info available from 'getInfo'
+2019-11-20 11:22:25:241       getMacros          gets a list of macros in the map (for use with executeMacro)
+2019-11-20 11:22:25:254 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2019-11-20 11:22:25:268  getPoseEncoder          Gets the encoder pose of the robot
+2019-11-20 11:22:25:277       getRoutes          gets the routes the robot has
+2019-11-20 11:22:25:288              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2019-11-20 11:22:25:298 goalDistanceRemaining          Gets the distance remaining to robots goals
+2019-11-20 11:22:25:308 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2019-11-20 11:22:25:32            help          gives the listing of available commands (optionally with prefix)
+2019-11-20 11:22:25:329       inputList          Lists the named digital inputs [inL]
+2019-11-20 11:22:25:341      inputQuery          Queries the state of a named digital input [inQ]
+2019-11-20 11:22:25:352  localizeAtGoal          Localizes to a given goal [lag]
+2019-11-20 11:22:25:364             log          Logs the message to the normal log file
+2019-11-20 11:22:25:376   mapObjectInfo          Gets the information about a map object specified by name.
+2019-11-20 11:22:25:387   mapObjectList          Gets a list the map objects of a given type.
+2019-11-20 11:22:25:405 mapObjectTypeInfo          Gets information about a particular type of map object.
+2019-11-20 11:22:25:418 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2019-11-20 11:22:25:435 mapObjectUpdate          Creates or updates a map object with the specified data.
+2019-11-20 11:22:25:458        modeLock          Locks the current mode
+2019-11-20 11:22:25:469       modeQuery          Queries the current mode and it's lock status
+2019-11-20 11:22:25:478      modeUnlock          Unlocks the current mode
+2019-11-20 11:22:25:488  newConfigParam          Adds a new param to the config (shows up in MP)
+2019-11-20 11:22:25:499 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2019-11-20 11:22:25:511 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2019-11-20 11:22:25:52 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2019-11-20 11:22:25:533        odometer          Shows the robot trip odometer
+2019-11-20 11:22:25:546   odometerReset          Resets the robot trip odometer
+2019-11-20 11:22:25:564   oneLineStatus          Gets the status of the robot on one line
+2019-11-20 11:22:25:577      outputList          Lists the named outputs [outL]
+2019-11-20 11:22:25:59       outputOff          Turns off a named digital output [outOff]
+2019-11-20 11:22:25:602        outputOn          Turns on a named digital output [outOn]
+2019-11-20 11:22:25:614     outputQuery          Queries the state of a named output [outQ]
+2019-11-20 11:22:25:627          patrol          patrols the given route
+2019-11-20 11:22:25:642      patrolOnce          Patrols the given route once, starts at optional index
+2019-11-20 11:22:25:658    patrolResume          Resumes the last patrol
+2019-11-20 11:22:25:679 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2019-11-20 11:22:25:7   pauseTaskFail          Fails the pause task (if it's active)
+2019-11-20 11:22:25:714  pauseTaskState          Gets the state of the pause task
+2019-11-20 11:22:25:728            play          Plays the given wave file already on the robot
+2019-11-20 11:22:25:74     popupSimple          Creates a simple popup
+2019-11-20 11:22:25:753 queryDockStatus          Gets the docking status
+2019-11-20 11:22:25:766     queryMotors          Queries the state of the motors
+2019-11-20 11:22:25:779            quit          closes this connection to the server
+2019-11-20 11:22:25:788             say          Says the given string
+2019-11-20 11:22:25:798        shutdown          shuts down the robot
+2019-11-20 11:22:25:807          status          Gets the status of the robot
+2019-11-20 11:22:25:818            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2019-11-20 11:22:25:829            stop          Stops the robot
+2019-11-20 11:22:25:838 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2019-11-20 11:22:25:872 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2019-11-20 11:22:25:882 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2019-11-20 11:22:25:897 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2019-11-20 11:22:25:911 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2019-11-20 11:22:25:924       tripReset          Resets the trip values in the Data Store [tr]
+2019-11-20 11:22:25:936          undock          Undocks the robot (done automatically too)
+2019-11-20 11:22:25:953      updateInfo          updates a piece of information
+2019-11-20 11:22:25:963  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2019-11-20 11:22:25:974    waitTaskFail          Fails the wait task (if it's active)
+2019-11-20 11:22:25:985   waitTaskState          Gets the state of the wait task
+2019-11-20 11:22:25:996 End of commands
+2019-11-20 11:22:26:008 Unknown command 1111
+2019-11-20 11:22:26:019 Unknown command 1111
+2019-11-20 11:22:26:03 Unknown command 1111
+2019-11-20 11:22:26:042 Unknown command 1111
+2019-11-20 11:22:26:053 Unknown command 1111
+2019-11-20 11:22:26:062 Unknown command 1111
+2019-11-20 11:22:26:072 Unknown command 1111
+2019-11-20 11:22:26:084 Unknown command 1111
+2019-11-20 11:22:26:093 Unknown command 1111

@@ -1,0 +1,38 @@
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\AMC Test.exe.config
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\AMC Test.exe
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\AMC Test.pdb
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\AdvancedHMIControls.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\AdvancedHMIDrivers.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Cognex.DataMan.CogNamer.PC.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Cognex.DataMan.SDK.Discovery.PC.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Cognex.DataMan.SDK.PC.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Cognex.DataMan.SDK.Utils.PC.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\log4net.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\MfgControl.AdvancedHMI.Controls.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\MfgControl.AdvancedHMI.Drivers.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Modbus.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Modbus.Extensions.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\nesslab.reader.api.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\OpcComRcw.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\OpcNetApi.Com.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\OpcNetApi.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\SocketGlobal.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\SuperSocket.ClientEngine.Common.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\SuperSocket.ClientEngine.Core.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\SuperSocket.ClientEngine.Protocol.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\SuperSocket.ClientEngine.Proxy.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\bin\Release\Unme.Common.dll
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.csprojAssemblyReference.cache
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.AMC_Monitor.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.Form1.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.HMI_Main.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.frmReconnecting.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.MainForm.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.Properties.Resources.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.RFID_Main.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC_Test.Save_Screen_frm.resources
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.csproj.GenerateResource.cache
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.csproj.CoreCompileInputs.cache
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.csproj.CopyComplete
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.exe
+D:\Amkor\AMC\AMC_Client\AMC Test\obj\Release\AMC Test.pdb

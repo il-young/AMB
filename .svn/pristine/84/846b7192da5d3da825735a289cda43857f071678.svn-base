@@ -1,0 +1,6 @@
+﻿GO 8"PI	goto 8PI	Y	Y
+GO DESCUM	goto DESCUM	Y	Y
+EMPTY
+EMPTY
+GO 12"PI	goto 12PI	Y	Y
+GO Cure	goto CURE	Y	Y

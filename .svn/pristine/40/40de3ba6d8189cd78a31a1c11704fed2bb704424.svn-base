@@ -1,0 +1,48 @@
+========================================================
+=                                                                                                            =
+=                                      AMC Log File 2019-11-26                                    =
+=                                                                                                            =
+========================================================
+2019-11-26 10:37:21:41 Welcome to the server.
+2019-11-26 10:37:21:475 You can type 'help' at any time for the following help list.
+2019-11-26 10:37:21:486 Commands:
+2019-11-26 10:37:21:495 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-26 10:37:21:502 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-26 10:37:21:513 analogInputList          Lists the named analog inputs
+2019-11-26 10:37:21:522 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-26 10:37:21:53 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-26 10:37:21:539 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-26 10:37:21:548 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-26 10:37:21:557 applicationFaultClear          Clears an application fault [afc]
+2019-11-26 10:37:21:566 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-26 10:37:21:576 applicationFaultSet          Sets an application fault [afs]
+2019-11-26 10:37:21:591    arclSendText          Sends the given message to all ARCL clients
+2019-11-26 10:37:21:603   centralServer          Gets information about the central server connection
+2019-11-26 10:37:21:616 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-26 10:37:21:628      createInfo          creates a piece of information
+2019-11-26 10:37:21:641            dock          Sends the robot to the dock
+2019-11-26 10:37:21:65          doTask          does a task
+2019-11-26 10:37:21:661   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-26 10:37:21:673            echo          with no args gets echo, with args sets echo
+2019-11-26 10:37:21:685    enableMotors          Enables the motors so the robot can drive again
+2019-11-26 10:37:21:695    engageCancel          cancel engage state (without disengaging)
+2019-11-26 10:37:21:709 engageQueryState          query the engage state of a robot
+2019-11-26 10:37:21:72    executeMacro          executes a given macro
+2019-11-26 10:37:21:733 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-26 10:37:21:75        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-26 10:37:21:785 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-26 10:37:21:801 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-26 10:37:21:817 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-26 10:37:21:829 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-26 10:37:21:843 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-26 10:37:21:856 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-26 10:37:21:879     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-26 10:37:21:926       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-26 10:37:21:944 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-26 10:37:21:966 getConfigSectionList          Gets the list of sections in the config
+2019-11-26 10:37:21:983 getConfigSectionValues          Gets the values in a section of the config
+2019-11-26 10:37:21:995 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-26 10:37:22:013 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-26 10:37:22:025 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-26 10:37:22:039 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-26 10:37:22:053 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]

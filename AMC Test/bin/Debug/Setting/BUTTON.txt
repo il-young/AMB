@@ -1,0 +1,6 @@
+﻿대기장소 이동	dock	Y	Y
+EMPTY
+GO QC	goto QC	Y	Y
+GO NABOO	goto NABOO	Y	Y
+GO C11 Loader	goto ONLOADER_C11	Y	Y
+GO C07 Loader	goto ONLOADER	Y	Y

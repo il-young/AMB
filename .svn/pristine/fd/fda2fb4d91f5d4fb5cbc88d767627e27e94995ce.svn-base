@@ -1,0 +1,1018 @@
+========================================================
+=                                                                                                            =
+=                                      AMC Log File 2019-11-14                                    =
+=                                                                                                            =
+========================================================
+2019-11-14 16:43:59:924 Welcome to the server.
+2019-11-14 16:44:00:115 You can type 'help' at any time for the following help list.
+2019-11-14 16:44:00:125 Commands:
+2019-11-14 16:44:00:133 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-14 16:44:00:146 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-14 16:44:00:158 analogInputList          Lists the named analog inputs
+2019-11-14 16:44:00:169 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-14 16:44:00:179 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-14 16:44:00:188 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-14 16:44:00:197 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-14 16:44:00:206 applicationFaultClear          Clears an application fault [afc]
+2019-11-14 16:44:00:218 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-14 16:44:00:227 applicationFaultSet          Sets an application fault [afs]
+2019-11-14 16:44:00:236    arclSendText          Sends the given message to all ARCL clients
+2019-11-14 16:44:00:25   centralServer          Gets information about the central server connection
+2019-11-14 16:44:00:265 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-14 16:44:00:274      createInfo          creates a piece of information
+2019-11-14 16:44:00:284            dock          Sends the robot to the dock
+2019-11-14 16:44:00:294          doTask          does a task
+2019-11-14 16:44:00:304   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-14 16:44:00:314            echo          with no args gets echo, with args sets echo
+2019-11-14 16:44:00:323    enableMotors          Enables the motors so the robot can drive again
+2019-11-14 16:44:00:332    engageCancel          cancel engage state (without disengaging)
+2019-11-14 16:44:00:343 engageQueryState          query the engage state of a robot
+2019-11-14 16:44:00:352    executeMacro          executes a given macro
+2019-11-14 16:44:00:361 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-14 16:44:00:373        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-14 16:44:00:385 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-14 16:44:00:407 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-14 16:44:00:423 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-14 16:44:00:441 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-14 16:44:00:457 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-14 16:44:00:471 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-14 16:44:00:484     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-14 16:44:00:498       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-14 16:44:00:513 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-14 16:44:00:526 getConfigSectionList          Gets the list of sections in the config
+2019-11-14 16:44:00:538 getConfigSectionValues          Gets the values in a section of the config
+2019-11-14 16:44:00:548 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-14 16:44:00:559 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-14 16:44:00:57 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-14 16:44:00:579 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-14 16:44:00:588 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2019-11-14 16:44:00:597 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2019-11-14 16:44:00:608 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2019-11-14 16:44:00:617     getDateTime          gets the date and time
+2019-11-14 16:44:00:626        getGoals          gets a list of goals in the map (for use with goto)
+2019-11-14 16:44:00:638         getInfo          Gets a piece of information
+2019-11-14 16:44:00:661     getInfoList          Gets the list of info available from 'getInfo'
+2019-11-14 16:44:00:676       getMacros          gets a list of macros in the map (for use with executeMacro)
+2019-11-14 16:44:00:688 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2019-11-14 16:44:00:701  getPoseEncoder          Gets the encoder pose of the robot
+2019-11-14 16:44:00:713       getRoutes          gets the routes the robot has
+2019-11-14 16:44:00:725              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2019-11-14 16:44:00:738 goalDistanceRemaining          Gets the distance remaining to robots goals
+2019-11-14 16:44:00:747 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2019-11-14 16:44:00:756            help          gives the listing of available commands (optionally with prefix)
+2019-11-14 16:44:00:765       inputList          Lists the named digital inputs [inL]
+2019-11-14 16:44:00:777      inputQuery          Queries the state of a named digital input [inQ]
+2019-11-14 16:44:00:789  localizeAtGoal          Localizes to a given goal [lag]
+2019-11-14 16:44:00:801             log          Logs the message to the normal log file
+2019-11-14 16:44:00:81   mapObjectInfo          Gets the information about a map object specified by name.
+2019-11-14 16:44:00:821   mapObjectList          Gets a list the map objects of a given type.
+2019-11-14 16:44:00:83 mapObjectTypeInfo          Gets information about a particular type of map object.
+2019-11-14 16:44:00:84 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2019-11-14 16:44:00:848 mapObjectUpdate          Creates or updates a map object with the specified data.
+2019-11-14 16:44:00:86        modeLock          Locks the current mode
+2019-11-14 16:44:00:874       modeQuery          Queries the current mode and it's lock status
+2019-11-14 16:44:00:888      modeUnlock          Unlocks the current mode
+2019-11-14 16:44:00:901  newConfigParam          Adds a new param to the config (shows up in MP)
+2019-11-14 16:44:00:917 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2019-11-14 16:44:00:928 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2019-11-14 16:44:00:94 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2019-11-14 16:44:00:952        odometer          Shows the robot trip odometer
+2019-11-14 16:44:00:966   odometerReset          Resets the robot trip odometer
+2019-11-14 16:44:00:986   oneLineStatus          Gets the status of the robot on one line
+2019-11-14 16:44:00:999      outputList          Lists the named outputs [outL]
+2019-11-14 16:44:01:012       outputOff          Turns off a named digital output [outOff]
+2019-11-14 16:44:01:025        outputOn          Turns on a named digital output [outOn]
+2019-11-14 16:44:01:038     outputQuery          Queries the state of a named output [outQ]
+2019-11-14 16:44:01:051          patrol          patrols the given route
+2019-11-14 16:44:01:067      patrolOnce          Patrols the given route once, starts at optional index
+2019-11-14 16:44:01:08    patrolResume          Resumes the last patrol
+2019-11-14 16:44:01:093 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2019-11-14 16:44:01:104   pauseTaskFail          Fails the pause task (if it's active)
+2019-11-14 16:44:01:118  pauseTaskState          Gets the state of the pause task
+2019-11-14 16:44:01:13            play          Plays the given wave file already on the robot
+2019-11-14 16:44:01:143     popupSimple          Creates a simple popup
+2019-11-14 16:44:01:158 queryDockStatus          Gets the docking status
+2019-11-14 16:44:01:169     queryMotors          Queries the state of the motors
+2019-11-14 16:44:01:178            quit          closes this connection to the server
+2019-11-14 16:44:01:188             say          Says the given string
+2019-11-14 16:44:01:199        shutdown          shuts down the robot
+2019-11-14 16:44:01:209          status          Gets the status of the robot
+2019-11-14 16:44:01:221            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2019-11-14 16:44:01:231            stop          Stops the robot
+2019-11-14 16:44:01:242 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2019-11-14 16:44:01:254 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2019-11-14 16:44:01:266 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2019-11-14 16:44:01:281 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2019-11-14 16:44:01:294 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2019-11-14 16:44:01:307       tripReset          Resets the trip values in the Data Store [tr]
+2019-11-14 16:44:01:318          undock          Undocks the robot (done automatically too)
+2019-11-14 16:44:01:33      updateInfo          updates a piece of information
+2019-11-14 16:44:01:342  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2019-11-14 16:44:01:353    waitTaskFail          Fails the wait task (if it's active)
+2019-11-14 16:44:01:362   waitTaskState          Gets the state of the wait task
+2019-11-14 16:44:01:375 End of commands
+2019-11-14 16:44:01:388 Unknown command 1111
+2019-11-14 16:44:01:4 Unknown command 1111
+2019-11-14 16:44:01:411 Unknown command 1111
+2019-11-14 16:44:01:422 Unknown command 1111
+2019-11-14 16:44:01:433 Unknown command 1111
+2019-11-14 16:44:01:444 Unknown command 1111
+2019-11-14 16:44:01:455 Unknown command 1111
+2019-11-14 16:44:01:469 Unknown command 1111
+2019-11-14 16:44:01:481 Unknown command 1111
+2019-11-14 16:44:03:997 Goal: Goal106
+2019-11-14 16:44:04:036 Goal: OFFICE2
+2019-11-14 16:44:04:045 Goal: STB1
+2019-11-14 16:44:04:052 Goal: PACK
+2019-11-14 16:44:04:06 Goal: 2F_ELV
+2019-11-14 16:44:04:068 End of goals
+2019-11-14 16:44:04:898 Executing macro Lamp_Green
+2019-11-14 16:44:04:953 Completed macro Lamp_Green
+2019-11-14 16:44:04:998 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:05:037 Status: Completed macro Lamp_Green
+2019-11-14 16:44:05:046 StateOfCharge: 95.0
+2019-11-14 16:44:05:059 Location: 31248 -84299 -179
+2019-11-14 16:44:05:068 LocalizationScore: 0.434783
+2019-11-14 16:44:05:076 Temperature: 46
+2019-11-14 16:44:06:035 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:06:046 Status: Completed macro Lamp_Green
+2019-11-14 16:44:06:055 StateOfCharge: 95.0
+2019-11-14 16:44:06:063 Location: 31248 -84299 -179
+2019-11-14 16:44:06:072 LocalizationScore: 0.434783
+2019-11-14 16:44:06:079 Temperature: 46
+2019-11-14 16:44:07:096 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:07:126 Status: Completed macro Lamp_Green
+2019-11-14 16:44:07:134 StateOfCharge: 95.0
+2019-11-14 16:44:07:146 Location: 31248 -84299 -179
+2019-11-14 16:44:07:158 LocalizationScore: 0.434783
+2019-11-14 16:44:07:17 Temperature: 46
+2019-11-14 16:44:08:097 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:08:14 Status: Completed macro Lamp_Green
+2019-11-14 16:44:08:15 StateOfCharge: 95.0
+2019-11-14 16:44:08:16 Location: 31248 -84299 -179
+2019-11-14 16:44:08:17 LocalizationScore: 0.434783
+2019-11-14 16:44:08:178 Temperature: 46
+2019-11-14 16:44:09:097 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:09:133 Status: Completed macro Lamp_Green
+2019-11-14 16:44:09:141 StateOfCharge: 95.0
+2019-11-14 16:44:09:149 Location: 31248 -84299 -179
+2019-11-14 16:44:09:157 LocalizationScore: 0.434783
+2019-11-14 16:44:09:165 Temperature: 46
+2019-11-14 16:44:10:238 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:10:246 Status: Completed macro Lamp_Green
+2019-11-14 16:44:10:254 StateOfCharge: 95.0
+2019-11-14 16:44:10:262 Location: 31248 -84299 -179
+2019-11-14 16:44:10:27 LocalizationScore: 0.434783
+2019-11-14 16:44:10:278 Temperature: 46
+2019-11-14 16:44:11:197 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:11:238 Status: Completed macro Lamp_Green
+2019-11-14 16:44:11:246 StateOfCharge: 95.0
+2019-11-14 16:44:11:254 Location: 31248 -84299 -179
+2019-11-14 16:44:11:262 LocalizationScore: 0.434783
+2019-11-14 16:44:11:27 Temperature: 46
+2019-11-14 16:44:12:197 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:12:222 Status: Completed macro Lamp_Green
+2019-11-14 16:44:12:231 StateOfCharge: 95.0
+2019-11-14 16:44:12:239 Location: 31248 -84299 -179
+2019-11-14 16:44:12:248 LocalizationScore: 0.434783
+2019-11-14 16:44:12:256 Temperature: 46
+2019-11-14 16:44:13:297 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:13:339 Status: Completed macro Lamp_Green
+2019-11-14 16:44:13:347 StateOfCharge: 95.0
+2019-11-14 16:44:13:356 Location: 31248 -84299 -179
+2019-11-14 16:44:13:366 LocalizationScore: 0.434783
+2019-11-14 16:44:13:375 Temperature: 46
+2019-11-14 16:44:14:297 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:14:325 Status: Completed macro Lamp_Green
+2019-11-14 16:44:14:333 StateOfCharge: 95.0
+2019-11-14 16:44:14:342 Location: 31248 -84299 -179
+2019-11-14 16:44:14:353 LocalizationScore: 0.434783
+2019-11-14 16:44:14:362 Temperature: 46
+2019-11-14 16:44:15:296 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:15:344 Status: Completed macro Lamp_Green
+2019-11-14 16:44:15:353 StateOfCharge: 95.0
+2019-11-14 16:44:15:361 Location: 31248 -84299 -179
+2019-11-14 16:44:15:369 LocalizationScore: 0.434783
+2019-11-14 16:44:15:378 Temperature: 46
+2019-11-14 16:44:16:399 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:16:439 Status: Completed macro Lamp_Green
+2019-11-14 16:44:16:448 StateOfCharge: 95.0
+2019-11-14 16:44:16:458 Location: 31248 -84299 -179
+2019-11-14 16:44:16:47 LocalizationScore: 0.434783
+2019-11-14 16:44:16:48 Temperature: 46
+2019-11-14 16:44:17:437 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:17:446 Status: Completed macro Lamp_Green
+2019-11-14 16:44:17:456 StateOfCharge: 95.0
+2019-11-14 16:44:17:465 Location: 31248 -84299 -179
+2019-11-14 16:44:17:476 LocalizationScore: 0.434783
+2019-11-14 16:44:17:487 Temperature: 46
+2019-11-14 16:44:18:397 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:18:434 Status: Completed macro Lamp_Green
+2019-11-14 16:44:18:444 StateOfCharge: 95.0
+2019-11-14 16:44:18:456 Location: 31248 -84299 -179
+2019-11-14 16:44:18:467 LocalizationScore: 0.434783
+2019-11-14 16:44:18:48 Temperature: 46
+2019-11-14 16:44:19:495 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:19:536 Status: Completed macro Lamp_Green
+2019-11-14 16:44:19:545 StateOfCharge: 95.0
+2019-11-14 16:44:19:553 Location: 31248 -84299 -179
+2019-11-14 16:44:19:562 LocalizationScore: 0.434783
+2019-11-14 16:44:19:572 Temperature: 46
+2019-11-14 16:44:20:496 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:20:539 Status: Completed macro Lamp_Green
+2019-11-14 16:44:20:552 StateOfCharge: 95.0
+2019-11-14 16:44:20:562 Location: 31248 -84299 -179
+2019-11-14 16:44:20:57 LocalizationScore: 0.434783
+2019-11-14 16:44:20:578 Temperature: 46
+2019-11-14 16:44:21:543 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:21:551 Status: Completed macro Lamp_Green
+2019-11-14 16:44:21:559 StateOfCharge: 95.0
+2019-11-14 16:44:21:568 Location: 31248 -84299 -179
+2019-11-14 16:44:21:576 LocalizationScore: 0.434783
+2019-11-14 16:44:21:584 Temperature: 46
+2019-11-14 16:44:22:597 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:22:628 Status: Completed macro Lamp_Green
+2019-11-14 16:44:22:637 StateOfCharge: 95.0
+2019-11-14 16:44:22:645 Location: 31248 -84299 -179
+2019-11-14 16:44:22:655 LocalizationScore: 0.434783
+2019-11-14 16:44:22:666 Temperature: 46
+2019-11-14 16:44:23:6 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:23:643 Status: Completed macro Lamp_Green
+2019-11-14 16:44:23:65 StateOfCharge: 95.0
+2019-11-14 16:44:23:659 Location: 31248 -84299 -179
+2019-11-14 16:44:23:668 LocalizationScore: 0.434783
+2019-11-14 16:44:23:677 Temperature: 46
+2019-11-14 16:44:24:597 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:24:638 Status: Completed macro Lamp_Green
+2019-11-14 16:44:24:646 StateOfCharge: 95.0
+2019-11-14 16:44:24:656 Location: 31248 -84299 -179
+2019-11-14 16:44:24:665 LocalizationScore: 0.434783
+2019-11-14 16:44:24:675 Temperature: 46
+2019-11-14 16:44:25:737 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:25:745 Status: Completed macro Lamp_Green
+2019-11-14 16:44:25:753 StateOfCharge: 95.0
+2019-11-14 16:44:25:762 Location: 31248 -84299 -179
+2019-11-14 16:44:25:771 LocalizationScore: 0.434783
+2019-11-14 16:44:25:781 Temperature: 46
+2019-11-14 16:44:26:697 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:26:738 Status: Completed macro Lamp_Green
+2019-11-14 16:44:26:747 StateOfCharge: 95.0
+2019-11-14 16:44:26:754 Location: 31248 -84299 -179
+2019-11-14 16:44:26:766 LocalizationScore: 0.434783
+2019-11-14 16:44:26:776 Temperature: 46
+2019-11-14 16:44:27:696 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:27:738 Status: Completed macro Lamp_Green
+2019-11-14 16:44:27:745 StateOfCharge: 95.0
+2019-11-14 16:44:27:753 Location: 31248 -84299 -179
+2019-11-14 16:44:27:761 LocalizationScore: 0.434783
+2019-11-14 16:44:27:77 Temperature: 46
+2019-11-14 16:44:28:797 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:28:836 Status: Completed macro Lamp_Green
+2019-11-14 16:44:28:844 StateOfCharge: 95.0
+2019-11-14 16:44:28:852 Location: 31248 -84299 -179
+2019-11-14 16:44:28:86 LocalizationScore: 0.434783
+2019-11-14 16:44:28:869 Temperature: 46
+2019-11-14 16:44:29:815 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:29:823 Status: Completed macro Lamp_Green
+2019-11-14 16:44:29:832 StateOfCharge: 95.0
+2019-11-14 16:44:29:844 Location: 31248 -84299 -179
+2019-11-14 16:44:29:852 LocalizationScore: 0.434783
+2019-11-14 16:44:29:86 Temperature: 46
+2019-11-14 16:44:30:818 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:30:847 Status: Completed macro Lamp_Green
+2019-11-14 16:44:30:855 StateOfCharge: 95.0
+2019-11-14 16:44:30:863 Location: 31248 -84299 -179
+2019-11-14 16:44:30:872 LocalizationScore: 0.434783
+2019-11-14 16:44:30:881 Temperature: 46
+2019-11-14 16:44:31:899 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:31:939 Status: Completed macro Lamp_Green
+2019-11-14 16:44:31:96 StateOfCharge: 95.0
+2019-11-14 16:44:31:97 Location: 31248 -84299 -179
+2019-11-14 16:44:31:979 LocalizationScore: 0.434783
+2019-11-14 16:44:31:988 Temperature: 46
+2019-11-14 16:44:32:928 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:32:937 Status: Completed macro Lamp_Green
+2019-11-14 16:44:32:948 StateOfCharge: 95.0
+2019-11-14 16:44:32:957 Location: 31248 -84299 -179
+2019-11-14 16:44:32:967 LocalizationScore: 0.434783
+2019-11-14 16:44:32:978 Temperature: 46
+2019-11-14 16:44:33:999 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:34:033 Status: Completed macro Lamp_Green
+2019-11-14 16:44:34:04 StateOfCharge: 95.0
+2019-11-14 16:44:34:051 Location: 31248 -84299 -179
+2019-11-14 16:44:34:067 LocalizationScore: 0.434783
+2019-11-14 16:44:34:074 Temperature: 46
+2019-11-14 16:44:34:996 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:35:038 Status: Completed macro Lamp_Green
+2019-11-14 16:44:35:053 StateOfCharge: 95.0
+2019-11-14 16:44:35:072 Location: 31248 -84299 -179
+2019-11-14 16:44:35:084 LocalizationScore: 0.434783
+2019-11-14 16:44:35:091 Temperature: 46
+2019-11-14 16:44:36:005 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:36:036 Status: Completed macro Lamp_Green
+2019-11-14 16:44:36:045 StateOfCharge: 95.0
+2019-11-14 16:44:36:06 Location: 31248 -84299 -179
+2019-11-14 16:44:36:07 LocalizationScore: 0.434783
+2019-11-14 16:44:36:081 Temperature: 46
+2019-11-14 16:44:37:143 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:37:151 Status: Completed macro Lamp_Green
+2019-11-14 16:44:37:16 StateOfCharge: 95.0
+2019-11-14 16:44:37:168 Location: 31248 -84299 -179
+2019-11-14 16:44:37:178 LocalizationScore: 0.434783
+2019-11-14 16:44:37:189 Temperature: 46
+2019-11-14 16:44:38:095 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:44:38:126 Status: Completed macro Lamp_Green
+2019-11-14 16:44:38:134 StateOfCharge: 95.0
+2019-11-14 16:44:38:144 Location: 31248 -84299 -179
+2019-11-14 16:44:38:155 LocalizationScore: 0.434783
+2019-11-14 16:44:38:163 Temperature: 46
+2019-11-14 16:44:39:014 Teleop driving unsafely
+2019-11-14 16:44:39:197 ExtendedStatusForHumans: Stopped
+2019-11-14 16:44:39:236 Status: Teleop driving unsafely
+2019-11-14 16:44:39:245 StateOfCharge: 95.0
+2019-11-14 16:44:39:26 Location: 31248 -84299 -179
+2019-11-14 16:44:39:274 LocalizationScore: 0.434783
+2019-11-14 16:44:39:284 Temperature: 46
+2019-11-14 16:44:40:197 ExtendedStatusForHumans: Driving
+2019-11-14 16:44:40:237 Status: Teleop driving unsafely
+2019-11-14 16:44:40:245 StateOfCharge: 95.0
+2019-11-14 16:44:40:253 Location: 31334 -84297 -179
+2019-11-14 16:44:40:264 LocalizationScore: 0.434783
+2019-11-14 16:44:40:274 Temperature: 46
+2019-11-14 16:44:41:246 ExtendedStatusForHumans: Driving
+2019-11-14 16:44:41:254 Status: Teleop driving unsafely
+2019-11-14 16:44:41:262 StateOfCharge: 95.0
+2019-11-14 16:44:41:271 Location: 31433 -84294 -179
+2019-11-14 16:44:41:279 LocalizationScore: 0.434783
+2019-11-14 16:44:41:287 Temperature: 46
+2019-11-14 16:44:42:295 ExtendedStatusForHumans: Driving
+2019-11-14 16:44:42:324 Status: Teleop driving unsafely
+2019-11-14 16:44:42:332 StateOfCharge: 95.0
+2019-11-14 16:44:42:341 Location: 31542 -84291 -179
+2019-11-14 16:44:42:351 LocalizationScore: 0.434783
+2019-11-14 16:44:42:361 Temperature: 46
+2019-11-14 16:44:42:916 DockingState: Undocked ForcedState: Unforced ChargeState: Bulk
+2019-11-14 16:44:42:937 DockingState: Docked ForcedState: Unforced ChargeState: Bulk
+2019-11-14 16:44:43:029 DockingState: Docked ForcedState: Unforced ChargeState: Bulk
+2019-11-14 16:44:43:198 DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:43:297 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:43:34 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:43:348 StateOfCharge: 95.0
+2019-11-14 16:44:43:356 Location: 31645 -84290 -179
+2019-11-14 16:44:43:364 LocalizationScore: 0.459330
+2019-11-14 16:44:43:383 Temperature: 46
+2019-11-14 16:44:44:296 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:44:321 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:44:329 StateOfCharge: 95.0
+2019-11-14 16:44:44:337 Location: 31648 -84290 -179
+2019-11-14 16:44:44:345 LocalizationScore: 0.459330
+2019-11-14 16:44:44:353 Temperature: 46
+2019-11-14 16:44:45:442 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:45:457 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:45:48 StateOfCharge: 95.0
+2019-11-14 16:44:45:492 Location: 31648 -84290 -179
+2019-11-14 16:44:45:502 LocalizationScore: 0.459330
+2019-11-14 16:44:45:51 Temperature: 46
+2019-11-14 16:44:46:399 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:46:442 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:46:453 StateOfCharge: 95.0
+2019-11-14 16:44:46:462 Location: 31648 -84290 -179
+2019-11-14 16:44:46:47 LocalizationScore: 0.459330
+2019-11-14 16:44:46:484 Temperature: 46
+2019-11-14 16:44:47:397 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:47:427 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:47:436 StateOfCharge: 95.0
+2019-11-14 16:44:47:445 Location: 31648 -84290 -179
+2019-11-14 16:44:47:459 LocalizationScore: 0.459330
+2019-11-14 16:44:47:473 Temperature: 46
+2019-11-14 16:44:48:497 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:48:543 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:48:559 StateOfCharge: 95.0
+2019-11-14 16:44:48:571 Location: 31648 -84290 -179
+2019-11-14 16:44:48:579 LocalizationScore: 0.459330
+2019-11-14 16:44:48:587 Temperature: 46
+2019-11-14 16:44:49:496 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:49:522 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:49:531 StateOfCharge: 95.0
+2019-11-14 16:44:49:54 Location: 31648 -84290 -179
+2019-11-14 16:44:49:548 LocalizationScore: 0.459330
+2019-11-14 16:44:49:559 Temperature: 46
+2019-11-14 16:44:50:496 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:50:536 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:50:544 StateOfCharge: 95.0
+2019-11-14 16:44:50:554 Location: 31648 -84290 -179
+2019-11-14 16:44:50:563 LocalizationScore: 0.459330
+2019-11-14 16:44:50:571 Temperature: 46
+2019-11-14 16:44:51:596 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:51:637 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:51:646 StateOfCharge: 95.0
+2019-11-14 16:44:51:659 Location: 31648 -84290 -179
+2019-11-14 16:44:51:688 LocalizationScore: 0.459330
+2019-11-14 16:44:51:697 Temperature: 46
+2019-11-14 16:44:52:64 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:52:648 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:52:655 StateOfCharge: 95.0
+2019-11-14 16:44:52:666 Location: 31648 -84290 -179
+2019-11-14 16:44:52:675 LocalizationScore: 0.459330
+2019-11-14 16:44:52:686 Temperature: 46
+2019-11-14 16:44:53:595 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:53:637 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:53:645 StateOfCharge: 95.0
+2019-11-14 16:44:53:653 Location: 31648 -84290 -179
+2019-11-14 16:44:53:664 LocalizationScore: 0.459330
+2019-11-14 16:44:53:675 Temperature: 46
+2019-11-14 16:44:54:696 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:54:738 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:54:751 StateOfCharge: 95.0
+2019-11-14 16:44:54:761 Location: 31648 -84290 -179
+2019-11-14 16:44:54:774 LocalizationScore: 0.459330
+2019-11-14 16:44:54:789 Temperature: 46
+2019-11-14 16:44:55:696 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:55:738 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:55:746 StateOfCharge: 95.0
+2019-11-14 16:44:55:754 Location: 31648 -84290 -179
+2019-11-14 16:44:55:762 LocalizationScore: 0.459330
+2019-11-14 16:44:55:772 Temperature: 46
+2019-11-14 16:44:56:721 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:56:729 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:56:737 StateOfCharge: 95.0
+2019-11-14 16:44:56:745 Location: 31648 -84290 -179
+2019-11-14 16:44:56:752 LocalizationScore: 0.459330
+2019-11-14 16:44:56:76 Temperature: 46
+2019-11-14 16:44:57:714 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:57:739 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:57:747 StateOfCharge: 95.0
+2019-11-14 16:44:57:755 Location: 31648 -84290 -179
+2019-11-14 16:44:57:763 LocalizationScore: 0.459330
+2019-11-14 16:44:57:771 Temperature: 46
+2019-11-14 16:44:58:794 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:58:836 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:58:843 StateOfCharge: 95.0
+2019-11-14 16:44:58:852 Location: 31648 -84290 -179
+2019-11-14 16:44:58:862 LocalizationScore: 0.459330
+2019-11-14 16:44:58:877 Temperature: 46
+2019-11-14 16:44:59:796 ExtendedStatusForHumans: Docked
+2019-11-14 16:44:59:821 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:44:59:829 StateOfCharge: 95.0
+2019-11-14 16:44:59:837 Location: 31648 -84290 -179
+2019-11-14 16:44:59:845 LocalizationScore: 0.459330
+2019-11-14 16:44:59:853 Temperature: 46
+2019-11-14 16:45:00:944 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:00:955 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:00:967 StateOfCharge: 95.0
+2019-11-14 16:45:00:977 Location: 31648 -84290 -179
+2019-11-14 16:45:00:988 LocalizationScore: 0.459330
+2019-11-14 16:45:00:998 Temperature: 46
+2019-11-14 16:45:01:898 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:01:939 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:01:95 StateOfCharge: 95.0
+2019-11-14 16:45:01:96 Location: 31648 -84290 -179
+2019-11-14 16:45:01:973 LocalizationScore: 0.459330
+2019-11-14 16:45:01:983 Temperature: 46
+2019-11-14 16:45:02:898 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:02:939 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:02:947 StateOfCharge: 95.0
+2019-11-14 16:45:02:96 Location: 31648 -84290 -179
+2019-11-14 16:45:02:97 LocalizationScore: 0.459330
+2019-11-14 16:45:02:987 Temperature: 46
+2019-11-14 16:45:03:945 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:03:956 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:03:968 StateOfCharge: 95.0
+2019-11-14 16:45:03:976 Location: 31648 -84290 -179
+2019-11-14 16:45:03:985 LocalizationScore: 0.459330
+2019-11-14 16:45:03:992 Temperature: 46
+2019-11-14 16:45:04:997 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:05:023 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:05:031 StateOfCharge: 95.0
+2019-11-14 16:45:05:039 Location: 31648 -84290 -179
+2019-11-14 16:45:05:048 LocalizationScore: 0.459330
+2019-11-14 16:45:05:055 Temperature: 46
+2019-11-14 16:45:05:996 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:06:037 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:06:045 StateOfCharge: 95.0
+2019-11-14 16:45:06:054 Location: 31648 -84290 -179
+2019-11-14 16:45:06:061 LocalizationScore: 0.459330
+2019-11-14 16:45:06:069 Temperature: 46
+2019-11-14 16:45:07:007 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:07:045 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:07:053 StateOfCharge: 95.0
+2019-11-14 16:45:07:062 Location: 31648 -84290 -179
+2019-11-14 16:45:07:069 LocalizationScore: 0.459330
+2019-11-14 16:45:07:077 Temperature: 46
+2019-11-14 16:45:08:139 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:08:147 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:08:155 StateOfCharge: 95.0
+2019-11-14 16:45:08:163 Location: 31648 -84290 -179
+2019-11-14 16:45:08:17 LocalizationScore: 0.459330
+2019-11-14 16:45:08:179 Temperature: 46
+2019-11-14 16:45:09:096 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:09:124 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:09:132 StateOfCharge: 95.0
+2019-11-14 16:45:09:14 Location: 31648 -84290 -179
+2019-11-14 16:45:09:148 LocalizationScore: 0.459330
+2019-11-14 16:45:09:157 Temperature: 46
+2019-11-14 16:45:10:11 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:10:135 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:10:143 StateOfCharge: 95.0
+2019-11-14 16:45:10:152 Location: 31648 -84290 -179
+2019-11-14 16:45:10:162 LocalizationScore: 0.459330
+2019-11-14 16:45:10:17 Temperature: 46
+2019-11-14 16:45:11:195 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:11:235 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:11:244 StateOfCharge: 95.0
+2019-11-14 16:45:11:252 Location: 31648 -84290 -179
+2019-11-14 16:45:11:261 LocalizationScore: 0.459330
+2019-11-14 16:45:11:268 Temperature: 46
+2019-11-14 16:45:12:256 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:12:264 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:12:272 StateOfCharge: 95.1
+2019-11-14 16:45:12:281 Location: 31648 -84290 -179
+2019-11-14 16:45:12:289 LocalizationScore: 0.459330
+2019-11-14 16:45:12:297 Temperature: 46
+2019-11-14 16:45:13:295 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:13:335 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:13:343 StateOfCharge: 95.1
+2019-11-14 16:45:13:354 Location: 31648 -84290 -179
+2019-11-14 16:45:13:363 LocalizationScore: 0.459330
+2019-11-14 16:45:13:376 Temperature: 46
+2019-11-14 16:45:14:295 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:14:336 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:14:344 StateOfCharge: 95.1
+2019-11-14 16:45:14:352 Location: 31648 -84290 -179
+2019-11-14 16:45:14:36 LocalizationScore: 0.459330
+2019-11-14 16:45:14:368 Temperature: 46
+2019-11-14 16:45:15:3 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:15:344 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:15:481 StateOfCharge: 95.1
+2019-11-14 16:45:15:587 Location: 31648 -84290 -179
+2019-11-14 16:45:15:634 LocalizationScore: 0.459330
+2019-11-14 16:45:15:665 Temperature: 46
+2019-11-14 16:45:16:424 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:16:433 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:16:45 StateOfCharge: 95.1
+2019-11-14 16:45:16:463 Location: 31648 -84290 -179
+2019-11-14 16:45:16:476 LocalizationScore: 0.459330
+2019-11-14 16:45:16:486 Temperature: 46
+2019-11-14 16:45:17:396 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:17:455 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:17:467 StateOfCharge: 95.1
+2019-11-14 16:45:17:478 Location: 31648 -84290 -179
+2019-11-14 16:45:17:489 LocalizationScore: 0.459330
+2019-11-14 16:45:17:498 Temperature: 46
+2019-11-14 16:45:18:423 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:18:472 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:18:485 StateOfCharge: 95.1
+2019-11-14 16:45:18:495 Location: 31648 -84290 -179
+2019-11-14 16:45:18:507 LocalizationScore: 0.459330
+2019-11-14 16:45:18:517 Temperature: 46
+2019-11-14 16:45:19:495 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:19:54 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:19:549 StateOfCharge: 95.1
+2019-11-14 16:45:19:558 Location: 31648 -84290 -179
+2019-11-14 16:45:19:567 LocalizationScore: 0.459330
+2019-11-14 16:45:19:577 Temperature: 46
+2019-11-14 16:45:20:495 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:20:525 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:20:533 StateOfCharge: 95.1
+2019-11-14 16:45:20:541 Location: 31648 -84290 -179
+2019-11-14 16:45:20:549 LocalizationScore: 0.459330
+2019-11-14 16:45:20:557 Temperature: 46
+2019-11-14 16:45:21:595 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:21:635 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:21:647 StateOfCharge: 95.1
+2019-11-14 16:45:21:658 Location: 31648 -84290 -179
+2019-11-14 16:45:21:67 LocalizationScore: 0.459330
+2019-11-14 16:45:21:679 Temperature: 46
+2019-11-14 16:45:22:595 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:22:635 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:22:648 StateOfCharge: 95.1
+2019-11-14 16:45:22:659 Location: 31648 -84290 -179
+2019-11-14 16:45:22:668 LocalizationScore: 0.459330
+2019-11-14 16:45:22:676 Temperature: 46
+2019-11-14 16:45:23:643 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:23:652 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:23:66 StateOfCharge: 95.1
+2019-11-14 16:45:23:669 Location: 31648 -84290 -179
+2019-11-14 16:45:23:682 LocalizationScore: 0.459330
+2019-11-14 16:45:23:692 Temperature: 46
+2019-11-14 16:45:24:695 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:24:721 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:24:732 StateOfCharge: 95.1
+2019-11-14 16:45:24:742 Location: 31648 -84290 -179
+2019-11-14 16:45:24:752 LocalizationScore: 0.459330
+2019-11-14 16:45:24:762 Temperature: 46
+2019-11-14 16:45:25:695 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:25:737 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:25:745 StateOfCharge: 95.1
+2019-11-14 16:45:25:753 Location: 31648 -84290 -179
+2019-11-14 16:45:25:765 LocalizationScore: 0.459330
+2019-11-14 16:45:25:772 Temperature: 46
+2019-11-14 16:45:26:695 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:26:736 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:26:744 StateOfCharge: 95.1
+2019-11-14 16:45:26:752 Location: 31648 -84290 -179
+2019-11-14 16:45:26:76 LocalizationScore: 0.459330
+2019-11-14 16:45:26:768 Temperature: 46
+2019-11-14 16:45:27:846 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:27:855 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:27:864 StateOfCharge: 95.1
+2019-11-14 16:45:27:875 Location: 31648 -84290 -179
+2019-11-14 16:45:27:887 LocalizationScore: 0.459330
+2019-11-14 16:45:27:896 Temperature: 46
+2019-11-14 16:45:28:796 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:28:822 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:28:836 StateOfCharge: 95.1
+2019-11-14 16:45:28:845 Location: 31648 -84290 -179
+2019-11-14 16:45:28:852 LocalizationScore: 0.459330
+2019-11-14 16:45:28:861 Temperature: 46
+2019-11-14 16:45:29:796 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:29:822 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:29:83 StateOfCharge: 95.1
+2019-11-14 16:45:29:838 Location: 31648 -84290 -179
+2019-11-14 16:45:29:848 LocalizationScore: 0.459330
+2019-11-14 16:45:29:856 Temperature: 46
+2019-11-14 16:45:30:895 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:30:938 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:30:953 StateOfCharge: 95.1
+2019-11-14 16:45:30:962 Location: 31648 -84290 -179
+2019-11-14 16:45:30:974 LocalizationScore: 0.459330
+2019-11-14 16:45:30:986 Temperature: 46
+2019-11-14 16:45:31:946 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:31:957 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:31:974 StateOfCharge: 95.1
+2019-11-14 16:45:31:986 Location: 31648 -84290 -179
+2019-11-14 16:45:31:995 LocalizationScore: 0.459330
+2019-11-14 16:45:32:006 Temperature: 46
+2019-11-14 16:45:32:895 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:32:935 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:32:945 StateOfCharge: 95.1
+2019-11-14 16:45:32:955 Location: 31648 -84290 -179
+2019-11-14 16:45:32:965 LocalizationScore: 0.459330
+2019-11-14 16:45:32:974 Temperature: 46
+2019-11-14 16:45:33:925 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:33:957 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:33:966 StateOfCharge: 95.1
+2019-11-14 16:45:33:976 Location: 31648 -84290 -179
+2019-11-14 16:45:33:987 LocalizationScore: 0.459330
+2019-11-14 16:45:33:997 Temperature: 46
+2019-11-14 16:45:34:995 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:35:041 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:35:049 StateOfCharge: 95.1
+2019-11-14 16:45:35:059 Location: 31648 -84290 -179
+2019-11-14 16:45:35:067 LocalizationScore: 0.459330
+2019-11-14 16:45:35:08 Temperature: 46
+2019-11-14 16:45:36:119 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:36:13 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:36:141 StateOfCharge: 95.1
+2019-11-14 16:45:36:154 Location: 31648 -84290 -179
+2019-11-14 16:45:36:163 LocalizationScore: 0.459330
+2019-11-14 16:45:36:175 Temperature: 46
+2019-11-14 16:45:37:1 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:37:141 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:37:149 StateOfCharge: 95.2
+2019-11-14 16:45:37:158 Location: 31648 -84290 -179
+2019-11-14 16:45:37:166 LocalizationScore: 0.459330
+2019-11-14 16:45:37:176 Temperature: 46
+2019-11-14 16:45:38:113 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:38:142 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:38:152 StateOfCharge: 95.2
+2019-11-14 16:45:38:16 Location: 31648 -84290 -179
+2019-11-14 16:45:38:169 LocalizationScore: 0.459330
+2019-11-14 16:45:38:178 Temperature: 46
+2019-11-14 16:45:39:239 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:39:252 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:39:263 StateOfCharge: 95.2
+2019-11-14 16:45:39:271 Location: 31648 -84290 -179
+2019-11-14 16:45:39:282 LocalizationScore: 0.459330
+2019-11-14 16:45:39:29 Temperature: 46
+2019-11-14 16:45:40:197 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:40:222 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:40:23 StateOfCharge: 95.2
+2019-11-14 16:45:40:238 Location: 31648 -84290 -179
+2019-11-14 16:45:40:246 LocalizationScore: 0.459330
+2019-11-14 16:45:40:255 Temperature: 46
+2019-11-14 16:45:41:206 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:41:237 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:41:246 StateOfCharge: 95.2
+2019-11-14 16:45:41:253 Location: 31648 -84290 -179
+2019-11-14 16:45:41:264 LocalizationScore: 0.459330
+2019-11-14 16:45:41:273 Temperature: 46
+2019-11-14 16:45:42:296 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:42:337 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:42:345 StateOfCharge: 95.2
+2019-11-14 16:45:42:353 Location: 31648 -84290 -179
+2019-11-14 16:45:42:367 LocalizationScore: 0.459330
+2019-11-14 16:45:42:378 Temperature: 46
+2019-11-14 16:45:43:339 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:43:349 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:43:357 StateOfCharge: 95.2
+2019-11-14 16:45:43:366 Location: 31648 -84290 -179
+2019-11-14 16:45:43:375 LocalizationScore: 0.459330
+2019-11-14 16:45:43:388 Temperature: 46
+2019-11-14 16:45:44:301 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:44:327 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:44:335 StateOfCharge: 95.2
+2019-11-14 16:45:44:343 Location: 31648 -84290 -179
+2019-11-14 16:45:44:351 LocalizationScore: 0.459330
+2019-11-14 16:45:44:359 Temperature: 46
+2019-11-14 16:45:45:396 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:45:437 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:45:447 StateOfCharge: 95.2
+2019-11-14 16:45:45:458 Location: 31648 -84290 -179
+2019-11-14 16:45:45:47 LocalizationScore: 0.459330
+2019-11-14 16:45:45:481 Temperature: 46
+2019-11-14 16:45:46:395 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:46:436 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:46:446 StateOfCharge: 95.2
+2019-11-14 16:45:46:455 Location: 31648 -84290 -179
+2019-11-14 16:45:46:47 LocalizationScore: 0.459330
+2019-11-14 16:45:46:484 Temperature: 46
+2019-11-14 16:45:47:434 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:47:442 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:47:453 StateOfCharge: 95.2
+2019-11-14 16:45:47:466 Location: 31648 -84290 -179
+2019-11-14 16:45:47:478 LocalizationScore: 0.459330
+2019-11-14 16:45:47:487 Temperature: 46
+2019-11-14 16:45:48:495 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:48:538 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:48:547 StateOfCharge: 95.2
+2019-11-14 16:45:48:556 Location: 31648 -84290 -179
+2019-11-14 16:45:48:563 LocalizationScore: 0.459330
+2019-11-14 16:45:48:572 Temperature: 46
+2019-11-14 16:45:49:495 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:49:536 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:49:546 StateOfCharge: 95.2
+2019-11-14 16:45:49:553 Location: 31648 -84290 -179
+2019-11-14 16:45:49:565 LocalizationScore: 0.459330
+2019-11-14 16:45:49:575 Temperature: 46
+2019-11-14 16:45:50:559 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:50:567 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:50:575 StateOfCharge: 95.2
+2019-11-14 16:45:50:585 Location: 31648 -84290 -179
+2019-11-14 16:45:50:593 LocalizationScore: 0.459330
+2019-11-14 16:45:50:604 Temperature: 46
+2019-11-14 16:45:51:596 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:51:626 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:51:634 StateOfCharge: 95.2
+2019-11-14 16:45:51:643 Location: 31648 -84290 -179
+2019-11-14 16:45:51:65 LocalizationScore: 0.459330
+2019-11-14 16:45:51:659 Temperature: 46
+2019-11-14 16:45:52:595 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:52:637 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:52:646 StateOfCharge: 95.2
+2019-11-14 16:45:52:655 Location: 31648 -84290 -179
+2019-11-14 16:45:52:662 LocalizationScore: 0.459330
+2019-11-14 16:45:52:67 Temperature: 46
+2019-11-14 16:45:53:594 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:53:636 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:53:647 StateOfCharge: 95.2
+2019-11-14 16:45:53:661 Location: 31648 -84290 -179
+2019-11-14 16:45:53:672 LocalizationScore: 0.459330
+2019-11-14 16:45:53:681 Temperature: 46
+2019-11-14 16:45:54:695 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:54:736 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:54:745 StateOfCharge: 95.2
+2019-11-14 16:45:54:755 Location: 31648 -84290 -179
+2019-11-14 16:45:54:774 LocalizationScore: 0.459330
+2019-11-14 16:45:54:781 Temperature: 46
+2019-11-14 16:45:55:695 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:55:726 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:55:736 StateOfCharge: 95.2
+2019-11-14 16:45:55:747 Location: 31648 -84290 -179
+2019-11-14 16:45:55:756 LocalizationScore: 0.459330
+2019-11-14 16:45:55:765 Temperature: 46
+2019-11-14 16:45:56:7 ExtendedStatusForHumans: Docked
+2019-11-14 16:45:56:727 Status: DockingState: Docked ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:56:738 StateOfCharge: 95.2
+2019-11-14 16:45:56:747 Location: 31648 -84290 -179
+2019-11-14 16:45:56:759 LocalizationScore: 0.459330
+2019-11-14 16:45:56:769 Temperature: 46
+2019-11-14 16:45:57:495 DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:57:643 DockingState: Undocking ForcedState: Unforced ChargeState: Not
+2019-11-14 16:45:57:695 DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:57:799 ExtendedStatusForHumans: Undocking
+2019-11-14 16:45:57:84 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:57:849 StateOfCharge: 95.2
+2019-11-14 16:45:57:857 Location: 31648 -84290 -179
+2019-11-14 16:45:57:865 LocalizationScore: 0.459330
+2019-11-14 16:45:57:874 Temperature: 46
+2019-11-14 16:45:58:84 ExtendedStatusForHumans: Undocking
+2019-11-14 16:45:58:848 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:58:856 StateOfCharge: 95.2
+2019-11-14 16:45:58:865 Location: 31648 -84290 -179
+2019-11-14 16:45:58:877 LocalizationScore: 0.459330
+2019-11-14 16:45:58:892 Temperature: 46
+2019-11-14 16:45:59:796 ExtendedStatusForHumans: Undocking
+2019-11-14 16:45:59:836 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:45:59:844 StateOfCharge: 95.2
+2019-11-14 16:45:59:857 Location: 31648 -84290 -179
+2019-11-14 16:45:59:867 LocalizationScore: 0.459330
+2019-11-14 16:45:59:879 Temperature: 46
+2019-11-14 16:46:00:81 ExtendedStatusForHumans: Undocking
+2019-11-14 16:46:00:841 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Overcharge
+2019-11-14 16:46:00:85 StateOfCharge: 95.2
+2019-11-14 16:46:00:859 Location: 31648 -84290 -179
+2019-11-14 16:46:00:867 LocalizationScore: 0.459330
+2019-11-14 16:46:00:881 Temperature: 46
+2019-11-14 16:46:01:519 DockingState: Undocking ForcedState: Unforced ChargeState: Not
+2019-11-14 16:46:01:624 DockingState: Undocking ForcedState: Unforced ChargeState: Bulk
+2019-11-14 16:46:01:849 DockingState: Undocking ForcedState: Unforced ChargeState: Not
+2019-11-14 16:46:01:896 ExtendedStatusForHumans: Undocking
+2019-11-14 16:46:01:954 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Not
+2019-11-14 16:46:01:966 StateOfCharge: 95.2
+2019-11-14 16:46:01:977 Location: 31511 -84292 -179
+2019-11-14 16:46:01:99 LocalizationScore: 0.459330
+2019-11-14 16:46:01:998 Temperature: 46
+2019-11-14 16:46:02:937 ExtendedStatusForHumans: Undocking
+2019-11-14 16:46:02:948 Status: DockingState: Undocking ForcedState: Unforced ChargeState: Not
+2019-11-14 16:46:02:959 StateOfCharge: 95.2
+2019-11-14 16:46:02:971 Location: 31290 -84300 -179
+2019-11-14 16:46:02:981 LocalizationScore: 0.437500
+2019-11-14 16:46:02:992 Temperature: 46
+2019-11-14 16:46:03:428 DockingState: Undocked ForcedState: Unforced ChargeState: Not
+2019-11-14 16:46:03:461 Executing macro Latch
+2019-11-14 16:46:03:908 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:03:937 Status: Executing macro Latch
+2019-11-14 16:46:03:946 StateOfCharge: 95.2
+2019-11-14 16:46:03:955 Location: 31252 -84301 -179
+2019-11-14 16:46:03:964 LocalizationScore: 0.437500
+2019-11-14 16:46:03:976 Temperature: 46
+2019-11-14 16:46:04:996 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:05:038 Status: Executing macro Latch
+2019-11-14 16:46:05:05 StateOfCharge: 95.2
+2019-11-14 16:46:05:062 Location: 31252 -84301 -179
+2019-11-14 16:46:05:073 LocalizationScore: 0.437500
+2019-11-14 16:46:05:084 Temperature: 46
+2019-11-14 16:46:06:039 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:06:047 Status: Executing macro Latch
+2019-11-14 16:46:06:054 StateOfCharge: 95.2
+2019-11-14 16:46:06:065 Location: 31252 -84301 -179
+2019-11-14 16:46:06:073 LocalizationScore: 0.437500
+2019-11-14 16:46:06:084 Temperature: 46
+2019-11-14 16:46:07:008 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:07:039 Status: Executing macro Latch
+2019-11-14 16:46:07:048 StateOfCharge: 95.2
+2019-11-14 16:46:07:056 Location: 31252 -84301 -179
+2019-11-14 16:46:07:071 LocalizationScore: 0.437500
+2019-11-14 16:46:07:088 Temperature: 46
+2019-11-14 16:46:07:415 Latch Fail
+2019-11-14 16:46:07:447 Completed macro Latch
+2019-11-14 16:46:07:601 Executing macro Lamp_Red
+2019-11-14 16:46:07:65 Completed macro Lamp_Red
+2019-11-14 16:46:08:094 ExtendedStatusForHumans: Completed macro Lamp_Red
+2019-11-14 16:46:08:134 Status: Completed macro Lamp_Red
+2019-11-14 16:46:08:143 StateOfCharge: 95.2
+2019-11-14 16:46:08:153 Location: 31252 -84301 -179
+2019-11-14 16:46:08:161 LocalizationScore: 0.437500
+2019-11-14 16:46:08:17 Temperature: 46
+2019-11-14 16:46:09:116 ExtendedStatusForHumans: Completed macro Lamp_Red
+2019-11-14 16:46:09:149 Status: Completed macro Lamp_Red
+2019-11-14 16:46:09:158 StateOfCharge: 95.2
+2019-11-14 16:46:09:168 Location: 31252 -84301 -179
+2019-11-14 16:46:09:178 LocalizationScore: 0.437500
+2019-11-14 16:46:09:19 Temperature: 46
+2019-11-14 16:46:10:136 ExtendedStatusForHumans: Completed macro Lamp_Red
+2019-11-14 16:46:10:144 Status: Completed macro Lamp_Red
+2019-11-14 16:46:10:152 StateOfCharge: 95.2
+2019-11-14 16:46:10:16 Location: 31252 -84301 -179
+2019-11-14 16:46:10:168 LocalizationScore: 0.437500
+2019-11-14 16:46:10:177 Temperature: 46
+2019-11-14 16:46:10:296 Executing macro Unlatch
+2019-11-14 16:46:11:194 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:11:221 Status: Executing macro Unlatch
+2019-11-14 16:46:11:232 StateOfCharge: 95.2
+2019-11-14 16:46:11:241 Location: 31252 -84301 -179
+2019-11-14 16:46:11:25 LocalizationScore: 0.437500
+2019-11-14 16:46:11:258 Temperature: 46
+2019-11-14 16:46:12:196 ExtendedStatusForHumans: Checking custom inputs
+2019-11-14 16:46:12:222 Status: Executing macro Unlatch
+2019-11-14 16:46:12:231 StateOfCharge: 95.2
+2019-11-14 16:46:12:239 Location: 31252 -84301 -179
+2019-11-14 16:46:12:247 LocalizationScore: 0.437500
+2019-11-14 16:46:12:257 Temperature: 46
+2019-11-14 16:46:12:97 Completed macro Unlatch
+2019-11-14 16:46:13:238 ExtendedStatusForHumans: Input triggered, executing macro UnlatchOff|Macro "UnlatchOff"
+2019-11-14 16:46:13:246 Status: Completed macro Unlatch
+2019-11-14 16:46:13:255 StateOfCharge: 95.2
+2019-11-14 16:46:13:265 Location: 31252 -84301 -179
+2019-11-14 16:46:13:274 LocalizationScore: 0.437500
+2019-11-14 16:46:13:284 Temperature: 46
+2019-11-14 16:46:14:295 ExtendedStatusForHumans: Input triggered, executing macro UnlatchOff|Macro "UnlatchOff"
+2019-11-14 16:46:14:321 Status: Completed macro Unlatch
+2019-11-14 16:46:14:329 StateOfCharge: 95.2
+2019-11-14 16:46:14:337 Location: 31252 -84301 -179
+2019-11-14 16:46:14:351 LocalizationScore: 0.437500
+2019-11-14 16:46:14:361 Temperature: 46
+2019-11-14 16:46:14:519 Stopping
+2019-11-14 16:46:14:526 Motors enabled
+2019-11-14 16:46:14:576 Stopped
+2019-11-14 16:46:14:618 Executing macro Lamp_Green
+2019-11-14 16:46:14:627 Completed macro Lamp_Green
+2019-11-14 16:46:15:295 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:15:336 Status: Completed macro Lamp_Green
+2019-11-14 16:46:15:346 StateOfCharge: 95.2
+2019-11-14 16:46:15:359 Location: 31252 -84301 -179
+2019-11-14 16:46:15:367 LocalizationScore: 0.437500
+2019-11-14 16:46:15:378 Temperature: 46
+2019-11-14 16:46:16:313 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:16:343 Status: Completed macro Lamp_Green
+2019-11-14 16:46:16:353 StateOfCharge: 95.2
+2019-11-14 16:46:16:392 Location: 31252 -84301 -179
+2019-11-14 16:46:16:406 LocalizationScore: 0.437500
+2019-11-14 16:46:16:431 Temperature: 46
+2019-11-14 16:46:17:437 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:17:447 Status: Completed macro Lamp_Green
+2019-11-14 16:46:17:457 StateOfCharge: 95.2
+2019-11-14 16:46:17:47 Location: 31252 -84301 -179
+2019-11-14 16:46:17:483 LocalizationScore: 0.437500
+2019-11-14 16:46:17:494 Temperature: 46
+2019-11-14 16:46:18:394 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:18:423 Status: Completed macro Lamp_Green
+2019-11-14 16:46:18:433 StateOfCharge: 95.2
+2019-11-14 16:46:18:442 Location: 31252 -84301 -179
+2019-11-14 16:46:18:451 LocalizationScore: 0.437500
+2019-11-14 16:46:18:46 Temperature: 46
+2019-11-14 16:46:19:493 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:19:535 Status: Completed macro Lamp_Green
+2019-11-14 16:46:19:543 StateOfCharge: 95.2
+2019-11-14 16:46:19:552 Location: 31252 -84301 -179
+2019-11-14 16:46:19:559 LocalizationScore: 0.437500
+2019-11-14 16:46:19:568 Temperature: 46
+2019-11-14 16:46:20:497 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:20:539 Status: Completed macro Lamp_Green
+2019-11-14 16:46:20:548 StateOfCharge: 95.2
+2019-11-14 16:46:20:562 Location: 31252 -84301 -179
+2019-11-14 16:46:20:57 LocalizationScore: 0.437500
+2019-11-14 16:46:20:578 Temperature: 46
+2019-11-14 16:46:21:548 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:21:556 Status: Completed macro Lamp_Green
+2019-11-14 16:46:21:564 StateOfCharge: 95.2
+2019-11-14 16:46:21:572 Location: 31252 -84301 -179
+2019-11-14 16:46:21:58 LocalizationScore: 0.437500
+2019-11-14 16:46:21:588 Temperature: 46
+2019-11-14 16:46:22:601 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:22:628 Status: Completed macro Lamp_Green
+2019-11-14 16:46:22:638 StateOfCharge: 95.2
+2019-11-14 16:46:22:647 Location: 31252 -84301 -179
+2019-11-14 16:46:22:654 LocalizationScore: 0.437500
+2019-11-14 16:46:22:665 Temperature: 46
+2019-11-14 16:46:23:593 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:23:64 Status: Completed macro Lamp_Green
+2019-11-14 16:46:23:648 StateOfCharge: 95.2
+2019-11-14 16:46:23:656 Location: 31252 -84301 -179
+2019-11-14 16:46:23:664 LocalizationScore: 0.437500
+2019-11-14 16:46:23:672 Temperature: 46
+2019-11-14 16:46:24:599 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:24:637 Status: Completed macro Lamp_Green
+2019-11-14 16:46:24:645 StateOfCharge: 95.2
+2019-11-14 16:46:24:654 Location: 31252 -84301 -179
+2019-11-14 16:46:24:663 LocalizationScore: 0.437500
+2019-11-14 16:46:24:671 Temperature: 46
+2019-11-14 16:46:25:736 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:25:745 Status: Completed macro Lamp_Green
+2019-11-14 16:46:25:753 StateOfCharge: 95.2
+2019-11-14 16:46:25:762 Location: 31252 -84301 -179
+2019-11-14 16:46:25:77 LocalizationScore: 0.437500
+2019-11-14 16:46:25:778 Temperature: 46
+2019-11-14 16:46:26:695 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:26:736 Status: Completed macro Lamp_Green
+2019-11-14 16:46:26:745 StateOfCharge: 95.2
+2019-11-14 16:46:26:753 Location: 31252 -84301 -179
+2019-11-14 16:46:26:761 LocalizationScore: 0.437500
+2019-11-14 16:46:26:769 Temperature: 46
+2019-11-14 16:46:27:694 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:27:734 Status: Completed macro Lamp_Green
+2019-11-14 16:46:27:742 StateOfCharge: 95.2
+2019-11-14 16:46:27:75 Location: 31252 -84301 -179
+2019-11-14 16:46:27:759 LocalizationScore: 0.437500
+2019-11-14 16:46:27:768 Temperature: 46
+2019-11-14 16:46:28:794 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:28:835 Status: Completed macro Lamp_Green
+2019-11-14 16:46:28:844 StateOfCharge: 95.2
+2019-11-14 16:46:28:851 Location: 31252 -84301 -179
+2019-11-14 16:46:28:862 LocalizationScore: 0.437500
+2019-11-14 16:46:28:871 Temperature: 46
+2019-11-14 16:46:29:814 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:29:822 Status: Completed macro Lamp_Green
+2019-11-14 16:46:29:83 StateOfCharge: 95.2
+2019-11-14 16:46:29:839 Location: 31252 -84301 -179
+2019-11-14 16:46:29:846 LocalizationScore: 0.437500
+2019-11-14 16:46:29:854 Temperature: 46
+2019-11-14 16:46:30:794 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:30:837 Status: Completed macro Lamp_Green
+2019-11-14 16:46:30:844 StateOfCharge: 95.2
+2019-11-14 16:46:30:852 Location: 31252 -84301 -179
+2019-11-14 16:46:30:861 LocalizationScore: 0.437500
+2019-11-14 16:46:30:868 Temperature: 46
+2019-11-14 16:46:31:894 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:31:936 Status: Completed macro Lamp_Green
+2019-11-14 16:46:31:944 StateOfCharge: 95.2
+2019-11-14 16:46:31:955 Location: 31252 -84301 -179
+2019-11-14 16:46:31:968 LocalizationScore: 0.437500
+2019-11-14 16:46:31:979 Temperature: 46
+2019-11-14 16:46:32:894 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-14 16:46:32:937 Status: Completed macro Lamp_Green
+2019-11-14 16:46:32:946 StateOfCharge: 95.2
+2019-11-14 16:46:32:958 Location: 31252 -84301 -179
+2019-11-14 16:46:32:969 LocalizationScore: 0.437500
+2019-11-14 16:46:32:977 Temperature: 46

@@ -1,0 +1,1339 @@
+========================================================
+=                                                                                                            =
+=                                      AMC Log File 2019-11-25                                    =
+=                                                                                                            =
+========================================================
+2019-11-25 16:42:03:881 You can type 'help' at any time for the following help list.
+2019-11-25 16:42:03:881 Commands:
+2019-11-25 16:42:03:881 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-25 16:42:03:881 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-25 16:42:03:881 analogInputList          Lists the named analog inputs
+2019-11-25 16:42:03:881 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-25 16:42:03:881 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-25 16:42:03:881 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-25 16:42:03:881 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-25 16:42:03:881 applicationFaultClear          Clears an application fault [afc]
+2019-11-25 16:42:03:881 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-25 16:42:03:881 applicationFaultSet          Sets an application fault [afs]
+2019-11-25 16:42:03:881    arclSendText          Sends the given message to all ARCL clients
+2019-11-25 16:42:03:881   centralServer          Gets information about the central server connection
+2019-11-25 16:42:03:881 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-25 16:42:03:881      createInfo          creates a piece of information
+2019-11-25 16:42:03:881            dock          Sends the robot to the dock
+2019-11-25 16:42:03:881          doTask          does a task
+2019-11-25 16:42:03:881   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-25 16:42:03:881            echo          with no args gets echo, with args sets echo
+2019-11-25 16:42:03:881    enableMotors          Enables the motors so the robot can drive again
+2019-11-25 16:42:03:881    engageCancel          cancel engage state (without disengaging)
+2019-11-25 16:42:03:881 engageQueryState          query the engage state of a robot
+2019-11-25 16:42:03:881    executeMacro          executes a given macro
+2019-11-25 16:42:03:881 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-25 16:42:03:881        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-25 16:42:03:881 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-25 16:42:03:881 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-25 16:42:03:881 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-25 16:42:03:881 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-25 16:42:03:881 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-25 16:42:03:881 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-25 16:42:03:881     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-25 16:42:03:881       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-25 16:42:03:881 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-25 16:42:03:881 getConfigSectionList          Gets the list of sections in the config
+2019-11-25 16:42:03:881 getConfigSectionValues          Gets the values in a section of the config
+2019-11-25 16:42:03:881 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-25 16:42:03:881 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-25 16:42:03:881 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-25 16:42:03:881 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-25 16:42:03:881 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2019-11-25 16:42:03:881 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2019-11-25 16:42:03:881 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2019-11-25 16:42:03:881     getDateTime          gets the date and time
+2019-11-25 16:42:03:881        getGoals          gets a list of goals in the map (for use with goto)
+2019-11-25 16:42:03:881         getInfo          Gets a piece of information
+2019-11-25 16:42:03:881     getInfoList          Gets the list of info available from 'getInfo'
+2019-11-25 16:42:03:881       getMacros          gets a list of macros in the map (for use with executeMacro)
+2019-11-25 16:42:03:881 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2019-11-25 16:42:03:881  getPoseEncoder          Gets the encoder pose of the robot
+2019-11-25 16:42:03:881       getRoutes          gets the routes the robot has
+2019-11-25 16:42:03:881              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2019-11-25 16:42:03:881 goalDistanceRemaining          Gets the distance remaining to robots goals
+2019-11-25 16:42:03:881 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2019-11-25 16:42:03:881            help          gives the listing of available commands (optionally with prefix)
+2019-11-25 16:42:03:881       inputList          Lists the named digital inputs [inL]
+2019-11-25 16:42:03:881      inputQuery          Queries the state of a named digital input [inQ]
+2019-11-25 16:42:03:881  localizeAtGoal          Localizes to a given goal [lag]
+2019-11-25 16:42:03:881             log          Logs the message to the normal log file
+2019-11-25 16:42:03:881   mapObjectInfo          Gets the information about a map object specified by name.
+2019-11-25 16:42:03:881   mapObjectList          Gets a list the map objects of a given type.
+2019-11-25 16:42:03:881 mapObjectTypeInfo          Gets information about a particular type of map object.
+2019-11-25 16:42:03:881 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2019-11-25 16:42:03:881 mapObjectUpdate          Creates or updates a map object with the specified data.
+2019-11-25 16:42:03:881        modeLock          Locks the current mode
+2019-11-25 16:42:03:881       modeQuery          Queries the current mode and it's lock status
+2019-11-25 16:42:03:881      modeUnlock          Unlocks the current mode
+2019-11-25 16:42:03:881  newConfigParam          Adds a new param to the config (shows up in MP)
+2019-11-25 16:42:03:881 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2019-11-25 16:42:03:881 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2019-11-25 16:42:03:881 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2019-11-25 16:42:03:881        odometer          Shows the robot trip odometer
+2019-11-25 16:42:03:881   odometerReset          Resets the robot trip odometer
+2019-11-25 16:42:03:881   oneLineStatus          Gets the status of the robot on one line
+2019-11-25 16:42:03:881      outputList          Lists the named outputs [outL]
+2019-11-25 16:42:03:881       outputOff          Turns off a named digital output [outOff]
+2019-11-25 16:42:03:881        outputOn          Turns on a named digital output [outOn]
+2019-11-25 16:42:03:881     outputQuery          Queries the state of a named output [outQ]
+2019-11-25 16:42:03:881          patrol          patrols the given route
+2019-11-25 16:42:03:881      patrolOnce          Patrols the given route once, starts at optional index
+2019-11-25 16:42:03:881    patrolResume          Resumes the last patrol
+2019-11-25 16:42:03:881 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2019-11-25 16:42:03:881   pauseTaskFail          Fails the pause task (if it's active)
+2019-11-25 16:42:03:881  pauseTaskState          Gets the state of the pause task
+2019-11-25 16:42:03:881            play          Plays the given wave file already on the robot
+2019-11-25 16:42:03:881     popupSimple          Creates a simple popup
+2019-11-25 16:42:03:881 queryDockStatus          Gets the docking status
+2019-11-25 16:42:03:881     queryMotors          Queries the state of the motors
+2019-11-25 16:42:03:881            quit          closes this connection to the server
+2019-11-25 16:42:03:881             say          Says the given string
+2019-11-25 16:42:03:881        shutdown          shuts down the robot
+2019-11-25 16:42:03:881          status          Gets the status of the robot
+2019-11-25 16:42:03:881            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2019-11-25 16:42:03:881            stop          Stops the robot
+2019-11-25 16:42:03:881 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2019-11-25 16:42:03:881 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2019-11-25 16:42:03:881 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2019-11-25 16:42:03:881 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2019-11-25 16:42:03:881 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2019-11-25 16:42:03:881       tripReset          Resets the trip values in the Data Store [tr]
+2019-11-25 16:42:03:881          undock          Undocks the robot (done automatically too)
+2019-11-25 16:42:03:881      updateInfo          updates a piece of information
+2019-11-25 16:42:03:881  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2019-11-25 16:42:03:881    waitTaskFail          Fails the wait task (if it's active)
+2019-11-25 16:42:03:881   waitTaskState          Gets the state of the wait task
+2019-11-25 16:42:03:881 End of commands
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:881 Unknown command 1111
+2019-11-25 16:42:03:982 Output: o1 off
+2019-11-25 16:42:03:982 Output: o2 off
+2019-11-25 16:42:03:982 Output: o3 off
+2019-11-25 16:42:03:982 Output: o4 off
+2019-11-25 16:42:03:982 Output: o5 off
+2019-11-25 16:42:03:982 Output: o6 off
+2019-11-25 16:42:03:982 Output: o7 on
+2019-11-25 16:42:03:982 Output: o8 off
+2019-11-25 16:42:03:982 Output: o9 off
+2019-11-25 16:42:03:982 Output: o10 off
+2019-11-25 16:42:03:982 Output: o11 off
+2019-11-25 16:42:03:982 Output: o12 off
+2019-11-25 16:42:03:982 Output: o13 off
+2019-11-25 16:42:03:982 Output: o14 off
+2019-11-25 16:42:03:982 Output: o15 off
+2019-11-25 16:42:03:982 Output: o16 off
+2019-11-25 16:42:03:982 Output: o1 off
+2019-11-25 16:42:03:982 Output: o2 off
+2019-11-25 16:42:03:982 Output: o3 off
+2019-11-25 16:42:03:982 Output: o4 off
+2019-11-25 16:42:03:982 Output: o5 off
+2019-11-25 16:42:03:982 Output: o6 off
+2019-11-25 16:42:03:982 Output: o7 on
+2019-11-25 16:42:03:982 Output: o8 off
+2019-11-25 16:42:03:982 Output: o9 off
+2019-11-25 16:42:03:982 Output: o10 off
+2019-11-25 16:42:03:982 Output: o11 off
+2019-11-25 16:42:03:982 Output: o12 off
+2019-11-25 16:42:03:982 Output: o13 off
+2019-11-25 16:42:03:982 Output: o14 off
+2019-11-25 16:42:03:982 Output: o15 off
+2019-11-25 16:42:03:982 Output: o16 off
+2019-11-25 16:42:04:035 Goal: Goal106
+2019-11-25 16:42:04:288 Goal: OFFICE2
+2019-11-25 16:42:04:288 Goal: STB1
+2019-11-25 16:42:04:288 Goal: PACK3
+2019-11-25 16:42:04:288 Goal: PACK4
+2019-11-25 16:42:04:288 Goal: PATH2
+2019-11-25 16:42:04:288 Goal: PATH1
+2019-11-25 16:42:04:288 Goal: PACK6
+2019-11-25 16:42:04:288 Goal: PACK
+2019-11-25 16:42:04:288 Goal: PACK1
+2019-11-25 16:42:04:288 Goal: PACK2
+2019-11-25 16:42:04:288 Goal: PACK5
+2019-11-25 16:42:04:288 Goal: 2F_ELV1
+2019-11-25 16:42:04:288 Goal: 2F_ELV2
+2019-11-25 16:42:04:288 Goal: 2F_CART2
+2019-11-25 16:42:04:288 Goal: 2F_CART1
+2019-11-25 16:42:04:288 End of goals
+2019-11-25 16:42:04:319 Output: o1 off
+2019-11-25 16:42:04:319 Output: o2 off
+2019-11-25 16:42:04:319 Output: o3 off
+2019-11-25 16:42:04:319 Output: o4 off
+2019-11-25 16:42:04:319 Output: o5 off
+2019-11-25 16:42:04:319 Output: o6 off
+2019-11-25 16:42:04:319 Output: o7 on
+2019-11-25 16:42:04:319 Output: o8 off
+2019-11-25 16:42:04:319 Output: o9 off
+2019-11-25 16:42:04:319 Output: o10 off
+2019-11-25 16:42:04:319 Output: o11 off
+2019-11-25 16:42:04:346 Output: o12 off
+2019-11-25 16:42:04:388 Output: o13 off
+2019-11-25 16:42:04:388 Output: o14 off
+2019-11-25 16:42:04:388 Output: o15 off
+2019-11-25 16:42:04:388 Output: o16 off
+2019-11-25 16:42:04:855 Output: o1 off
+2019-11-25 16:42:04:897 Output: o2 off
+2019-11-25 16:42:04:897 Output: o3 off
+2019-11-25 16:42:04:897 Output: o4 off
+2019-11-25 16:42:04:897 Output: o5 off
+2019-11-25 16:42:04:897 Output: o6 off
+2019-11-25 16:42:04:897 Output: o7 on
+2019-11-25 16:42:04:897 Output: o8 off
+2019-11-25 16:42:04:897 Output: o9 off
+2019-11-25 16:42:04:897 Output: o10 off
+2019-11-25 16:42:04:897 Output: o11 off
+2019-11-25 16:42:04:897 Output: o12 off
+2019-11-25 16:42:04:897 Output: o13 off
+2019-11-25 16:42:04:897 Output: o14 off
+2019-11-25 16:42:04:897 Output: o15 off
+2019-11-25 16:42:04:927 Output: o16 off
+2019-11-25 16:42:05:057 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:42:05:148 Status: Completed macro Lamp_Green
+2019-11-25 16:42:05:148 StateOfCharge: 76.5
+2019-11-25 16:42:05:148 Location: 36050 -81436 91
+2019-11-25 16:42:05:148 LocalizationScore: 0.878453
+2019-11-25 16:42:05:148 Temperature: 43
+2019-11-25 16:42:05:148 Info: WirelessQuality 0%
+2019-11-25 16:42:05:148 Info: CurrentDraw 2.95 a
+2019-11-25 16:42:05:148 Info: PackVoltage 26.295 v
+2019-11-25 16:42:05:148 Info: Odometer(KM) 101
+2019-11-25 16:42:05:427 Output: o1 off
+2019-11-25 16:42:05:467 Output: o2 off
+2019-11-25 16:42:05:467 Output: o3 off
+2019-11-25 16:42:05:467 Output: o4 off
+2019-11-25 16:42:05:467 Output: o5 off
+2019-11-25 16:42:05:467 Output: o6 off
+2019-11-25 16:42:05:467 Output: o7 on
+2019-11-25 16:42:05:467 Output: o8 off
+2019-11-25 16:42:05:467 Output: o9 off
+2019-11-25 16:42:05:467 Output: o10 off
+2019-11-25 16:42:05:467 Output: o11 off
+2019-11-25 16:42:05:467 Output: o12 off
+2019-11-25 16:42:05:467 Output: o13 off
+2019-11-25 16:42:05:467 Output: o14 off
+2019-11-25 16:42:05:467 Output: o15 off
+2019-11-25 16:42:05:529 Output: o16 off
+2019-11-25 16:42:06:026 Output: o1 off
+2019-11-25 16:42:06:078 Output: o2 off
+2019-11-25 16:42:06:078 Output: o3 off
+2019-11-25 16:42:06:078 Output: o4 off
+2019-11-25 16:42:06:078 Output: o5 off
+2019-11-25 16:42:06:078 Output: o6 off
+2019-11-25 16:42:06:078 Output: o7 on
+2019-11-25 16:42:06:078 Output: o8 off
+2019-11-25 16:42:06:078 Output: o9 off
+2019-11-25 16:42:06:078 Output: o10 off
+2019-11-25 16:42:06:078 Output: o11 off
+2019-11-25 16:42:06:078 Output: o12 off
+2019-11-25 16:42:06:078 Output: o13 off
+2019-11-25 16:42:06:078 Output: o14 off
+2019-11-25 16:42:06:078 Output: o15 off
+2019-11-25 16:42:06:128 Output: o16 off
+2019-11-25 16:42:06:266 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:42:06:266 Status: Completed macro Lamp_Green
+2019-11-25 16:42:06:266 StateOfCharge: 76.5
+2019-11-25 16:42:06:266 Location: 36050 -81436 91
+2019-11-25 16:42:06:266 LocalizationScore: 0.878453
+2019-11-25 16:42:06:266 Temperature: 43
+2019-11-25 16:42:06:266 Info: WirelessQuality 0%
+2019-11-25 16:42:06:266 Info: CurrentDraw 2.89 a
+2019-11-25 16:42:06:266 Info: PackVoltage 26.296 v
+2019-11-25 16:42:06:266 Info: Odometer(KM) 101
+2019-11-25 16:42:06:627 Output: o1 off
+2019-11-25 16:42:06:728 Output: o2 off
+2019-11-25 16:42:06:728 Output: o3 off
+2019-11-25 16:42:06:728 Output: o4 off
+2019-11-25 16:42:06:728 Output: o5 off
+2019-11-25 16:42:06:728 Output: o6 off
+2019-11-25 16:42:06:728 Output: o7 on
+2019-11-25 16:42:06:728 Output: o8 off
+2019-11-25 16:42:06:728 Output: o9 off
+2019-11-25 16:42:06:728 Output: o10 off
+2019-11-25 16:42:06:728 Output: o11 off
+2019-11-25 16:42:06:728 Output: o12 off
+2019-11-25 16:42:06:728 Output: o13 off
+2019-11-25 16:42:06:728 Output: o14 off
+2019-11-25 16:42:06:728 Output: o15 off
+2019-11-25 16:42:06:728 Output: o16 off
+2019-11-25 16:42:07:137 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:42:07:199 Status: Completed macro Lamp_Green
+2019-11-25 16:42:07:199 StateOfCharge: 76.5
+2019-11-25 16:42:07:199 Location: 36050 -81436 91
+2019-11-25 16:42:07:199 LocalizationScore: 0.878453
+2019-11-25 16:42:07:199 Temperature: 43
+2019-11-25 16:42:07:228 Info: WirelessQuality 0%
+2019-11-25 16:42:07:269 Info: CurrentDraw 3.05 a
+2019-11-25 16:42:07:269 Info: PackVoltage 26.295 v
+2019-11-25 16:42:07:269 Info: Odometer(KM) 101
+2019-11-25 16:42:07:269 Output: o1 off
+2019-11-25 16:42:07:269 Output: o2 off
+2019-11-25 16:42:07:269 Output: o3 off
+2019-11-25 16:42:07:269 Output: o4 off
+2019-11-25 16:42:07:269 Output: o5 off
+2019-11-25 16:42:07:269 Output: o6 off
+2019-11-25 16:42:07:269 Output: o7 on
+2019-11-25 16:42:07:269 Output: o8 off
+2019-11-25 16:42:07:269 Output: o9 off
+2019-11-25 16:42:07:269 Output: o10 off
+2019-11-25 16:42:07:269 Output: o11 off
+2019-11-25 16:42:07:269 Output: o12 off
+2019-11-25 16:42:07:269 Output: o13 off
+2019-11-25 16:42:07:269 Output: o14 off
+2019-11-25 16:42:07:269 Output: o15 off
+2019-11-25 16:42:07:269 Output: o16 off
+2019-11-25 16:42:07:442 Executing macro Lamp_Green
+2019-11-25 16:42:07:481 Output: o9 off
+2019-11-25 16:42:07:481 Output: o8 off
+2019-11-25 16:42:07:481 Output: o7 on
+2019-11-25 16:42:07:481 Completed macro Lamp_Green
+2019-11-25 16:42:07:83 Output: o1 off
+2019-11-25 16:42:07:892 Output: o2 off
+2019-11-25 16:42:07:892 Output: o3 off
+2019-11-25 16:42:07:892 Output: o4 off
+2019-11-25 16:42:07:892 Output: o5 off
+2019-11-25 16:42:07:892 Output: o6 off
+2019-11-25 16:42:07:892 Output: o7 on
+2019-11-25 16:42:07:892 Output: o8 off
+2019-11-25 16:42:07:892 Output: o9 off
+2019-11-25 16:42:07:892 Output: o10 off
+2019-11-25 16:42:07:892 Output: o11 off
+2019-11-25 16:42:07:892 Output: o12 off
+2019-11-25 16:42:07:934 Output: o13 off
+2019-11-25 16:42:07:934 Output: o14 off
+2019-11-25 16:42:07:934 Output: o15 off
+2019-11-25 16:42:07:934 Output: o16 off
+2019-11-25 16:42:08:241 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:42:08:332 Status: Completed macro Lamp_Green
+2019-11-25 16:42:08:332 StateOfCharge: 76.5
+2019-11-25 16:42:08:332 Location: 36050 -81436 91
+2019-11-25 16:42:08:332 LocalizationScore: 0.878453
+2019-11-25 16:42:08:332 Temperature: 43
+2019-11-25 16:42:08:332 Info: WirelessQuality 0%
+2019-11-25 16:42:08:332 Info: CurrentDraw 2.86 a
+2019-11-25 16:42:08:332 Info: PackVoltage 26.296 v
+2019-11-25 16:42:08:332 Info: Odometer(KM) 101
+2019-11-25 16:42:08:364 Output: o1 off
+2019-11-25 16:42:08:426 Output: o2 off
+2019-11-25 16:42:08:456 Output: o3 off
+2019-11-25 16:42:08:456 Output: o4 off
+2019-11-25 16:42:08:456 Output: o5 off
+2019-11-25 16:42:08:456 Output: o6 off
+2019-11-25 16:42:08:456 Output: o7 on
+2019-11-25 16:42:08:456 Output: o8 off
+2019-11-25 16:42:08:456 Output: o9 off
+2019-11-25 16:42:08:456 Output: o10 off
+2019-11-25 16:42:08:456 Output: o11 off
+2019-11-25 16:42:08:456 Output: o12 off
+2019-11-25 16:42:08:481 Output: o13 off
+2019-11-25 16:42:08:481 Output: o14 off
+2019-11-25 16:42:08:481 Output: o15 off
+2019-11-25 16:42:08:481 Output: o16 off
+2019-11-25 16:42:08:952 Output: o1 off
+2019-11-25 16:42:09:026 Output: o2 off
+2019-11-25 16:42:09:086 Output: o3 off
+2019-11-25 16:42:09:086 Output: o4 off
+2019-11-25 16:42:09:086 Output: o5 off
+2019-11-25 16:42:09:086 Output: o6 off
+2019-11-25 16:42:09:086 Output: o7 on
+2019-11-25 16:42:09:086 Output: o8 off
+2019-11-25 16:42:09:086 Output: o9 off
+2019-11-25 16:42:09:086 Output: o10 off
+2019-11-25 16:42:09:086 Output: o11 off
+2019-11-25 16:42:09:086 Output: o12 off
+2019-11-25 16:42:09:086 Output: o13 off
+2019-11-25 16:42:09:086 Output: o14 off
+2019-11-25 16:42:09:086 Output: o15 off
+2019-11-25 16:42:09:086 Output: o16 off
+2019-11-25 16:42:09:236 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:42:09:337 Status: Completed macro Lamp_Green
+2019-11-25 16:42:09:337 StateOfCharge: 76.5
+2019-11-25 16:42:09:337 Location: 36050 -81436 91
+2019-11-25 16:42:09:337 LocalizationScore: 0.878453
+2019-11-25 16:42:09:337 Temperature: 43
+2019-11-25 16:42:09:337 Info: WirelessQuality 0%
+2019-11-25 16:42:09:337 Info: CurrentDraw 3.01 a
+2019-11-25 16:42:09:337 Info: PackVoltage 26.296 v
+2019-11-25 16:42:09:337 Info: Odometer(KM) 101
+2019-11-25 16:42:09:629 Output: o1 off
+2019-11-25 16:42:09:724 Output: o2 off
+2019-11-25 16:42:09:724 Output: o3 off
+2019-11-25 16:42:09:724 Output: o4 off
+2019-11-25 16:42:09:724 Output: o5 off
+2019-11-25 16:42:09:724 Output: o6 off
+2019-11-25 16:42:09:724 Output: o7 on
+2019-11-25 16:42:09:724 Output: o8 off
+2019-11-25 16:42:09:724 Output: o9 off
+2019-11-25 16:42:09:724 Output: o10 off
+2019-11-25 16:42:09:724 Output: o11 off
+2019-11-25 16:42:09:724 Output: o12 off
+2019-11-25 16:42:09:724 Output: o13 off
+2019-11-25 16:42:09:724 Output: o14 off
+2019-11-25 16:42:09:724 Output: o15 off
+2019-11-25 16:42:09:724 Output: o16 off
+2019-11-25 16:42:54:361 Enter password:
+2019-11-25 16:42:54:448 Welcome to the server.
+2019-11-25 16:44:10:229 Enter password:
+2019-11-25 16:44:10:338 Welcome to the server.
+2019-11-25 16:44:11:581 You can type 'help' at any time for the following help list.
+2019-11-25 16:44:11:581 Commands:
+2019-11-25 16:44:11:581 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2019-11-25 16:44:11:581 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2019-11-25 16:44:11:581 analogInputList          Lists the named analog inputs
+2019-11-25 16:44:11:581 analogInputQueryRaw          Queries the state of an analog input by raw
+2019-11-25 16:44:11:581 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2019-11-25 16:44:11:581 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2019-11-25 16:44:11:581 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2019-11-25 16:44:11:581 applicationFaultClear          Clears an application fault [afc]
+2019-11-25 16:44:11:581 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2019-11-25 16:44:11:581 applicationFaultSet          Sets an application fault [afs]
+2019-11-25 16:44:11:581    arclSendText          Sends the given message to all ARCL clients
+2019-11-25 16:44:11:581   centralServer          Gets information about the central server connection
+2019-11-25 16:44:11:581 connectOutgoing          (re)connects a socket to the given outside server
+2019-11-25 16:44:11:581      createInfo          creates a piece of information
+2019-11-25 16:44:11:581            dock          Sends the robot to the dock
+2019-11-25 16:44:11:581          doTask          does a task
+2019-11-25 16:44:11:581   doTaskInstant          does an instant task (doesn't interrupt modes)
+2019-11-25 16:44:11:581            echo          with no args gets echo, with args sets echo
+2019-11-25 16:44:11:581    enableMotors          Enables the motors so the robot can drive again
+2019-11-25 16:44:11:581    engageCancel          cancel engage state (without disengaging)
+2019-11-25 16:44:11:581 engageQueryState          query the engage state of a robot
+2019-11-25 16:44:11:581    executeMacro          executes a given macro
+2019-11-25 16:44:11:581 executeMacroTemplate          executes a specified macro template with the given parameters
+2019-11-25 16:44:11:581        extIOAdd          Adds the external digital inputs and outputs [eda]
+2019-11-25 16:44:11:581 extIOInputUpdate          Updates the external digital inputs [ediu]
+2019-11-25 16:44:11:581 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2019-11-25 16:44:11:581 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2019-11-25 16:44:11:581 extIOOutputUpdate          Updates the external digital outputs [edou]
+2019-11-25 16:44:11:581 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2019-11-25 16:44:11:581 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2019-11-25 16:44:11:581     extIORemove          Removes the external digital inputs and outputs [edr]
+2019-11-25 16:44:11:581       faultsGet          Gets the list of any faults currently triggered [fg]
+2019-11-25 16:44:11:581 getConfigSectionInfo          Gets the info about a section of the config
+2019-11-25 16:44:11:581 getConfigSectionList          Gets the list of sections in the config
+2019-11-25 16:44:11:581 getConfigSectionValues          Gets the values in a section of the config
+2019-11-25 16:44:11:581 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2019-11-25 16:44:11:581 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2019-11-25 16:44:11:581 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2019-11-25 16:44:11:581 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2019-11-25 16:44:11:581 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2019-11-25 16:44:11:581 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2019-11-25 16:44:11:581 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2019-11-25 16:44:11:581     getDateTime          gets the date and time
+2019-11-25 16:44:11:581        getGoals          gets a list of goals in the map (for use with goto)
+2019-11-25 16:44:11:581         getInfo          Gets a piece of information
+2019-11-25 16:44:11:581     getInfoList          Gets the list of info available from 'getInfo'
+2019-11-25 16:44:11:581       getMacros          gets a list of macros in the map (for use with executeMacro)
+2019-11-25 16:44:11:581 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2019-11-25 16:44:11:581  getPoseEncoder          Gets the encoder pose of the robot
+2019-11-25 16:44:11:581       getRoutes          gets the routes the robot has
+2019-11-25 16:44:11:581              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2019-11-25 16:44:11:581 goalDistanceRemaining          Gets the distance remaining to robots goals
+2019-11-25 16:44:11:581 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2019-11-25 16:44:11:581            help          gives the listing of available commands (optionally with prefix)
+2019-11-25 16:44:11:581       inputList          Lists the named digital inputs [inL]
+2019-11-25 16:44:11:581      inputQuery          Queries the state of a named digital input [inQ]
+2019-11-25 16:44:11:581  localizeAtGoal          Localizes to a given goal [lag]
+2019-11-25 16:44:11:581             log          Logs the message to the normal log file
+2019-11-25 16:44:11:581   mapObjectInfo          Gets the information about a map object specified by name.
+2019-11-25 16:44:11:581   mapObjectList          Gets a list the map objects of a given type.
+2019-11-25 16:44:11:581 mapObjectTypeInfo          Gets information about a particular type of map object.
+2019-11-25 16:44:11:581 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2019-11-25 16:44:11:581 mapObjectUpdate          Creates or updates a map object with the specified data.
+2019-11-25 16:44:11:581        modeLock          Locks the current mode
+2019-11-25 16:44:11:581       modeQuery          Queries the current mode and it's lock status
+2019-11-25 16:44:11:581      modeUnlock          Unlocks the current mode
+2019-11-25 16:44:11:581  newConfigParam          Adds a new param to the config (shows up in MP)
+2019-11-25 16:44:11:581 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2019-11-25 16:44:11:581 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2019-11-25 16:44:11:581 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2019-11-25 16:44:11:581        odometer          Shows the robot trip odometer
+2019-11-25 16:44:11:581   odometerReset          Resets the robot trip odometer
+2019-11-25 16:44:11:581   oneLineStatus          Gets the status of the robot on one line
+2019-11-25 16:44:11:581      outputList          Lists the named outputs [outL]
+2019-11-25 16:44:11:581       outputOff          Turns off a named digital output [outOff]
+2019-11-25 16:44:11:581        outputOn          Turns on a named digital output [outOn]
+2019-11-25 16:44:11:581     outputQuery          Queries the state of a named output [outQ]
+2019-11-25 16:44:11:581          patrol          patrols the given route
+2019-11-25 16:44:11:581      patrolOnce          Patrols the given route once, starts at optional index
+2019-11-25 16:44:11:581    patrolResume          Resumes the last patrol
+2019-11-25 16:44:11:581 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2019-11-25 16:44:11:581   pauseTaskFail          Fails the pause task (if it's active)
+2019-11-25 16:44:11:581  pauseTaskState          Gets the state of the pause task
+2019-11-25 16:44:11:581            play          Plays the given wave file already on the robot
+2019-11-25 16:44:11:581     popupSimple          Creates a simple popup
+2019-11-25 16:44:11:581 queryDockStatus          Gets the docking status
+2019-11-25 16:44:11:581     queryMotors          Queries the state of the motors
+2019-11-25 16:44:11:581            quit          closes this connection to the server
+2019-11-25 16:44:11:581             say          Says the given string
+2019-11-25 16:44:11:581        shutdown          shuts down the robot
+2019-11-25 16:44:11:581          status          Gets the status of the robot
+2019-11-25 16:44:11:581            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2019-11-25 16:44:11:581            stop          Stops the robot
+2019-11-25 16:44:11:581 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2019-11-25 16:44:11:913 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2019-11-25 16:44:11:913 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2019-11-25 16:44:11:913 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2019-11-25 16:44:11:913 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2019-11-25 16:44:11:913       tripReset          Resets the trip values in the Data Store [tr]
+2019-11-25 16:44:11:913          undock          Undocks the robot (done automatically too)
+2019-11-25 16:44:11:913      updateInfo          updates a piece of information
+2019-11-25 16:44:11:913  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2019-11-25 16:44:11:913    waitTaskFail          Fails the wait task (if it's active)
+2019-11-25 16:44:11:913   waitTaskState          Gets the state of the wait task
+2019-11-25 16:44:11:913 End of commands
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Unknown command 1111
+2019-11-25 16:44:11:913 Output: o1 off
+2019-11-25 16:44:11:913 Output: o2 off
+2019-11-25 16:44:11:913 Output: o3 off
+2019-11-25 16:44:11:913 Output: o4 off
+2019-11-25 16:44:11:913 Output: o5 off
+2019-11-25 16:44:11:913 Output: o6 off
+2019-11-25 16:44:11:913 Output: o7 on
+2019-11-25 16:44:11:913 Output: o8 off
+2019-11-25 16:44:11:913 Output: o9 off
+2019-11-25 16:44:11:913 Output: o10 off
+2019-11-25 16:44:11:913 Output: o11 off
+2019-11-25 16:44:11:913 Output: o12 off
+2019-11-25 16:44:11:913 Output: o13 off
+2019-11-25 16:44:11:913 Output: o14 off
+2019-11-25 16:44:11:913 Output: o15 off
+2019-11-25 16:44:11:913 Output: o16 off
+2019-11-25 16:44:11:946 Output: o1 off
+2019-11-25 16:44:11:946 Output: o2 off
+2019-11-25 16:44:11:946 Output: o3 off
+2019-11-25 16:44:11:946 Output: o4 off
+2019-11-25 16:44:11:946 Output: o5 off
+2019-11-25 16:44:11:946 Output: o6 off
+2019-11-25 16:44:11:946 Output: o7 on
+2019-11-25 16:44:11:946 Output: o8 off
+2019-11-25 16:44:11:946 Output: o9 off
+2019-11-25 16:44:11:946 Output: o10 off
+2019-11-25 16:44:11:946 Output: o11 off
+2019-11-25 16:44:11:946 Output: o12 off
+2019-11-25 16:44:11:946 Output: o13 off
+2019-11-25 16:44:11:975 Output: o14 off
+2019-11-25 16:44:11:975 Output: o15 off
+2019-11-25 16:44:11:975 Output: o16 off
+2019-11-25 16:44:12:245 Goal: Goal106
+2019-11-25 16:44:12:523 Goal: OFFICE2
+2019-11-25 16:44:12:523 Goal: STB1
+2019-11-25 16:44:12:523 Goal: PACK3
+2019-11-25 16:44:12:523 Goal: PACK4
+2019-11-25 16:44:12:523 Goal: PATH2
+2019-11-25 16:44:12:523 Goal: PATH1
+2019-11-25 16:44:12:523 Goal: PACK6
+2019-11-25 16:44:12:523 Goal: PACK
+2019-11-25 16:44:12:523 Goal: PACK1
+2019-11-25 16:44:12:523 Goal: PACK2
+2019-11-25 16:44:12:523 Goal: PACK5
+2019-11-25 16:44:12:523 Goal: 2F_ELV1
+2019-11-25 16:44:12:523 Goal: 2F_ELV2
+2019-11-25 16:44:12:523 Goal: 2F_CART2
+2019-11-25 16:44:12:523 Goal: 2F_CART1
+2019-11-25 16:44:12:523 End of goals
+2019-11-25 16:44:12:565 Output: o1 off
+2019-11-25 16:44:12:565 Output: o2 off
+2019-11-25 16:44:12:565 Output: o3 off
+2019-11-25 16:44:12:565 Output: o4 off
+2019-11-25 16:44:12:565 Output: o5 off
+2019-11-25 16:44:12:565 Output: o6 off
+2019-11-25 16:44:12:565 Output: o7 on
+2019-11-25 16:44:12:565 Output: o8 off
+2019-11-25 16:44:12:565 Output: o9 off
+2019-11-25 16:44:12:565 Output: o10 off
+2019-11-25 16:44:12:565 Output: o11 off
+2019-11-25 16:44:12:565 Output: o12 off
+2019-11-25 16:44:12:586 Output: o13 off
+2019-11-25 16:44:12:586 Output: o14 off
+2019-11-25 16:44:12:586 Output: o15 off
+2019-11-25 16:44:12:586 Output: o16 off
+2019-11-25 16:44:13:025 Output: o1 off
+2019-11-25 16:44:13:07 Output: o2 off
+2019-11-25 16:44:13:07 Output: o3 off
+2019-11-25 16:44:13:07 Output: o4 off
+2019-11-25 16:44:13:07 Output: o5 off
+2019-11-25 16:44:13:07 Output: o6 off
+2019-11-25 16:44:13:07 Output: o7 on
+2019-11-25 16:44:13:07 Output: o8 off
+2019-11-25 16:44:13:07 Output: o9 off
+2019-11-25 16:44:13:07 Output: o10 off
+2019-11-25 16:44:13:07 Output: o11 off
+2019-11-25 16:44:13:07 Output: o12 off
+2019-11-25 16:44:13:07 Output: o13 off
+2019-11-25 16:44:13:07 Output: o14 off
+2019-11-25 16:44:13:07 Output: o15 off
+2019-11-25 16:44:13:147 Output: o16 off
+2019-11-25 16:44:13:236 ExtendedStatusForHumans: Stopped
+2019-11-25 16:44:13:361 Status: Stopped
+2019-11-25 16:44:13:361 StateOfCharge: 76.2
+2019-11-25 16:44:13:361 Location: 36050 -81436 91
+2019-11-25 16:44:13:361 LocalizationScore: 0.878453
+2019-11-25 16:44:13:361 Temperature: 43
+2019-11-25 16:44:13:361 Info: WirelessQuality 0%
+2019-11-25 16:44:13:361 Info: CurrentDraw 3.00 a
+2019-11-25 16:44:13:361 Info: PackVoltage 26.290 v
+2019-11-25 16:44:13:361 Info: Odometer(KM) 101
+2019-11-25 16:44:13:626 Output: o1 off
+2019-11-25 16:44:13:762 Output: o2 off
+2019-11-25 16:44:13:762 Output: o3 off
+2019-11-25 16:44:13:762 Output: o4 off
+2019-11-25 16:44:13:762 Output: o5 off
+2019-11-25 16:44:13:762 Output: o6 off
+2019-11-25 16:44:13:762 Output: o7 on
+2019-11-25 16:44:13:762 Output: o8 off
+2019-11-25 16:44:13:762 Output: o9 off
+2019-11-25 16:44:13:762 Output: o10 off
+2019-11-25 16:44:13:762 Output: o11 off
+2019-11-25 16:44:13:762 Output: o12 off
+2019-11-25 16:44:13:762 Output: o13 off
+2019-11-25 16:44:13:762 Output: o14 off
+2019-11-25 16:44:13:762 Output: o15 off
+2019-11-25 16:44:13:762 Output: o16 off
+2019-11-25 16:44:13:836 Unknown command A2A
+2019-11-25 16:44:14:246 Output: o1 off
+2019-11-25 16:44:14:353 Output: o2 off
+2019-11-25 16:44:14:353 Output: o3 off
+2019-11-25 16:44:14:353 Output: o4 off
+2019-11-25 16:44:14:353 Output: o5 off
+2019-11-25 16:44:14:353 Output: o6 off
+2019-11-25 16:44:14:353 Output: o7 on
+2019-11-25 16:44:14:353 Output: o8 off
+2019-11-25 16:44:14:353 Output: o9 off
+2019-11-25 16:44:14:353 Output: o10 off
+2019-11-25 16:44:14:353 Output: o11 off
+2019-11-25 16:44:14:353 Output: o12 off
+2019-11-25 16:44:14:353 Output: o13 off
+2019-11-25 16:44:14:353 ExtendedStatusForHumans: Stopped
+2019-11-25 16:44:14:353 Status: Stopped
+2019-11-25 16:44:14:353 StateOfCharge: 76.2
+2019-11-25 16:44:14:353 Location: 36050 -81436 91
+2019-11-25 16:44:14:353 LocalizationScore: 0.878453
+2019-11-25 16:44:14:353 Temperature: 43
+2019-11-25 16:44:14:374 Info: WirelessQuality 0%
+2019-11-25 16:44:14:374 Info: CurrentDraw 2.96 a
+2019-11-25 16:44:14:374 Info: PackVoltage 26.290 v
+2019-11-25 16:44:14:374 Info: Odometer(KM) 101
+2019-11-25 16:44:14:374 Output: o14 off
+2019-11-25 16:44:14:374 Output: o15 off
+2019-11-25 16:44:14:374 Output: o16 off
+2019-11-25 16:44:14:829 Output: o1 off
+2019-11-25 16:44:14:86 Output: o2 off
+2019-11-25 16:44:14:86 Output: o3 off
+2019-11-25 16:44:14:86 Output: o4 off
+2019-11-25 16:44:14:86 Output: o5 off
+2019-11-25 16:44:14:86 Output: o6 off
+2019-11-25 16:44:14:86 Output: o7 on
+2019-11-25 16:44:14:86 Output: o8 off
+2019-11-25 16:44:14:86 Output: o9 off
+2019-11-25 16:44:14:86 Output: o10 off
+2019-11-25 16:44:14:86 Output: o11 off
+2019-11-25 16:44:14:86 Output: o12 off
+2019-11-25 16:44:14:926 Output: o13 off
+2019-11-25 16:44:14:995 Output: o14 off
+2019-11-25 16:44:14:995 Output: o15 off
+2019-11-25 16:44:14:995 Output: o16 off
+2019-11-25 16:44:15:359 Executing macro Lamp_Green
+2019-11-25 16:44:15:457 ExtendedStatusForHumans: Executing macro Lamp_Green
+2019-11-25 16:44:15:457 Status: Executing macro Lamp_Green
+2019-11-25 16:44:15:457 StateOfCharge: 76.2
+2019-11-25 16:44:15:457 Location: 36050 -81436 91
+2019-11-25 16:44:15:457 LocalizationScore: 0.878453
+2019-11-25 16:44:15:457 Temperature: 43
+2019-11-25 16:44:15:457 Info: WirelessQuality 0%
+2019-11-25 16:44:15:457 Info: CurrentDraw 2.87 a
+2019-11-25 16:44:15:457 Info: PackVoltage 26.291 v
+2019-11-25 16:44:15:457 Info: Odometer(KM) 101
+2019-11-25 16:44:15:457 Output: o9 off
+2019-11-25 16:44:15:457 Output: o8 off
+2019-11-25 16:44:15:457 Output: o7 on
+2019-11-25 16:44:15:457 Completed macro Lamp_Green
+2019-11-25 16:44:15:495 Output: o1 off
+2019-11-25 16:44:15:495 Output: o2 off
+2019-11-25 16:44:15:495 Output: o3 off
+2019-11-25 16:44:15:495 Output: o4 off
+2019-11-25 16:44:15:495 Output: o5 off
+2019-11-25 16:44:15:495 Output: o6 off
+2019-11-25 16:44:15:495 Output: o7 on
+2019-11-25 16:44:15:495 Output: o8 off
+2019-11-25 16:44:15:495 Output: o9 off
+2019-11-25 16:44:15:495 Output: o10 off
+2019-11-25 16:44:15:495 Output: o11 off
+2019-11-25 16:44:15:542 Output: o12 off
+2019-11-25 16:44:15:573 Output: o13 off
+2019-11-25 16:44:15:573 Output: o14 off
+2019-11-25 16:44:15:573 Output: o15 off
+2019-11-25 16:44:15:573 Output: o16 off
+2019-11-25 16:44:16:025 Output: o1 off
+2019-11-25 16:44:16:088 Output: o2 off
+2019-11-25 16:44:16:088 Output: o3 off
+2019-11-25 16:44:16:088 Output: o4 off
+2019-11-25 16:44:16:088 Output: o5 off
+2019-11-25 16:44:16:088 Output: o6 off
+2019-11-25 16:44:16:088 Output: o7 on
+2019-11-25 16:44:16:088 Output: o8 off
+2019-11-25 16:44:16:088 Output: o9 off
+2019-11-25 16:44:16:088 Output: o10 off
+2019-11-25 16:44:16:088 Output: o11 off
+2019-11-25 16:44:16:136 Output: o12 off
+2019-11-25 16:44:16:168 Output: o13 off
+2019-11-25 16:44:16:168 Output: o14 off
+2019-11-25 16:44:16:168 Output: o15 off
+2019-11-25 16:44:16:168 Output: o16 off
+2019-11-25 16:44:16:442 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:16:536 Status: Completed macro Lamp_Green
+2019-11-25 16:44:16:536 StateOfCharge: 76.2
+2019-11-25 16:44:16:536 Location: 36050 -81436 91
+2019-11-25 16:44:16:536 LocalizationScore: 0.878453
+2019-11-25 16:44:16:536 Temperature: 43
+2019-11-25 16:44:16:536 Info: WirelessQuality 0%
+2019-11-25 16:44:16:536 Info: CurrentDraw 3.07 a
+2019-11-25 16:44:16:536 Info: PackVoltage 26.291 v
+2019-11-25 16:44:16:536 Info: Odometer(KM) 101
+2019-11-25 16:44:16:624 Output: o1 off
+2019-11-25 16:44:16:696 Output: o2 off
+2019-11-25 16:44:16:696 Output: o3 off
+2019-11-25 16:44:16:696 Output: o4 off
+2019-11-25 16:44:16:696 Output: o5 off
+2019-11-25 16:44:16:696 Output: o6 off
+2019-11-25 16:44:16:696 Output: o7 on
+2019-11-25 16:44:16:696 Output: o8 off
+2019-11-25 16:44:16:696 Output: o9 off
+2019-11-25 16:44:16:696 Output: o10 off
+2019-11-25 16:44:16:696 Output: o11 off
+2019-11-25 16:44:16:696 Output: o12 off
+2019-11-25 16:44:16:696 Output: o13 off
+2019-11-25 16:44:16:765 Output: o14 off
+2019-11-25 16:44:16:79 Output: o15 off
+2019-11-25 16:44:16:79 Output: o16 off
+2019-11-25 16:44:17:224 Output: o1 off
+2019-11-25 16:44:17:249 Output: o2 off
+2019-11-25 16:44:17:249 Output: o3 off
+2019-11-25 16:44:17:249 Output: o4 off
+2019-11-25 16:44:17:249 Output: o5 off
+2019-11-25 16:44:17:249 Output: o6 off
+2019-11-25 16:44:17:249 Output: o7 on
+2019-11-25 16:44:17:249 Output: o8 off
+2019-11-25 16:44:17:249 Output: o9 off
+2019-11-25 16:44:17:249 Output: o10 off
+2019-11-25 16:44:17:249 Output: o11 off
+2019-11-25 16:44:17:249 Output: o12 off
+2019-11-25 16:44:17:249 Output: o13 off
+2019-11-25 16:44:17:249 Output: o14 off
+2019-11-25 16:44:17:346 Output: o15 off
+2019-11-25 16:44:17:389 Output: o16 off
+2019-11-25 16:44:17:542 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:17:637 Status: Completed macro Lamp_Green
+2019-11-25 16:44:17:637 StateOfCharge: 76.2
+2019-11-25 16:44:17:637 Location: 36050 -81436 91
+2019-11-25 16:44:17:637 LocalizationScore: 0.878453
+2019-11-25 16:44:17:637 Temperature: 43
+2019-11-25 16:44:17:637 Info: WirelessQuality 0%
+2019-11-25 16:44:17:637 Info: CurrentDraw 2.89 a
+2019-11-25 16:44:17:637 Info: PackVoltage 26.290 v
+2019-11-25 16:44:17:637 Info: Odometer(KM) 101
+2019-11-25 16:44:17:75 Unknown command A2A
+2019-11-25 16:44:17:826 Output: o1 off
+2019-11-25 16:44:17:887 Output: o2 off
+2019-11-25 16:44:17:887 Output: o3 off
+2019-11-25 16:44:17:887 Output: o4 off
+2019-11-25 16:44:17:887 Output: o5 off
+2019-11-25 16:44:17:887 Output: o6 off
+2019-11-25 16:44:17:887 Output: o7 on
+2019-11-25 16:44:17:887 Output: o8 off
+2019-11-25 16:44:17:887 Output: o9 off
+2019-11-25 16:44:17:887 Output: o10 off
+2019-11-25 16:44:17:887 Output: o11 off
+2019-11-25 16:44:17:887 Output: o12 off
+2019-11-25 16:44:17:887 Output: o13 off
+2019-11-25 16:44:17:887 Output: o14 off
+2019-11-25 16:44:17:887 Output: o15 off
+2019-11-25 16:44:17:924 Output: o16 off
+2019-11-25 16:44:18:426 Output: o1 off
+2019-11-25 16:44:18:524 Output: o2 off
+2019-11-25 16:44:18:524 Output: o3 off
+2019-11-25 16:44:18:524 Output: o4 off
+2019-11-25 16:44:18:524 Output: o5 off
+2019-11-25 16:44:18:524 Output: o6 off
+2019-11-25 16:44:18:524 Output: o7 on
+2019-11-25 16:44:18:524 Output: o8 off
+2019-11-25 16:44:18:524 Output: o9 off
+2019-11-25 16:44:18:524 Output: o10 off
+2019-11-25 16:44:18:524 Output: o11 off
+2019-11-25 16:44:18:524 Output: o12 off
+2019-11-25 16:44:18:524 Output: o13 off
+2019-11-25 16:44:18:524 Output: o14 off
+2019-11-25 16:44:18:524 Output: o15 off
+2019-11-25 16:44:18:524 Output: o16 off
+2019-11-25 16:44:18:56 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:18:666 Status: Completed macro Lamp_Green
+2019-11-25 16:44:18:666 StateOfCharge: 76.2
+2019-11-25 16:44:18:666 Location: 36050 -81436 91
+2019-11-25 16:44:18:666 LocalizationScore: 0.878453
+2019-11-25 16:44:18:666 Temperature: 43
+2019-11-25 16:44:18:666 Info: WirelessQuality 0%
+2019-11-25 16:44:18:666 Info: CurrentDraw 2.91 a
+2019-11-25 16:44:18:666 Info: PackVoltage 26.291 v
+2019-11-25 16:44:18:666 Info: Odometer(KM) 101
+2019-11-25 16:44:19:024 Output: o1 off
+2019-11-25 16:44:19:052 Output: o2 off
+2019-11-25 16:44:19:052 Output: o3 off
+2019-11-25 16:44:19:052 Output: o4 off
+2019-11-25 16:44:19:052 Output: o5 off
+2019-11-25 16:44:19:052 Output: o6 off
+2019-11-25 16:44:19:126 Output: o7 on
+2019-11-25 16:44:19:126 Output: o8 off
+2019-11-25 16:44:19:126 Output: o9 off
+2019-11-25 16:44:19:126 Output: o10 off
+2019-11-25 16:44:19:126 Output: o11 off
+2019-11-25 16:44:19:126 Output: o12 off
+2019-11-25 16:44:19:126 Output: o13 off
+2019-11-25 16:44:19:126 Output: o14 off
+2019-11-25 16:44:19:126 Output: o15 off
+2019-11-25 16:44:19:126 Output: o16 off
+2019-11-25 16:44:19:582 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:19:661 Status: Completed macro Lamp_Green
+2019-11-25 16:44:19:661 StateOfCharge: 76.2
+2019-11-25 16:44:19:661 Location: 36050 -81436 91
+2019-11-25 16:44:19:661 LocalizationScore: 0.878453
+2019-11-25 16:44:19:661 Temperature: 43
+2019-11-25 16:44:19:684 Info: WirelessQuality 0%
+2019-11-25 16:44:19:684 Info: CurrentDraw 2.93 a
+2019-11-25 16:44:19:684 Info: PackVoltage 26.289 v
+2019-11-25 16:44:19:684 Info: Odometer(KM) 101
+2019-11-25 16:44:19:684 Output: o1 off
+2019-11-25 16:44:19:684 Output: o2 off
+2019-11-25 16:44:19:684 Output: o3 off
+2019-11-25 16:44:19:684 Output: o4 off
+2019-11-25 16:44:19:684 Output: o5 off
+2019-11-25 16:44:19:684 Output: o6 off
+2019-11-25 16:44:19:684 Output: o7 on
+2019-11-25 16:44:19:684 Output: o8 off
+2019-11-25 16:44:19:684 Output: o9 off
+2019-11-25 16:44:19:684 Output: o10 off
+2019-11-25 16:44:19:684 Output: o11 off
+2019-11-25 16:44:19:684 Output: o12 off
+2019-11-25 16:44:19:727 Output: o13 off
+2019-11-25 16:44:19:767 Output: o14 off
+2019-11-25 16:44:19:767 Output: o15 off
+2019-11-25 16:44:19:767 Output: o16 off
+2019-11-25 16:44:20:261 Output: o1 off
+2019-11-25 16:44:20:301 Output: o2 off
+2019-11-25 16:44:20:301 Output: o3 off
+2019-11-25 16:44:20:301 Output: o4 off
+2019-11-25 16:44:20:301 Output: o5 off
+2019-11-25 16:44:20:301 Output: o6 off
+2019-11-25 16:44:20:301 Output: o7 on
+2019-11-25 16:44:20:301 Output: o8 off
+2019-11-25 16:44:20:301 Output: o9 off
+2019-11-25 16:44:20:301 Output: o10 off
+2019-11-25 16:44:20:301 Output: o11 off
+2019-11-25 16:44:20:301 Output: o12 off
+2019-11-25 16:44:20:301 Output: o13 off
+2019-11-25 16:44:20:324 Output: o14 off
+2019-11-25 16:44:20:387 Output: o15 off
+2019-11-25 16:44:20:387 Output: o16 off
+2019-11-25 16:44:20:643 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:20:734 Status: Completed macro Lamp_Green
+2019-11-25 16:44:20:734 StateOfCharge: 76.2
+2019-11-25 16:44:20:734 Location: 36050 -81436 91
+2019-11-25 16:44:20:734 LocalizationScore: 0.878453
+2019-11-25 16:44:20:734 Temperature: 43
+2019-11-25 16:44:20:734 Info: WirelessQuality 0%
+2019-11-25 16:44:20:734 Info: CurrentDraw 2.80 a
+2019-11-25 16:44:20:734 Info: PackVoltage 26.290 v
+2019-11-25 16:44:20:734 Info: Odometer(KM) 101
+2019-11-25 16:44:20:824 Output: o1 off
+2019-11-25 16:44:20:856 Output: o2 off
+2019-11-25 16:44:20:856 Output: o3 off
+2019-11-25 16:44:20:856 Output: o4 off
+2019-11-25 16:44:20:856 Output: o5 off
+2019-11-25 16:44:20:856 Output: o6 off
+2019-11-25 16:44:20:856 Output: o7 on
+2019-11-25 16:44:20:856 Output: o8 off
+2019-11-25 16:44:20:856 Output: o9 off
+2019-11-25 16:44:20:856 Output: o10 off
+2019-11-25 16:44:20:856 Output: o11 off
+2019-11-25 16:44:20:856 Output: o12 off
+2019-11-25 16:44:20:856 Output: o13 off
+2019-11-25 16:44:20:856 Output: o14 off
+2019-11-25 16:44:20:924 Output: o15 off
+2019-11-25 16:44:20:966 Output: o16 off
+2019-11-25 16:44:21:141 Unknown command A2A
+2019-11-25 16:44:21:424 Output: o1 off
+2019-11-25 16:44:21:456 Output: o2 off
+2019-11-25 16:44:21:456 Output: o3 off
+2019-11-25 16:44:21:456 Output: o4 off
+2019-11-25 16:44:21:456 Output: o5 off
+2019-11-25 16:44:21:456 Output: o6 off
+2019-11-25 16:44:21:456 Output: o7 on
+2019-11-25 16:44:21:456 Output: o8 off
+2019-11-25 16:44:21:456 Output: o9 off
+2019-11-25 16:44:21:456 Output: o10 off
+2019-11-25 16:44:21:456 Output: o11 off
+2019-11-25 16:44:21:456 Output: o12 off
+2019-11-25 16:44:21:456 Output: o13 off
+2019-11-25 16:44:21:456 Output: o14 off
+2019-11-25 16:44:21:456 Output: o15 off
+2019-11-25 16:44:21:532 Output: o16 off
+2019-11-25 16:44:21:692 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:21:788 Status: Completed macro Lamp_Green
+2019-11-25 16:44:21:788 StateOfCharge: 76.2
+2019-11-25 16:44:21:788 Location: 36050 -81436 91
+2019-11-25 16:44:21:788 LocalizationScore: 0.878453
+2019-11-25 16:44:21:788 Temperature: 43
+2019-11-25 16:44:21:815 Info: WirelessQuality 0%
+2019-11-25 16:44:21:815 Info: CurrentDraw 2.97 a
+2019-11-25 16:44:21:815 Info: PackVoltage 26.291 v
+2019-11-25 16:44:21:815 Info: Odometer(KM) 101
+2019-11-25 16:44:22:026 Output: o1 off
+2019-11-25 16:44:22:145 Output: o2 off
+2019-11-25 16:44:22:145 Unknown command A2A
+2019-11-25 16:44:22:145 Output: o3 off
+2019-11-25 16:44:22:145 Output: o4 off
+2019-11-25 16:44:22:145 Output: o5 off
+2019-11-25 16:44:22:145 Output: o6 off
+2019-11-25 16:44:22:145 Output: o7 on
+2019-11-25 16:44:22:145 Output: o8 off
+2019-11-25 16:44:22:145 Output: o9 off
+2019-11-25 16:44:22:145 Output: o10 off
+2019-11-25 16:44:22:145 Output: o11 off
+2019-11-25 16:44:22:145 Output: o12 off
+2019-11-25 16:44:22:145 Output: o13 off
+2019-11-25 16:44:22:145 Output: o14 off
+2019-11-25 16:44:22:145 Output: o15 off
+2019-11-25 16:44:22:145 Output: o16 off
+2019-11-25 16:44:22:626 Output: o1 off
+2019-11-25 16:44:22:765 Output: o2 off
+2019-11-25 16:44:22:765 Output: o3 off
+2019-11-25 16:44:22:765 Output: o4 off
+2019-11-25 16:44:22:765 Output: o5 off
+2019-11-25 16:44:22:765 Output: o6 off
+2019-11-25 16:44:22:765 Output: o7 on
+2019-11-25 16:44:22:765 Output: o8 off
+2019-11-25 16:44:22:765 Output: o9 off
+2019-11-25 16:44:22:765 Output: o10 off
+2019-11-25 16:44:22:765 Output: o11 off
+2019-11-25 16:44:22:765 Output: o12 off
+2019-11-25 16:44:22:765 Output: o13 off
+2019-11-25 16:44:22:765 Output: o14 off
+2019-11-25 16:44:22:765 Output: o15 off
+2019-11-25 16:44:22:765 Output: o16 off
+2019-11-25 16:44:22:861 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:22:861 Status: Completed macro Lamp_Green
+2019-11-25 16:44:22:861 StateOfCharge: 76.2
+2019-11-25 16:44:22:861 Location: 36050 -81436 91
+2019-11-25 16:44:22:861 LocalizationScore: 0.878453
+2019-11-25 16:44:22:861 Temperature: 43
+2019-11-25 16:44:22:882 Info: WirelessQuality 0%
+2019-11-25 16:44:22:882 Info: CurrentDraw 2.94 a
+2019-11-25 16:44:22:882 Info: PackVoltage 26.291 v
+2019-11-25 16:44:22:882 Info: Odometer(KM) 101
+2019-11-25 16:44:23:246 Output: o1 off
+2019-11-25 16:44:23:29 Output: o2 off
+2019-11-25 16:44:23:29 Output: o3 off
+2019-11-25 16:44:23:29 Output: o4 off
+2019-11-25 16:44:23:29 Output: o5 off
+2019-11-25 16:44:23:29 Output: o6 off
+2019-11-25 16:44:23:29 Output: o7 on
+2019-11-25 16:44:23:29 Output: o8 off
+2019-11-25 16:44:23:29 Output: o9 off
+2019-11-25 16:44:23:29 Output: o10 off
+2019-11-25 16:44:23:29 Output: o11 off
+2019-11-25 16:44:23:29 Output: o12 off
+2019-11-25 16:44:23:29 Output: o13 off
+2019-11-25 16:44:23:29 Output: o14 off
+2019-11-25 16:44:23:329 Output: o15 off
+2019-11-25 16:44:23:368 Output: o16 off
+2019-11-25 16:44:23:825 Output: o1 off
+2019-11-25 16:44:23:935 Output: o2 off
+2019-11-25 16:44:23:935 Output: o3 off
+2019-11-25 16:44:23:935 Output: o4 off
+2019-11-25 16:44:23:935 Output: o5 off
+2019-11-25 16:44:23:935 Output: o6 off
+2019-11-25 16:44:23:935 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:23:935 Status: Completed macro Lamp_Green
+2019-11-25 16:44:23:935 StateOfCharge: 76.2
+2019-11-25 16:44:23:935 Location: 36050 -81436 91
+2019-11-25 16:44:23:935 LocalizationScore: 0.878453
+2019-11-25 16:44:23:935 Temperature: 43
+2019-11-25 16:44:23:935 Info: WirelessQuality 0%
+2019-11-25 16:44:23:935 Info: CurrentDraw 2.88 a
+2019-11-25 16:44:23:935 Info: PackVoltage 26.291 v
+2019-11-25 16:44:23:935 Info: Odometer(KM) 101
+2019-11-25 16:44:23:935 Output: o7 on
+2019-11-25 16:44:23:935 Output: o8 off
+2019-11-25 16:44:23:962 Output: o9 off
+2019-11-25 16:44:23:984 Output: o10 off
+2019-11-25 16:44:23:984 Output: o11 off
+2019-11-25 16:44:23:984 Output: o12 off
+2019-11-25 16:44:23:984 Output: o13 off
+2019-11-25 16:44:23:984 Output: o14 off
+2019-11-25 16:44:23:984 Output: o15 off
+2019-11-25 16:44:23:984 Output: o16 off
+2019-11-25 16:44:24:525 Output: o1 off
+2019-11-25 16:44:24:588 Output: o2 off
+2019-11-25 16:44:24:588 Output: o3 off
+2019-11-25 16:44:24:588 Output: o4 off
+2019-11-25 16:44:24:588 Output: o5 off
+2019-11-25 16:44:24:588 Output: o6 off
+2019-11-25 16:44:24:588 Output: o7 on
+2019-11-25 16:44:24:588 Output: o8 off
+2019-11-25 16:44:24:588 Output: o9 off
+2019-11-25 16:44:24:588 Output: o10 off
+2019-11-25 16:44:24:588 Output: o11 off
+2019-11-25 16:44:24:588 Output: o12 off
+2019-11-25 16:44:24:588 Output: o13 off
+2019-11-25 16:44:24:588 Output: o14 off
+2019-11-25 16:44:24:588 Output: o15 off
+2019-11-25 16:44:24:624 Output: o16 off
+2019-11-25 16:44:24:934 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:25:119 Status: Completed macro Lamp_Green
+2019-11-25 16:44:25:119 StateOfCharge: 76.2
+2019-11-25 16:44:25:119 Location: 36050 -81436 91
+2019-11-25 16:44:25:119 LocalizationScore: 0.878453
+2019-11-25 16:44:25:119 Temperature: 43
+2019-11-25 16:44:25:119 Info: WirelessQuality 0%
+2019-11-25 16:44:25:119 Info: CurrentDraw 3.02 a
+2019-11-25 16:44:25:119 Info: PackVoltage 26.288 v
+2019-11-25 16:44:25:119 Info: Odometer(KM) 101
+2019-11-25 16:44:25:153 Output: o1 off
+2019-11-25 16:44:25:153 Output: o2 off
+2019-11-25 16:44:25:153 Output: o3 off
+2019-11-25 16:44:25:153 Output: o4 off
+2019-11-25 16:44:25:153 Output: o5 off
+2019-11-25 16:44:25:153 Output: o6 off
+2019-11-25 16:44:25:153 Output: o7 on
+2019-11-25 16:44:25:153 Output: o8 off
+2019-11-25 16:44:25:153 Output: o9 off
+2019-11-25 16:44:25:153 Output: o10 off
+2019-11-25 16:44:25:153 Output: o11 off
+2019-11-25 16:44:25:225 Output: o12 off
+2019-11-25 16:44:25:269 Output: o13 off
+2019-11-25 16:44:25:269 Output: o14 off
+2019-11-25 16:44:25:269 Output: o15 off
+2019-11-25 16:44:25:269 Output: o16 off
+2019-11-25 16:44:25:727 Output: o1 off
+2019-11-25 16:44:25:793 Output: o2 off
+2019-11-25 16:44:25:793 Output: o3 off
+2019-11-25 16:44:25:793 Output: o4 off
+2019-11-25 16:44:25:793 Output: o5 off
+2019-11-25 16:44:25:793 Output: o6 off
+2019-11-25 16:44:25:793 Output: o7 on
+2019-11-25 16:44:25:793 Output: o8 off
+2019-11-25 16:44:25:793 Output: o9 off
+2019-11-25 16:44:25:793 Output: o10 off
+2019-11-25 16:44:25:793 Output: o11 off
+2019-11-25 16:44:25:793 Output: o12 off
+2019-11-25 16:44:25:793 Output: o13 off
+2019-11-25 16:44:25:793 Output: o14 off
+2019-11-25 16:44:25:793 Output: o15 off
+2019-11-25 16:44:25:793 Output: o16 off
+2019-11-25 16:44:25:936 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:26:016 Status: Completed macro Lamp_Green
+2019-11-25 16:44:26:016 StateOfCharge: 76.2
+2019-11-25 16:44:26:016 Location: 36050 -81436 91
+2019-11-25 16:44:26:016 LocalizationScore: 0.878453
+2019-11-25 16:44:26:016 Temperature: 43
+2019-11-25 16:44:26:039 Info: WirelessQuality 0%
+2019-11-25 16:44:26:063 Info: CurrentDraw 2.80 a
+2019-11-25 16:44:26:063 Info: PackVoltage 26.291 v
+2019-11-25 16:44:26:063 Info: Odometer(KM) 101
+2019-11-25 16:44:26:224 Output: o1 off
+2019-11-25 16:44:26:333 Output: o2 off
+2019-11-25 16:44:26:392 Output: o3 off
+2019-11-25 16:44:26:392 Output: o4 off
+2019-11-25 16:44:26:392 Output: o5 off
+2019-11-25 16:44:26:392 Output: o6 off
+2019-11-25 16:44:26:392 Output: o7 on
+2019-11-25 16:44:26:392 Output: o8 off
+2019-11-25 16:44:26:392 Output: o9 off
+2019-11-25 16:44:26:392 Output: o10 off
+2019-11-25 16:44:26:392 Output: o11 off
+2019-11-25 16:44:26:392 Output: o12 off
+2019-11-25 16:44:26:392 Output: o13 off
+2019-11-25 16:44:26:392 Output: o14 off
+2019-11-25 16:44:26:392 Output: o15 off
+2019-11-25 16:44:26:392 Output: o16 off
+2019-11-25 16:44:26:827 Output: o1 off
+2019-11-25 16:44:26:926 Output: o2 off
+2019-11-25 16:44:27:096 Output: o3 off
+2019-11-25 16:44:27:096 Output: o4 off
+2019-11-25 16:44:27:096 Output: o5 off
+2019-11-25 16:44:27:096 Output: o6 off
+2019-11-25 16:44:27:096 Output: o7 on
+2019-11-25 16:44:27:096 Output: o8 off
+2019-11-25 16:44:27:096 Output: o9 off
+2019-11-25 16:44:27:096 Output: o10 off
+2019-11-25 16:44:27:096 Output: o11 off
+2019-11-25 16:44:27:096 Output: o12 off
+2019-11-25 16:44:27:096 Output: o13 off
+2019-11-25 16:44:27:096 Output: o14 off
+2019-11-25 16:44:27:096 Output: o15 off
+2019-11-25 16:44:27:096 Output: o16 off
+2019-11-25 16:44:27:096 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:27:096 Status: Completed macro Lamp_Green
+2019-11-25 16:44:27:096 StateOfCharge: 76.2
+2019-11-25 16:44:27:096 Location: 36050 -81436 91
+2019-11-25 16:44:27:096 LocalizationScore: 0.878453
+2019-11-25 16:44:27:096 Temperature: 43
+2019-11-25 16:44:27:096 Info: WirelessQuality 0%
+2019-11-25 16:44:27:096 Info: CurrentDraw 2.95 a
+2019-11-25 16:44:27:096 Info: PackVoltage 26.291 v
+2019-11-25 16:44:27:096 Info: Odometer(KM) 101
+2019-11-25 16:44:27:49 Output: o1 off
+2019-11-25 16:44:27:539 Output: o2 off
+2019-11-25 16:44:27:579 Output: o3 off
+2019-11-25 16:44:27:579 Output: o4 off
+2019-11-25 16:44:27:579 Output: o5 off
+2019-11-25 16:44:27:579 Output: o6 off
+2019-11-25 16:44:27:579 Output: o7 on
+2019-11-25 16:44:27:579 Output: o8 off
+2019-11-25 16:44:27:579 Output: o9 off
+2019-11-25 16:44:27:579 Output: o10 off
+2019-11-25 16:44:27:579 Output: o11 off
+2019-11-25 16:44:27:579 Output: o12 off
+2019-11-25 16:44:27:579 Output: o13 off
+2019-11-25 16:44:27:579 Output: o14 off
+2019-11-25 16:44:27:579 Output: o15 off
+2019-11-25 16:44:27:579 Output: o16 off
+2019-11-25 16:44:28:043 Output: o1 off
+2019-11-25 16:44:28:138 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:28:216 Status: Completed macro Lamp_Green
+2019-11-25 16:44:28:216 StateOfCharge: 76.2
+2019-11-25 16:44:28:216 Location: 36050 -81436 91
+2019-11-25 16:44:28:216 LocalizationScore: 0.878453
+2019-11-25 16:44:28:216 Temperature: 43
+2019-11-25 16:44:28:216 Info: WirelessQuality 0%
+2019-11-25 16:44:28:216 Info: CurrentDraw 2.89 a
+2019-11-25 16:44:28:216 Info: PackVoltage 26.290 v
+2019-11-25 16:44:28:216 Info: Odometer(KM) 101
+2019-11-25 16:44:28:216 Output: o2 off
+2019-11-25 16:44:28:216 Output: o3 off
+2019-11-25 16:44:28:216 Output: o4 off
+2019-11-25 16:44:28:216 Output: o5 off
+2019-11-25 16:44:28:216 Output: o6 off
+2019-11-25 16:44:28:216 Output: o7 on
+2019-11-25 16:44:28:216 Output: o8 off
+2019-11-25 16:44:28:216 Output: o9 off
+2019-11-25 16:44:28:216 Output: o10 off
+2019-11-25 16:44:28:216 Output: o11 off
+2019-11-25 16:44:28:216 Output: o12 off
+2019-11-25 16:44:28:216 Output: o13 off
+2019-11-25 16:44:28:216 Output: o14 off
+2019-11-25 16:44:28:216 Output: o15 off
+2019-11-25 16:44:28:216 Output: o16 off
+2019-11-25 16:44:28:727 Output: o1 off
+2019-11-25 16:44:28:794 Output: o2 off
+2019-11-25 16:44:28:794 Output: o3 off
+2019-11-25 16:44:28:794 Output: o4 off
+2019-11-25 16:44:28:794 Output: o5 off
+2019-11-25 16:44:28:794 Output: o6 off
+2019-11-25 16:44:28:794 Output: o7 on
+2019-11-25 16:44:28:794 Output: o8 off
+2019-11-25 16:44:28:794 Output: o9 off
+2019-11-25 16:44:28:794 Output: o10 off
+2019-11-25 16:44:28:794 Output: o11 off
+2019-11-25 16:44:28:794 Output: o12 off
+2019-11-25 16:44:28:794 Output: o13 off
+2019-11-25 16:44:28:794 Output: o14 off
+2019-11-25 16:44:28:794 Output: o15 off
+2019-11-25 16:44:28:794 Output: o16 off
+2019-11-25 16:44:29:14 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:29:226 Status: Completed macro Lamp_Green
+2019-11-25 16:44:29:226 StateOfCharge: 76.2
+2019-11-25 16:44:29:226 Location: 36050 -81436 91
+2019-11-25 16:44:29:226 LocalizationScore: 0.878453
+2019-11-25 16:44:29:226 Temperature: 43
+2019-11-25 16:44:29:226 Info: WirelessQuality 0%
+2019-11-25 16:44:29:226 Info: CurrentDraw 2.92 a
+2019-11-25 16:44:29:226 Info: PackVoltage 26.291 v
+2019-11-25 16:44:29:226 Info: Odometer(KM) 101
+2019-11-25 16:44:29:256 Output: o1 off
+2019-11-25 16:44:29:326 Output: o2 off
+2019-11-25 16:44:29:428 Output: o3 off
+2019-11-25 16:44:29:428 Output: o4 off
+2019-11-25 16:44:29:428 Output: o5 off
+2019-11-25 16:44:29:428 Output: o6 off
+2019-11-25 16:44:29:428 Output: o7 on
+2019-11-25 16:44:29:428 Output: o8 off
+2019-11-25 16:44:29:428 Output: o9 off
+2019-11-25 16:44:29:428 Output: o10 off
+2019-11-25 16:44:29:428 Output: o11 off
+2019-11-25 16:44:29:428 Output: o12 off
+2019-11-25 16:44:29:428 Output: o13 off
+2019-11-25 16:44:29:428 Output: o14 off
+2019-11-25 16:44:29:428 Output: o15 off
+2019-11-25 16:44:29:428 Output: o16 off
+2019-11-25 16:44:29:825 Output: o1 off
+2019-11-25 16:44:29:937 Output: o2 off
+2019-11-25 16:44:29:999 Output: o3 off
+2019-11-25 16:44:29:999 Output: o4 off
+2019-11-25 16:44:29:999 Output: o5 off
+2019-11-25 16:44:29:999 Output: o6 off
+2019-11-25 16:44:29:999 Output: o7 on
+2019-11-25 16:44:29:999 Output: o8 off
+2019-11-25 16:44:29:999 Output: o9 off
+2019-11-25 16:44:29:999 Output: o10 off
+2019-11-25 16:44:29:999 Output: o11 off
+2019-11-25 16:44:29:999 Output: o12 off
+2019-11-25 16:44:29:999 Output: o13 off
+2019-11-25 16:44:29:999 Output: o14 off
+2019-11-25 16:44:29:999 Output: o15 off
+2019-11-25 16:44:29:999 Output: o16 off
+2019-11-25 16:44:30:144 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:30:239 Status: Completed macro Lamp_Green
+2019-11-25 16:44:30:239 StateOfCharge: 76.2
+2019-11-25 16:44:30:239 Location: 36050 -81436 91
+2019-11-25 16:44:30:239 LocalizationScore: 0.878453
+2019-11-25 16:44:30:239 Temperature: 43
+2019-11-25 16:44:30:26 Info: WirelessQuality 0%
+2019-11-25 16:44:30:279 Info: CurrentDraw 2.97 a
+2019-11-25 16:44:30:279 Info: PackVoltage 26.289 v
+2019-11-25 16:44:30:279 Info: Odometer(KM) 101
+2019-11-25 16:44:30:426 Output: o1 off
+2019-11-25 16:44:30:525 Output: o2 off
+2019-11-25 16:44:30:578 Output: o3 off
+2019-11-25 16:44:30:578 Output: o4 off
+2019-11-25 16:44:30:578 Output: o5 off
+2019-11-25 16:44:30:578 Output: o6 off
+2019-11-25 16:44:30:578 Output: o7 on
+2019-11-25 16:44:30:578 Output: o8 off
+2019-11-25 16:44:30:578 Output: o9 off
+2019-11-25 16:44:30:578 Output: o10 off
+2019-11-25 16:44:30:578 Output: o11 off
+2019-11-25 16:44:30:578 Output: o12 off
+2019-11-25 16:44:30:578 Output: o13 off
+2019-11-25 16:44:30:578 Output: o14 off
+2019-11-25 16:44:30:578 Output: o15 off
+2019-11-25 16:44:30:578 Output: o16 off
+2019-11-25 16:44:31:025 Output: o1 off
+2019-11-25 16:44:31:127 Output: o2 off
+2019-11-25 16:44:31:227 Output: o3 off
+2019-11-25 16:44:31:227 Output: o4 off
+2019-11-25 16:44:31:227 Output: o5 off
+2019-11-25 16:44:31:227 Output: o6 off
+2019-11-25 16:44:31:227 Output: o7 on
+2019-11-25 16:44:31:227 Output: o8 off
+2019-11-25 16:44:31:227 Output: o9 off
+2019-11-25 16:44:31:227 Output: o10 off
+2019-11-25 16:44:31:227 Output: o11 off
+2019-11-25 16:44:31:227 Output: o12 off
+2019-11-25 16:44:31:227 Output: o13 off
+2019-11-25 16:44:31:227 Output: o14 off
+2019-11-25 16:44:31:227 Output: o15 off
+2019-11-25 16:44:31:227 Output: o16 off
+2019-11-25 16:44:31:259 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:31:326 Status: Completed macro Lamp_Green
+2019-11-25 16:44:31:326 StateOfCharge: 76.2
+2019-11-25 16:44:31:326 Location: 36050 -81436 91
+2019-11-25 16:44:31:326 LocalizationScore: 0.878453
+2019-11-25 16:44:31:326 Temperature: 43
+2019-11-25 16:44:31:326 Info: WirelessQuality 0%
+2019-11-25 16:44:31:326 Info: CurrentDraw 2.86 a
+2019-11-25 16:44:31:326 Info: PackVoltage 26.291 v
+2019-11-25 16:44:31:326 Info: Odometer(KM) 101
+2019-11-25 16:44:31:624 Output: o1 off
+2019-11-25 16:44:31:644 Output: o2 off
+2019-11-25 16:44:31:644 Output: o3 off
+2019-11-25 16:44:31:644 Output: o4 off
+2019-11-25 16:44:31:644 Output: o5 off
+2019-11-25 16:44:31:725 Output: o6 off
+2019-11-25 16:44:31:783 Output: o7 on
+2019-11-25 16:44:31:783 Output: o8 off
+2019-11-25 16:44:31:783 Output: o9 off
+2019-11-25 16:44:31:783 Output: o10 off
+2019-11-25 16:44:31:783 Output: o11 off
+2019-11-25 16:44:31:783 Output: o12 off
+2019-11-25 16:44:31:783 Output: o13 off
+2019-11-25 16:44:31:783 Output: o14 off
+2019-11-25 16:44:31:783 Output: o15 off
+2019-11-25 16:44:31:783 Output: o16 off
+2019-11-25 16:44:32:264 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:32:37 Status: Completed macro Lamp_Green
+2019-11-25 16:44:32:37 StateOfCharge: 76.2
+2019-11-25 16:44:32:37 Location: 36050 -81436 91
+2019-11-25 16:44:32:37 LocalizationScore: 0.878453
+2019-11-25 16:44:32:37 Temperature: 43
+2019-11-25 16:44:32:37 Info: WirelessQuality 0%
+2019-11-25 16:44:32:37 Info: CurrentDraw 3.04 a
+2019-11-25 16:44:32:37 Info: PackVoltage 26.289 v
+2019-11-25 16:44:32:37 Info: Odometer(KM) 101
+2019-11-25 16:44:32:37 Output: o1 off
+2019-11-25 16:44:32:37 Output: o2 off
+2019-11-25 16:44:32:401 Output: o3 off
+2019-11-25 16:44:32:401 Output: o4 off
+2019-11-25 16:44:32:401 Output: o5 off
+2019-11-25 16:44:32:401 Output: o6 off
+2019-11-25 16:44:32:401 Output: o7 on
+2019-11-25 16:44:32:401 Output: o8 off
+2019-11-25 16:44:32:401 Output: o9 off
+2019-11-25 16:44:32:401 Output: o10 off
+2019-11-25 16:44:32:401 Output: o11 off
+2019-11-25 16:44:32:401 Output: o12 off
+2019-11-25 16:44:32:401 Output: o13 off
+2019-11-25 16:44:32:401 Output: o14 off
+2019-11-25 16:44:32:401 Output: o15 off
+2019-11-25 16:44:32:401 Output: o16 off
+2019-11-25 16:44:32:978 Output: o1 off
+2019-11-25 16:44:33:047 Output: o2 off
+2019-11-25 16:44:33:047 Output: o3 off
+2019-11-25 16:44:33:047 Output: o4 off
+2019-11-25 16:44:33:047 Output: o5 off
+2019-11-25 16:44:33:047 Output: o6 off
+2019-11-25 16:44:33:047 Output: o7 on
+2019-11-25 16:44:33:047 Output: o8 off
+2019-11-25 16:44:33:047 Output: o9 off
+2019-11-25 16:44:33:047 Output: o10 off
+2019-11-25 16:44:33:047 Output: o11 off
+2019-11-25 16:44:33:047 Output: o12 off
+2019-11-25 16:44:33:047 Output: o13 off
+2019-11-25 16:44:33:047 Output: o14 off
+2019-11-25 16:44:33:047 Output: o15 off
+2019-11-25 16:44:33:047 Output: o16 off
+2019-11-25 16:44:33:339 ExtendedStatusForHumans: Completed macro Lamp_Green
+2019-11-25 16:44:33:42 Status: Completed macro Lamp_Green
+2019-11-25 16:44:33:42 StateOfCharge: 76.2
+2019-11-25 16:44:33:42 Location: 36050 -81436 91
+2019-11-25 16:44:33:42 LocalizationScore: 0.878453
+2019-11-25 16:44:33:42 Temperature: 43
+2019-11-25 16:44:33:42 Info: WirelessQuality 0%
+2019-11-25 16:44:33:42 Info: CurrentDraw 2.93 a
+2019-11-25 16:44:33:42 Info: PackVoltage 26.290 v
+2019-11-25 16:44:33:42 Info: Odometer(KM) 101
+2019-11-25 16:44:33:441 Output: o1 off
+2019-11-25 16:44:33:523 Output: o2 off
+2019-11-25 16:44:33:574 Output: o3 off
+2019-11-25 16:44:33:574 Output: o4 off
+2019-11-25 16:44:33:574 Output: o5 off
+2019-11-25 16:44:33:574 Output: o6 off
+2019-11-25 16:44:33:574 Output: o7 on
+2019-11-25 16:44:33:574 Output: o8 off
+2019-11-25 16:44:33:574 Output: o9 off
+2019-11-25 16:44:33:574 Output: o10 off
+2019-11-25 16:44:33:574 Output: o11 off
+2019-11-25 16:44:33:574 Output: o12 off
+2019-11-25 16:44:33:574 Output: o13 off
+2019-11-25 16:44:33:574 Output: o14 off
+2019-11-25 16:44:33:574 Output: o15 off
+2019-11-25 16:44:33:574 Output: o16 off

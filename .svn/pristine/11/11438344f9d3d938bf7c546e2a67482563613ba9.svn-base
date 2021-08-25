@@ -1,0 +1,20 @@
+NONE_ERROR	0	0	No error.	No Solution.
+AMC_SERVER_DISCONNECT	1	3	AMC server disconnect.	Check Server.
+AMC_SERVER_SEND_STB_ERROR	2	3	AMC server send STB error.	Check Server and STB.
+MAN_IN_ERR	1000	3	Undefine tray manual in error	Check AMC.
+MAN_IN_CONVEYOR_TIME_OUT	1001	3	Tray manual in Conveyor time out.	Check conveyor.
+MAN_IN_GRIPER_TIME_OUT	1002	3	Tray manual in griper time out.	Check griper.
+MAN_IN_TRAY_FULL	1003	3	Tray full.	Tray is full.
+MAN_OUT_ERR	2000	3	Undefine manual out error.	Check conveyor.
+MAN_OUT_CONVEYOR_TIME_OUT	2001	3	Tray manual out conveyor time out.	Check conveyor.
+AUTO_OUT_ERR	3000	3	Undefine tray auto out error.	Check AMC.
+AUTO_OUT_MOUTH_ERR	3001	3	Mouth sensor not detected.	Check AMC mouth
+LD_ERR	4000	3	Undefine LD error.	Check LD.
+LD_ESTOP	4001	3	LD EMO stop puched.	Relese EMO.
+AMC_ERR	5000	3	Undefine AMC error.	Check AMC.
+AMC_SEFTY_SENSOR	5001	3	AMC light cutain detact.	Check light cutain.
+AMC_LINEAR_MOTOR_ERR	5100	3	AMC linearmotor error.	Front EMO push and Relese.
+AMC_DELTHAHEADING_FAIL	5200	3	DELTHAHEADING FAIL.	Retry command.
+AMC_MOVE_FAIL	5201	3	MOVE to GOAL FAIL.	Look around at goal point.
+AMB_ERR	6000	3	AMB ERROR.	Check AMB.
+AMB_LATCH_FAIL	6001	3	Cart latch fail.	Check cart and retry.

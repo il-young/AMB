@@ -1,0 +1,6 @@
+﻿GO 8"PI	goto Goal1	Y
+GO DESCUM	goto DESCUM	Y
+EMPTY
+EMPTY
+GO 12"PI	goto 12PI	Y
+GO Cure	goto Goal2	Y

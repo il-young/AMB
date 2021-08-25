@@ -1,0 +1,154 @@
+========================================================
+=                                                                                                            =
+=                                      AMC Log File 2020-01-23                                    =
+=                                                                                                            =
+========================================================
+2020-01-23 15:18:59:09 Welcome to the server.
+2020-01-23 15:19:00:13 You can type 'help' at any time for the following help list.
+2020-01-23 15:19:00:13 Commands:
+2020-01-23 15:19:00:13 addCustomCommand          Adds a custom command that'll send a message out ARCL when called
+2020-01-23 15:19:00:13 addCustomStringCommand          Adds a custom string command that'll send a message out ARCL when called
+2020-01-23 15:19:00:13 analogInputList          Lists the named analog inputs
+2020-01-23 15:19:00:13 analogInputQueryRaw          Queries the state of an analog input by raw
+2020-01-23 15:19:00:13 analogInputQueryVoltage          Queries the state of an analog input by voltage
+2020-01-23 15:19:00:13 applicationBlockDrivingClear          Clears an application blockDriving [abdc]
+2020-01-23 15:19:00:13 applicationBlockDrivingSet          Sets an application blockDriving [abds]
+2020-01-23 15:19:00:13 applicationFaultClear          Clears an application fault [afc]
+2020-01-23 15:19:00:13 applicationFaultQuery          Gets the list of any application faults currently triggered [afq]
+2020-01-23 15:19:00:13 applicationFaultSet          Sets an application fault [afs]
+2020-01-23 15:19:00:13    arclSendText          Sends the given message to all ARCL clients
+2020-01-23 15:19:00:13   centralServer          Gets information about the central server connection
+2020-01-23 15:19:00:13 connectOutgoing          (re)connects a socket to the given outside server
+2020-01-23 15:19:00:13      createInfo          creates a piece of information
+2020-01-23 15:19:00:13            dock          Sends the robot to the dock
+2020-01-23 15:19:00:13          doTask          does a task
+2020-01-23 15:19:00:13   doTaskInstant          does an instant task (doesn't interrupt modes)
+2020-01-23 15:19:00:13            echo          with no args gets echo, with args sets echo
+2020-01-23 15:19:00:13    enableMotors          Enables the motors so the robot can drive again
+2020-01-23 15:19:00:13    engageCancel          cancel engage state (without disengaging)
+2020-01-23 15:19:00:13 engageQueryState          query the engage state of a robot
+2020-01-23 15:19:00:13    executeMacro          executes a given macro
+2020-01-23 15:19:00:13 executeMacroTemplate          executes a specified macro template with the given parameters
+2020-01-23 15:19:00:13        extIOAdd          Adds the external digital inputs and outputs [eda]
+2020-01-23 15:19:00:13 extIOInputUpdate          Updates the external digital inputs [ediu]
+2020-01-23 15:19:00:13 extIOInputUpdateBit          Updates an external digital input bit, e.g. bit 32 most significant bit, bit 1 least [edib]
+2020-01-23 15:19:00:13 extIOInputUpdateByte          Updates an external digital input byte, e.g. byte 4 in a 32-bit bank is most significant [edi8]
+2020-01-23 15:19:00:13 extIOOutputUpdate          Updates the external digital outputs [edou]
+2020-01-23 15:19:00:13 extIOOutputUpdateBit          Updates an external digital output bit, e.g. bit 32 most significant bit, bit 1 least [edob]
+2020-01-23 15:19:00:13 extIOOutputUpdateByte          Updates an external digital output byte, e.g. byte 4 in a 32-bit bank is most significant [edo8]
+2020-01-23 15:19:00:13     extIORemove          Removes the external digital inputs and outputs [edr]
+2020-01-23 15:19:00:13       faultsGet          Gets the list of any faults currently triggered [fg]
+2020-01-23 15:19:00:13 getConfigSectionInfo          Gets the info about a section of the config
+2020-01-23 15:19:00:13 getConfigSectionList          Gets the list of sections in the config
+2020-01-23 15:19:00:13 getConfigSectionValues          Gets the values in a section of the config
+2020-01-23 15:19:00:13 getDataStoreFieldInfo          Gets the info on a field in the Data Store [dsfi]
+2020-01-23 15:19:00:13 getDataStoreFieldList          Gets the list of field names in the Data Store [dsfl]
+2020-01-23 15:19:00:13 getDataStoreFieldValues          Gets the values of a field in the Data Store [dsfv]
+2020-01-23 15:19:00:13 getDataStoreGroupInfo          Gets the info on a group in the Data Store [dsgi]
+2020-01-23 15:19:00:13 getDataStoreGroupList          Gets the list of groups in the Data Store [dsgl]
+2020-01-23 15:19:00:13 getDataStoreGroupValues          Gets the values of a group in the Data Store [dsgv]
+2020-01-23 15:19:00:13 getDataStoreTripGroupList          Gets the list of groups with trip values in the Data Store [dstgl]
+2020-01-23 15:19:00:13     getDateTime          gets the date and time
+2020-01-23 15:19:00:13        getGoals          gets a list of goals in the map (for use with goto)
+2020-01-23 15:19:00:13         getInfo          Gets a piece of information
+2020-01-23 15:19:00:13     getInfoList          Gets the list of info available from 'getInfo'
+2020-01-23 15:19:00:13       getMacros          gets a list of macros in the map (for use with executeMacro)
+2020-01-23 15:19:00:13 getMacroTemplates          gets a list of macro templates in the map (for use with executeMacroTemplates)
+2020-01-23 15:19:00:13  getPoseEncoder          Gets the encoder pose of the robot
+2020-01-23 15:19:00:13       getRoutes          gets the routes the robot has
+2020-01-23 15:19:00:13              go          Stops the robot from any wait it is doing then resume patrolling or makes the robot idle 2 minutes so that it will resume doing queued jobs (with the right parameters).  See also stay.
+2020-01-23 15:19:00:13 goalDistanceRemaining          Gets the distance remaining to robots goals
+2020-01-23 15:19:00:13 goalDistanceRemainingLocal          Gets the distance remaining to this robot's goal
+2020-01-23 15:19:00:13            help          gives the listing of available commands (optionally with prefix)
+2020-01-23 15:19:00:13       inputList          Lists the named digital inputs [inL]
+2020-01-23 15:19:00:13      inputQuery          Queries the state of a named digital input [inQ]
+2020-01-23 15:19:00:13  localizeAtGoal          Localizes to a given goal [lag]
+2020-01-23 15:19:00:13             log          Logs the message to the normal log file
+2020-01-23 15:19:00:13   mapObjectInfo          Gets the information about a map object specified by name.
+2020-01-23 15:19:00:13   mapObjectList          Gets a list the map objects of a given type.
+2020-01-23 15:19:00:13 mapObjectTypeInfo          Gets information about a particular type of map object.
+2020-01-23 15:19:00:13 mapObjectTypeList          Gets a list of the types of map objects in the map.
+2020-01-23 15:19:00:13 mapObjectUpdate          Creates or updates a map object with the specified data.
+2020-01-23 15:19:00:13        modeLock          Locks the current mode
+2020-01-23 15:19:00:13       modeQuery          Queries the current mode and it's lock status
+2020-01-23 15:19:00:13      modeUnlock          Unlocks the current mode
+2020-01-23 15:19:00:13  newConfigParam          Adds a new param to the config (shows up in MP)
+2020-01-23 15:19:00:13 newConfigParamEnd          Finishes adding multiple params to the config. Must be paired with a newConfigParamStart.
+2020-01-23 15:19:00:13 newConfigParamStart          Starts adding multiple params to the config. Optional. If specified, must be followed by a newConfigParamEnd.
+2020-01-23 15:19:00:13 newConfigSectionComment          Adds a comment to a section (shows up in MP)
+2020-01-23 15:19:00:13        odometer          Shows the robot trip odometer
+2020-01-23 15:19:00:13   odometerReset          Resets the robot trip odometer
+2020-01-23 15:19:00:13   oneLineStatus          Gets the status of the robot on one line
+2020-01-23 15:19:00:13      outputList          Lists the named outputs [outL]
+2020-01-23 15:19:00:13       outputOff          Turns off a named digital output [outOff]
+2020-01-23 15:19:00:13        outputOn          Turns on a named digital output [outOn]
+2020-01-23 15:19:00:13     outputQuery          Queries the state of a named output [outQ]
+2020-01-23 15:19:00:13          patrol          patrols the given route
+2020-01-23 15:19:00:13      patrolOnce          Patrols the given route once, starts at optional index
+2020-01-23 15:19:00:13    patrolResume          Resumes the last patrol
+2020-01-23 15:19:00:13 pauseTaskCancel          Cancels the pause task (if it's active, causing it to succeed)
+2020-01-23 15:19:00:13   pauseTaskFail          Fails the pause task (if it's active)
+2020-01-23 15:19:00:13  pauseTaskState          Gets the state of the pause task
+2020-01-23 15:19:00:13            play          Plays the given wave file already on the robot
+2020-01-23 15:19:00:13     popupSimple          Creates a simple popup
+2020-01-23 15:19:00:13 queryDockStatus          Gets the docking status
+2020-01-23 15:19:00:13     queryMotors          Queries the state of the motors
+2020-01-23 15:19:00:13            quit          closes this connection to the server
+2020-01-23 15:19:00:13             say          Says the given string
+2020-01-23 15:19:00:13        shutdown          shuts down the robot
+2020-01-23 15:19:00:13          status          Gets the status of the robot
+2020-01-23 15:19:00:13            stay          Makes the robot wait for a minute, then resume patrol or become idle 2 minutes so that it will resume queued jobs (with the right parameters).  See also go.
+2020-01-23 15:19:00:13            stop          Stops the robot
+2020-01-23 15:19:00:13 switchableForbiddenList          Gets the list and state of switchable forbiddens [sfL]
+2020-01-23 15:19:00:13 switchForbiddenOff          Switch a specific switchable forbidden off [sfOff]
+2020-01-23 15:19:00:397 switchForbiddenOn          Switch a specific switchable forbidden on [sfOn]
+2020-01-23 15:19:00:397 switchForbiddensOffByPrefix          Switch off switchable forbiddens by prefix [sfOffP]
+2020-01-23 15:19:00:397 switchForbiddensOnByPrefix          Switch on switchable forbiddens by prefix [sfOnP]
+2020-01-23 15:19:00:397       tripReset          Resets the trip values in the Data Store [tr]
+2020-01-23 15:19:00:397          undock          Undocks the robot (done automatically too)
+2020-01-23 15:19:00:397      updateInfo          updates a piece of information
+2020-01-23 15:19:00:397  waitTaskCancel          Cancels the wait task (if it's active, causing it to succeed)
+2020-01-23 15:19:00:397    waitTaskFail          Fails the wait task (if it's active)
+2020-01-23 15:19:00:397   waitTaskState          Gets the state of the wait task
+2020-01-23 15:19:00:397 End of commands
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Unknown command 1111
+2020-01-23 15:19:00:397 Output: o1 off
+2020-01-23 15:19:00:397 Output: o2 off
+2020-01-23 15:19:00:397 Output: o3 off
+2020-01-23 15:19:00:397 Output: o4 off
+2020-01-23 15:19:00:397 Output: o5 off
+2020-01-23 15:19:00:397 Output: o6 off
+2020-01-23 15:19:00:397 Output: o7 off
+2020-01-23 15:19:00:397 Output: o8 off
+2020-01-23 15:19:00:397 Output: o9 off
+2020-01-23 15:19:00:397 Output: o10 off
+2020-01-23 15:19:00:397 Output: o11 off
+2020-01-23 15:19:00:397 Output: o12 off
+2020-01-23 15:19:00:397 Output: o13 off
+2020-01-23 15:19:00:397 Output: o14 off
+2020-01-23 15:19:00:397 Output: o15 off
+2020-01-23 15:19:00:397 Output: o16 off
+2020-01-23 15:19:00:43 Output: o1 off
+2020-01-23 15:19:00:43 Output: o2 off
+2020-01-23 15:19:00:43 Output: o3 off
+2020-01-23 15:19:00:43 Output: o4 off
+2020-01-23 15:19:00:43 Output: o5 off
+2020-01-23 15:19:00:43 Output: o6 off
+2020-01-23 15:19:00:43 Output: o7 off
+2020-01-23 15:19:00:43 Output: o8 off
+2020-01-23 15:19:00:43 Output: o9 off
+2020-01-23 15:19:00:504 Output: o10 off
+2020-01-23 15:19:00:557 Output: o11 off
+2020-01-23 15:19:00:557 Output: o12 off
+2020-01-23 15:19:00:557 Output: o13 off
+2020-01-23 15:19:00:557 Output: o14 off
+2020-01-23 15:19:00:557 Output: o15 off
+2020-01-23 15:19:00:557 Output: o16 off

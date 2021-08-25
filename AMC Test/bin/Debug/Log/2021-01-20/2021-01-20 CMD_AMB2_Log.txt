@@ -1,0 +1,41 @@
+========================================================
+=                                                                                                            =
+=                                      AMB CMD Log File 2021-01-20                                    =
+=                                                                                                            =
+========================================================
+2021-01-20 00:51:25:47 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 00:52:09:42 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 00:58:19:861 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 02:27:06:995 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 02:32:23:566 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 02:32:28:233 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 03:41:53:518 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 03:53:23:976 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 04:21:20:9 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 04:25:31:508 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 05:37:54:175 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 05:44:11:221 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 05:47:09:731 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 10:14:21:163 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 10:18:14:581 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 11:17:08:171 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 11:26:41:53 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 11:31:14:534 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 12:00:27:968 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 12:00:29:438 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 12:04:18:499 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 12:40:39:016 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 14:19:55:816 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 14:34:18:724 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 14:44:58:178 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 16:25:00:557 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 16:34:03:948 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 19:41:54:9 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 19:41:56:789 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 19:47:12:225 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 20:21:47:112 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 20:30:32:001 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 21:40:45:102 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 21:46:54:513 GO OSP dock,Y,Y 버튼 클릭
+2021-01-20 22:15:04:412 GO ONLOADER goto ONLOADER,Y,Y 버튼 클릭
+2021-01-20 22:21:40:134 GO OSP dock,Y,Y 버튼 클릭
