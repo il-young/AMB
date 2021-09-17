@@ -1087,7 +1087,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
                 //Make_error(ex, "Insert_Listbox");
             }
         }
@@ -1249,7 +1249,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
                 //Insert_Log(msg);
             }
         }
@@ -1270,7 +1270,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
             }
         }
 
@@ -2264,7 +2264,7 @@ namespace AMC_Test
                     AMC_Client.Close();
                 }
 
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
 
             }
 
@@ -2320,7 +2320,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
 
             }
         }
@@ -2382,7 +2382,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log("]Send_String]" + ex.Message);
+                Insert_ERR_Log(ex);
                 throw;
             }
             
@@ -2412,7 +2412,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
                 // Make_error(ex, "Send_string");
             }
         }
@@ -2715,7 +2715,7 @@ namespace AMC_Test
                 }
                 catch (Exception ex)
                 {
-                    Insert_ERR_Log(ex.Message);
+                    Insert_ERR_Log(ex);
                 }
             }
         }
@@ -2801,6 +2801,79 @@ namespace AMC_Test
             }
         }
 
+        public static void Insert_ERR_Log(Exception ex)
+        {
+            if (Last_MSG == ex.Message)
+            {
+                return;
+            }
+
+            string msg = ex.Message;
+
+            string date = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:FFF"); ;
+            string str_temp = "";
+            string log_dir = System.Environment.CurrentDirectory + "\\Log\\Error\\Err" + System.DateTime.Now.ToString("yyyy/MM/dd") + "_Log.txt";
+
+
+
+            try
+            {
+                if (System.IO.File.Exists(log_dir) == false)
+                {
+                    Directory.CreateDirectory(System.Environment.CurrentDirectory + "\\Log\\Error\\");
+                    string temp;
+
+                    temp = "========================================================" + Environment.NewLine;
+                    temp += "=                                                                                                            =" + Environment.NewLine;
+                    temp += "=                                   AMC SYSTEM Log File " + System.DateTime.Now.ToString("yyyy/MM/dd") + "                                 =" + Environment.NewLine;
+                    temp += "=                                                                                                            =" + Environment.NewLine;
+                    temp += "========================================================" + Environment.NewLine;
+
+                    System.IO.File.WriteAllText(log_dir, temp);
+
+                    string[] arr_str = msg.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    System.IO.StreamWriter st = System.IO.File.AppendText(log_dir);
+
+                    for (int i = 0; i < arr_str.Length; i++)
+                    {
+                        if (arr_str[i].Trim('\0') != "")
+                        {
+                            str_temp = date + " " + arr_str[i];
+                            st.WriteLine(str_temp.ToCharArray());
+                        }
+                    }
+
+                    Check_Log_date(System.Environment.CurrentDirectory + "\\Log\\System\\Error\\", 30);
+                }
+                else
+                {
+                    string[] arr_str = msg.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    System.IO.StreamWriter st = System.IO.File.AppendText(log_dir);
+
+                    for (int i = 0; i < arr_str.Length; i++)
+                    {
+                        if (arr_str[i].Trim('\0') != "")
+                        {
+                            str_temp = date + " " + arr_str[i] + Environment.NewLine;
+                            str_temp += ex.Source;
+                            st.WriteLine(str_temp.ToCharArray());
+                        }
+                    }
+                    st.Close();
+                    st.Dispose();
+                }
+
+                Last_MSG = msg;
+
+
+            }
+            catch (Exception)
+            {
+                System.Threading.Thread.Sleep(10);
+            }
+        }
+
+
         public static void Insert_ERR_Log(string msg)
         {
             if (Last_MSG == msg)
@@ -2852,7 +2925,7 @@ namespace AMC_Test
                     {
                         if (arr_str[i].Trim('\0') != "")
                         {
-                            str_temp = date + " " + arr_str[i];
+                            str_temp = date + " " + arr_str[i] + Environment.NewLine;
                             st.WriteLine(str_temp.ToCharArray());
                         }
                     }
@@ -3104,7 +3177,7 @@ namespace AMC_Test
                 }
                 catch (Exception ex)
                 {
-                    Insert_ERR_Log(ex.Message);
+                    Insert_ERR_Log(ex);
                 }
                 
             }
@@ -3184,7 +3257,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
                 //Insert_Log(msg);
             }
         }
@@ -3684,7 +3757,7 @@ namespace AMC_Test
                 }
                 catch (Exception ex)
                 {
-                    Insert_ERR_Log(ex.Message);
+                    Insert_ERR_Log(ex);
                 }
             }
         }
@@ -5792,7 +5865,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
             }
         }
 
@@ -6802,7 +6875,7 @@ namespace AMC_Test
             }
             catch (Exception ex)
             {
-                Insert_ERR_Log(ex.Message);
+                Insert_ERR_Log(ex);
             }
         }
 
