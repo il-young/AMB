@@ -79,5 +79,8 @@
     <Setting Name="LogSCRAP_DIR" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="MobilePlanner_Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Omron\MobilePlanner4\bin\MobilePlanner.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

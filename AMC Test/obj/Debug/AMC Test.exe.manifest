@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="537600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="539648">
       <assemblyIdentity name="AMC Test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DpNkkPMNH+AM7dNhmhVeo34OJYqP6WUI6skKJpc8pgQ=</dsig:DigestValue>
+        <dsig:DigestValue>swxEtvR6soUVPh/5unCv4ZW+NeorJ7qajRXnnQYX2A0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -366,13 +366,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AMC Test.exe.config" size="3744">
+  <file name="AMC Test.exe.config" size="3930">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>W4gQ3dot09OBgekdWqepRbEULkOnyJyWu1RvKKV87DI=</dsig:DigestValue>
+      <dsig:DigestValue>/+M5ChTzdEd4Onyi0ROaDdjq8b38PPOckcPdMtIjdN0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="amkor.ico" size="32478">

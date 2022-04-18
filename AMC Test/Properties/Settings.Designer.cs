@@ -309,5 +309,17 @@ namespace AMC_Test.Properties {
                 this["LogSCRAP_DIR"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\Omron\\MobilePlanner4\\bin\\MobilePlanner.exe")]
+        public string MobilePlanner_Path {
+            get {
+                return ((string)(this["MobilePlanner_Path"]));
+            }
+            set {
+                this["MobilePlanner_Path"] = value;
+            }
+        }
     }
 }

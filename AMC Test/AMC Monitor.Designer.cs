@@ -180,6 +180,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.bgw_btn_blink = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mobilePlannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -244,6 +247,7 @@
             // toolToolStripMenuItem
             // 
             this.toolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.cameraToolStripMenuItem,
             this.rFIDToolStripMenuItem,
             this.lDToolStripMenuItem,
@@ -308,7 +312,8 @@
             // 
             this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mangerModeToolStripMenuItem,
-            this.logDirectoryToolStripMenuItem});
+            this.logDirectoryToolStripMenuItem,
+            this.mobilePlannerToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.settingToolStripMenuItem.Text = "&Setting";
@@ -316,14 +321,14 @@
             // mangerModeToolStripMenuItem
             // 
             this.mangerModeToolStripMenuItem.Name = "mangerModeToolStripMenuItem";
-            this.mangerModeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.mangerModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mangerModeToolStripMenuItem.Text = "Manger Mode";
             this.mangerModeToolStripMenuItem.Click += new System.EventHandler(this.mangerModeToolStripMenuItem_Click);
             // 
             // logDirectoryToolStripMenuItem
             // 
             this.logDirectoryToolStripMenuItem.Name = "logDirectoryToolStripMenuItem";
-            this.logDirectoryToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.logDirectoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logDirectoryToolStripMenuItem.Text = "Log Directory";
             this.logDirectoryToolStripMenuItem.Click += new System.EventHandler(this.logDirectoryToolStripMenuItem_Click);
             // 
@@ -1888,6 +1893,25 @@
             this.timer1.Interval = 700;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem1.Text = "Mobile Planner";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // mobilePlannerToolStripMenuItem
+            // 
+            this.mobilePlannerToolStripMenuItem.Name = "mobilePlannerToolStripMenuItem";
+            this.mobilePlannerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mobilePlannerToolStripMenuItem.Text = "&Mobile Planner";
+            this.mobilePlannerToolStripMenuItem.ToolTipText = "확장자까지 입력";
+            this.mobilePlannerToolStripMenuItem.Click += new System.EventHandler(this.mobilePlannerToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AMC_Monitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -2121,5 +2145,8 @@
         private System.Windows.Forms.ToolStripMenuItem 개별반송횟수구하기ToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker bgw_btn_blink;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mobilePlannerToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

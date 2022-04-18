@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
+using Microsoft.Win32;
 
 namespace AMC_Test
 {
@@ -1465,6 +1467,78 @@ namespace AMC_Test
                 throw;
             }
         }
-    
+
+        private void mobilePlannerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int nFileNameStartP = Properties.Settings.Default.MobilePlanner_Path.LastIndexOf("MobilePlanner.exe");
+
+            string temp = @Properties.Settings.Default.MobilePlanner_Path.Substring(0, nFileNameStartP);
+            openFileDialog1.InitialDirectory = temp;
+            openFileDialog1.FileName = Properties.Settings.Default.MobilePlanner_Path.Substring(nFileNameStartP, 
+                Properties.Settings.Default.MobilePlanner_Path.Length - nFileNameStartP);
+
+            if (DialogResult.OK == openFileDialog1.ShowDialog())
+            {
+                Properties.Settings.Default.MobilePlanner_Path = openFileDialog1.FileName;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        bool isExecuting = false;
+        // FindWindow 사용을 위한 코드
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr FindWindow(string strClassName, string StrWindowName);
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern void SetForegroundWindow(IntPtr hWnd);
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        private const int SW_SHOWNORMAL = 1;
+        private const int SW_SHOWMINIMIZED = 2;
+        private const int SW_MAXIMIZE = 3;
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Process[] p = Process.GetProcessesByName("MobilePlanner");
+
+            if(p.Length == 0)
+            {
+                if (System.IO.File.Exists(Properties.Settings.Default.MobilePlanner_Path) == true)
+                    Process.Start(Properties.Settings.Default.MobilePlanner_Path);
+                else
+                {
+                    if(DialogResult.Yes == MessageBox.Show("Mobile Planner 경로가 일치하지 않습니다.\nMobile Planner 설치 경로를 확인 해 주세요\n경로를 설정 하시겠습니까?", "Mobile Planner 경로 확인 필요", MessageBoxButtons.YesNo, MessageBoxIcon.Error))
+                    {
+                        mobilePlannerToolStripMenuItem_Click(sender, e);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Process proc in p)
+                {
+                    if (proc.ProcessName.Equals("MobilePlanner"))
+                    //  Pgm_FileName 프로그램의 실행 파일[.exe]를 제외한 파일명
+                    {
+                        isExecuting = true;
+                        break;
+                    }
+                    else
+                        isExecuting = false;
+                }
+
+                if (isExecuting)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    //윈도우 핸들러
+                    IntPtr procHandler = FindWindow(null, "MobilePlanner");
+                    ShowWindow(procHandler, SW_MAXIMIZE);
+                    SetForegroundWindow(procHandler);
+                }
+                else
+                {
+                    Process.Start(Properties.Settings.Default.MobilePlanner_Path);
+                }
+            }
+        }
     }
 }
