@@ -1299,8 +1299,8 @@ namespace AMC_Test
         {
             string date = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
             string str_temp = "";
-            string log_dir = Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + "\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
-            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + "\\");
+            string log_dir = Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\");
 
             try
             {
@@ -1322,7 +1322,7 @@ namespace AMC_Test
                     temp += "========================================================" + Environment.NewLine;
 
                     System.IO.File.WriteAllText(log_dir, temp);
-                    Check_Log_date(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + "\\" , 30);
+                    Check_Log_date(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\" , 30);
                 }
 
                 //str_buf = System.IO.File.ReadAllText(log_dir);
@@ -1357,8 +1357,8 @@ namespace AMC_Test
         {
             string date = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:FFF");
             string str_temp = "";
-            string log_dir = System.Environment.CurrentDirectory + "\\Log\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + "_BACKUP\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
-            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(System.Environment.CurrentDirectory + "\\Log\\" + System.DateTime.Now.ToString("yyyy/MM/dd") + "\\");
+            string log_dir = System.Environment.CurrentDirectory + "\\Log\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "_BACKUP\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(System.Environment.CurrentDirectory + "\\Log\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\");
 
             try
             {

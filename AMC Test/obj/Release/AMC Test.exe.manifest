@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="539648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="515072">
       <assemblyIdentity name="AMC Test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jdGtOIi/VlZ8OWRfCfyEYbqwTvt71pPY9mmq15yZRNs=</dsig:DigestValue>
+        <dsig:DigestValue>jigjp6ED8xjL1Ps/uJH4hvW01dpV24WUaFcYPfoMVK8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

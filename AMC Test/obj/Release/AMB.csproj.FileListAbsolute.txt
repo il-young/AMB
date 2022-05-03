@@ -1,0 +1,53 @@
+D:\Project\AMB\Source\AMC Test\bin\Release\AMC Test.exe.config
+D:\Project\AMB\Source\AMC Test\bin\Release\AMC Test.exe.manifest
+D:\Project\AMB\Source\AMC Test\bin\Release\AMC Test.application
+D:\Project\AMB\Source\AMC Test\bin\Release\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\bin\Release\AMC Test.pdb
+D:\Project\AMB\Source\AMC Test\bin\Release\AdvancedHMIControls.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\AdvancedHMIDrivers.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Cognex.DataMan.CogNamer.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Cognex.DataMan.SDK.Discovery.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Cognex.DataMan.SDK.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Cognex.DataMan.SDK.Utils.PC.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\log4net.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\MfgControl.AdvancedHMI.Controls.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\MfgControl.AdvancedHMI.Drivers.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Modbus.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Modbus.Extensions.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\nesslab.reader.api.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\OpcComRcw.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\OpcNetApi.Com.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\OpcNetApi.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Skynet.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SocketGlobal.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.ClientEngine.Common.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.ClientEngine.Core.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.ClientEngine.Protocol.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.ClientEngine.Proxy.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.Common.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.Facility.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.SocketBase.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\SuperSocket.SocketEngine.dll
+D:\Project\AMB\Source\AMC Test\bin\Release\Unme.Common.dll
+D:\Project\AMB\Source\AMC Test\obj\Release\AMB.csprojAssemblyReference.cache
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.AMC_Monitor.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.Board.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.Form1.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frmLocalize.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frm_Alarm.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frm_Individual_return.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frm_Log_Directory.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frm_Move.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.HMI_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.frmReconnecting.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.MainForm.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.Properties.Resources.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.RFID_Main.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC_Test.Save_Screen_frm.resources
+D:\Project\AMB\Source\AMC Test\obj\Release\AMB.csproj.GenerateResource.cache
+D:\Project\AMB\Source\AMC Test\obj\Release\AMB.csproj.CoreCompileInputs.cache
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC Test.exe.manifest
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC Test.application
+D:\Project\AMB\Source\AMC Test\obj\Release\AMB.csproj.CopyComplete
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC Test.exe
+D:\Project\AMB\Source\AMC Test\obj\Release\AMC Test.pdb
