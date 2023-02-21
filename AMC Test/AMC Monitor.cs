@@ -721,14 +721,28 @@ namespace AMC_Test
         {   
             clicked_btn = (Button)sender;
 
+            if (tabControl1.Visible == true)
+                btn_OK_Click_1(sender, e);
+
+            move_vehicle(clicked_btn);
+        }
+
+        public void MoveContinues()
+        {
             move_vehicle(clicked_btn);
         }
 
 
         private void move_vehicle(Button  btn)
         {
-            Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
+            //Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
+            sql_cmd cmd = new sql_cmd();
+            cmd.Query = string.Format("insert into TB_OPERATION_HISTORY ([DATETIME], [LINE_CODE], [EQUIP_ID], [TYPE], [DEPARTURE], [ARRIVAL]) values('{0}','{1}','{2}','{3}','{4}','{5}')", 
+                DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff"),
+                Linecode, EquipmentID, btn.Text + " Click", tb_AREA.Text, clicked_btn.Text);
+            cmd.retry_cnt = 0;
 
+            SQL_Q.Enqueue(cmd);
 
             end_blink();
 

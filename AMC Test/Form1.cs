@@ -151,6 +151,33 @@ namespace AMC_Test
             public string ERR_SOLUTION;
         }
 
+        public struct stAGV
+        {
+            public string agvName;
+            public List<string> Routes;
+            public List<string> Nodes;
+            public List<string> CMD;
+
+            public void init(string name)
+            {
+                agvName = name;
+                Routes = new List<string>();
+                Nodes = new List<string>();
+                CMD = new List<string>();
+            }
+
+            public void AddRoutes(string RouteName, string nodes, string ctl)
+            {
+                Routes.Add(RouteName);
+                Nodes.Add(nodes);
+                CMD.Add(ctl);
+            }
+
+        }
+
+        List<stAGV> AGVs;
+        bool AGVStandby = false;
+
         private List<stAREA> AREAs = new List<stAREA>();
         static public List<TAG_ID> CAPCODE_ARRAY = new List<TAG_ID>();
         static Skynet.Skynet skynet = new Skynet.Skynet();
@@ -253,6 +280,7 @@ namespace AMC_Test
 
         static SoundPlayer low_batt_sound = new SoundPlayer(System.Environment.CurrentDirectory + "\\Setting\\low_batt.wav");
 
+        private MS_SQL AGV_SQL = new MS_SQL();
 
 
 
@@ -2640,10 +2668,14 @@ namespace AMC_Test
                 AMC_Client.SendingQueueSize = 0xffff;
             }
 
+            if(LD[0].ZIGBEE_PORT != "COM0")
+            {
                 Zigbee.PortName = LD[0].ZIGBEE_PORT;
                 Zigbee.BaudRate = 9600;
                 Zigbee.Parity = Parity.None;
+
                 Chk_Serial_Port();
+            }
 
             Port_init();
             HMI.Show();
@@ -2663,10 +2695,62 @@ namespace AMC_Test
 
             LD[0].AUTO = true;
 
+            AGV_SQL.DataReceveEvent += AGV_SQL_DataReceveEvent;
+
+            if (bg_AGVLocation.IsBusy == false)
+                bg_AGVLocation.RunWorkerAsync();
+
             int a = 0;
             a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, "RECHARGE", LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
             Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
             Skynet_MSG_Send();
+        }
+
+        private void AGV_SQL_DataReceveEvent(string query, System.Data.DataSet ds)
+        {
+            try
+            {
+                if (ds.Tables.Count == 0)
+                    return;
+
+                if (query.ToUpper().Contains("TBL_AGV_STATUS_LIST") == true)
+                {
+                    bool AGVin = false;
+
+                    for (int i = 0; i < AGVs.Count; i++)
+                    {
+                        if (ds.Tables[0].Rows[0]["AGV_NAME"].ToString() == AGVs[i].agvName)
+                        {
+                            for (int j = 0; j < AGVs[i].Routes.Count; i++)
+                            {
+                                if (ds.Tables[0].Rows[i]["DESTINATION"].ToString() == AGVs[i].Routes[j])
+                                {
+                                    string[] node = Array.FindAll(AGVs[i].Nodes[j].Split(','), element => element == ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
+
+                                    if(node.Length != 0)
+                                    {
+                                        //Goal Name
+                                        AGVStandby = true;
+                                        AGVin = true;
+                                        Send_LD_String(AGVs[i].CMD[j]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if (AGVin == false)
+                    {// move Again
+                        //Monitor.Get_where2go();
+                        Monitor.MoveContinues();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void Monitor_add_alarm_event(int alarm_code)
@@ -6032,6 +6116,55 @@ namespace AMC_Test
                         ALARM_SRV.Set_ZIGBEE_ID(LD[0].ZIGBEE_NUM);
 
                     }
+                    else if(str_data[i] =="[AGV]")
+                    {
+                        AGVs = new List<stAGV>();
+                        int RouteCnt = 0;
+                        string[] temp;
+                        stAGV agvtemp = new stAGV();
+
+
+                        while(true)
+                        {
+                            if (i + ++RouteCnt >= str_data.Length)
+                                break;
+
+                            if (str_data[i + RouteCnt].Contains("[") == true)
+                                break;
+
+                            temp = str_data[i + RouteCnt].Split(';');
+
+                            if(AGVs.Count == 0)
+                            {
+                                agvtemp.init(temp[0]);
+                                agvtemp.AddRoutes(temp[1], temp[2], temp[3]);
+
+                                AGVs.Add(agvtemp);
+                            }
+                            else
+                            {
+                                int AGVListCnt = AGVs.Count;
+
+                                for (int j = 0; j < AGVListCnt; j++)
+                                {
+                                    if(AGVs[j].agvName == temp[0])
+                                    {
+                                        AGVs[j].AddRoutes(temp[1], temp[2], temp[3]);
+                                        
+                                        j = AGVs.Count+1;
+                                    }
+
+                                    if (j == AGVs.Count - 1)
+                                    {
+                                        agvtemp.init(temp[0]);
+                                        agvtemp.AddRoutes(temp[1], temp[2], temp[3]);
+
+                                        AGVs.Add(agvtemp);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -7352,6 +7485,16 @@ namespace AMC_Test
             while(bZIGBEE_T)
             {
                 Zigbee.Write(arr_byte, 0, 19);
+
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+
+        private void bg_AGVLocation_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while(true)
+            {
+                AGV_SQL.AddQuery("select [DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '29호기'");
 
                 System.Threading.Thread.Sleep(1000);
             }
