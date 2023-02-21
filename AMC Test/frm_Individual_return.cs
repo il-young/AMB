@@ -24,7 +24,7 @@ namespace AMC_Test
         {
             openFileDialog1.InitialDirectory = System.Environment.CurrentDirectory + "\\Log\\";
             openFileDialog1.DefaultExt = "txt";
-            file_name = Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.AddDays(-1).ToString("yyyy/MM/dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
+            file_name = Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.AddDays(-1).ToString("yyyy/MM/dd") + "\\" + System.DateTime.Now.AddDays(-1).ToString("yyyy/MM/dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
             tb_file_name.Text = file_name;
         }
 
@@ -67,7 +67,7 @@ namespace AMC_Test
                 cmd_data0 = str_data[i - 1].Split(' ');
                 cmd_data1 = str_data[i].Split(' ');
 
-                if (cmd_data0[4] != cmd_data1[4])
+                if (cmd_data0[2] != cmd_data1[3])
                     CMD++;
             }
 

@@ -313,6 +313,7 @@
     <Compile Include="frmReconnecting.Designer.cs">
       <DependentUpon>frmReconnecting.cs</DependentUpon>
     </Compile>
+    <Compile Include="MS_SQL.cs" />
     <Compile Include="Pager_Message.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

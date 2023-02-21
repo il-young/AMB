@@ -9,11 +9,29 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
+using System.Data.SqlClient;
 
 namespace AMC_Test
 {
     public partial class AMC_Monitor : Form
     {
+        public struct sql_cmd
+        {
+            public string Query;
+            public int retry_cnt;
+
+            public void init()
+            {
+                Query = "";
+                retry_cnt = 0;
+            }
+
+            public void retry()
+            {
+                retry_cnt++;
+            }
+        }
+
         private bool bDisplay_T = false;
 
         private bool[] INPUT_DATA = new bool[16];
@@ -56,6 +74,12 @@ namespace AMC_Test
 
         static public List<string> Goals = new List<string>();
 
+        private System.Threading.Thread DBThread;
+        private static Queue<sql_cmd> SQL_Q = new Queue<sql_cmd>();
+
+        public string Linecode = "";
+        public string EquipmentID = "";
+
         bool bis_Alarm = false;
         bool is_Alarm = false;
         bool blink_t = false;
@@ -76,6 +100,12 @@ namespace AMC_Test
         public AMC_Monitor()
         {
             InitializeComponent();
+        }
+
+        public void SetSkynetData(string L, string E)
+        {
+            Linecode = L;
+            EquipmentID = E;
         }
 
         public void Playing_Sound()
@@ -164,8 +194,52 @@ namespace AMC_Test
             }
         }
 
+        private void DBThread_Start()
+        {
+            int res = 0;
+
+            while (true)
+            {
+                if (SQL_Q.Count > 0)
+                {
+                    if (SQL_Q.Peek().Query.Contains("TB_OPERATION_HISTORY") == true)
+                    {
+                        //MessageBox.Show(SQL_Q.Peek().Query);
+                        res = WriteDB(SQL_Q.Peek().Query);
+                        ////ReturnLogSave(string.Format("DBThread_Start Queue Count : {0}, Queue[0] : {1}, Return : {2}", SQL_Q.Count, SQL_Q.Peek(), res));
+
+                        if (res != 0)
+                            SQL_Q.Dequeue();
+                        else
+                        {
+                            sql_cmd sql_temp = SQL_Q.Dequeue();
+
+                            if (sql_temp.retry_cnt < 5)
+                            {
+                                sql_temp.retry();
+                                SQL_Q.Enqueue(sql_temp);
+                                ////ReturnLogSave(string.Format("DBThread_Start Retry:{0} Query:{1}", sql_temp.retry_cnt, sql_temp.Query));
+                            }
+                            else
+                            {
+                                ////ReturnLogSave(string.Format("DBThread_Start Retry Fail Query : {0}", sql_temp.Query));
+                            }
+                        }
+                    }
+                    else if(SQL_Q.Peek().Query.Contains("TBL_AGV_STATUS_LIST") == true)
+                    {
+
+                    }
+                }
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+
+
         private void bw_Display_DoWork(object sender, DoWorkEventArgs e)
         {
+            int res = 0;
+
             while (bDisplay_T)
             {
                 //btn_sensor1.BackColor = INPUT_DATA[IN_NUM_TRAY_SENSOR1] == true ? Color.OrangeRed : Color.Gray;
@@ -230,9 +304,9 @@ namespace AMC_Test
 
 
                 
-                               
 
-                System.Threading.Thread.Sleep(100);
+
+                System.Threading.Thread.Sleep(1000);
             }
         }
 
@@ -249,6 +323,12 @@ namespace AMC_Test
 
             CheckForIllegalCrossThreadCalls = false;
 
+            if (Properties.Settings.Default.CMD_LOG_DIRECTORY == "")
+            {
+                Properties.Settings.Default.CMD_LOG_DIRECTORY = Application.StartupPath;
+                Properties.Settings.Default.Save();
+            }
+
             if (bgw_alarm.IsBusy == false)
                 bgw_alarm.RunWorkerAsync();
         
@@ -259,6 +339,10 @@ namespace AMC_Test
             bDisplay_T = true;
             bw_Display.RunWorkerAsync();
             Read_BUTTON();
+            DBThread = new System.Threading.Thread(DBThread_Start);
+
+            if (DBThread.IsAlive == false)
+                DBThread.Start();
 
             tabControl1.Visible = false;
         }
@@ -645,7 +729,7 @@ namespace AMC_Test
         {
             Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
 
-           
+
             end_blink();
 
             //if (s.Contains(tb_AREA.Text) == false || tb_AREA.Text == "")
@@ -1350,6 +1434,30 @@ namespace AMC_Test
                 //Insert_ERR_Log(ex.Message);
                 //Insert_Log(msg);
             }
+        }
+
+        private int WriteDB(string msg)
+        {
+            int res = 0;
+            string ConnectionString = "server=10.135.200.35;uid=skynet;pwd=amm;database=amm@123";
+
+            try
+            {
+                using (SqlConnection ssconn = new SqlConnection(ConnectionString))
+                {
+                    ssconn.Open();
+                    SqlCommand scmd = new SqlCommand(msg, ssconn);
+                    scmd.CommandType = System.Data.CommandType.Text;
+
+                    res = scmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return res;
         }
 
 

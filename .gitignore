@@ -1,2 +1,4 @@
 AMC Test/bin/
 .vs/AMC Test/v15/.suo
+*.cache
+.vs/

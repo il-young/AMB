@@ -2272,7 +2272,7 @@ namespace AMC_Test
 
         private void AMC_Client_Connected(object sender, EventArgs e)
         {
-            Login();
+            //Login();
             retry_cnt = 0;
             bRetry_T = false;
         }
@@ -2606,7 +2606,6 @@ namespace AMC_Test
             colors[6] = Color.LightGoldenrodYellow;
             colors[7] = Color.DarkSeaGreen;
 
-
             LD[0].LD_Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             LD[0].LD_GOAL = new List<string>();
             LD[0].LD_ST.LD_ST = "IDLE";
@@ -2641,11 +2640,11 @@ namespace AMC_Test
                 AMC_Client.SendingQueueSize = 0xffff;
             }
 
-            Zigbee.PortName = LD[0].ZIGBEE_PORT;
-            Zigbee.BaudRate = 9600;
-            Zigbee.Parity = Parity.None;
-            Chk_Serial_Port();
-            
+                Zigbee.PortName = LD[0].ZIGBEE_PORT;
+                Zigbee.BaudRate = 9600;
+                Zigbee.Parity = Parity.None;
+                Chk_Serial_Port();
+
             Port_init();
             HMI.Show();
             HMI.Hide();
@@ -6100,6 +6099,8 @@ namespace AMC_Test
                         Skynet_Param.EQUIPMENT_ID = str_temp[1];
                     }
                 }
+
+                Monitor.SetSkynetData(Skynet_Param.LINE_CODE, Skynet_Param.EQUIPMENT_ID);
             }
             catch (Exception)
             {

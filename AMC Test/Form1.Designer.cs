@@ -78,6 +78,7 @@
             this.bg_latch = new System.ComponentModel.BackgroundWorker();
             this.bg_LD_OUT = new System.ComponentModel.BackgroundWorker();
             this.bg_zigbee = new System.ComponentModel.BackgroundWorker();
+            this.bg_AGVLocation = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.nud_retry)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -504,6 +505,10 @@
             this.bg_zigbee.WorkerSupportsCancellation = true;
             this.bg_zigbee.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bg_zigbee_DoWork);
             // 
+            // bg_AGVLocation
+            // 
+            this.bg_AGVLocation.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bg_AGVLocation_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -603,6 +608,7 @@
         private System.ComponentModel.BackgroundWorker bg_latch;
         private System.ComponentModel.BackgroundWorker bg_LD_OUT;
         private System.ComponentModel.BackgroundWorker bg_zigbee;
+        private System.ComponentModel.BackgroundWorker bg_AGVLocation;
     }
 }
 

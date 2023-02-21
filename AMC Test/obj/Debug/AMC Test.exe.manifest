@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="539648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="545792">
       <assemblyIdentity name="AMC Test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jdGtOIi/VlZ8OWRfCfyEYbqwTvt71pPY9mmq15yZRNs=</dsig:DigestValue>
+        <dsig:DigestValue>IvyQ3sp18xhKaCY052RApx1SB05QezG0sxb1mRRHSaI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -420,13 +420,13 @@
       <dsig:DigestValue>D3t9B3RuPMuVJU3maTmOsHRIIZQrgAr8445xb9H/n44=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\Setting.txt" size="260">
+  <file name="bin\Debug\Setting\Setting.txt" size="443">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CzfAZ70V5+lQSRl4ss4G0YbdAtk3ofJ+ZgzCS1sF92w=</dsig:DigestValue>
+      <dsig:DigestValue>WLIEZp6hKlVulwS6ZHo565IGSj0vTC28Bir+fTLUr7I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Setting\SKYNET.txt" size="74">

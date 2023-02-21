@@ -129,6 +129,7 @@
             // 
             // dg_logdirectory
             // 
+            this.dg_logdirectory.AllowUserToAddRows = false;
             this.dg_logdirectory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_logdirectory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NAME,

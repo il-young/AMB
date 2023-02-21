@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jigjp6ED8xjL1Ps/uJH4hvW01dpV24WUaFcYPfoMVK8=</dsig:DigestValue>
+        <dsig:DigestValue>qHzBWpcx7ynosZhRu5L3zPsc9fBtO92fQ8xyFwTws4o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -426,7 +426,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CzfAZ70V5+lQSRl4ss4G0YbdAtk3ofJ+ZgzCS1sF92w=</dsig:DigestValue>
+      <dsig:DigestValue>dUH8XCgOUhT2HpYdGDhIJCnBGPIi4DWkryI4Nr6d9jg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Setting\SKYNET.txt" size="74">
