@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="545792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="547840">
       <assemblyIdentity name="AMC Test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IvyQ3sp18xhKaCY052RApx1SB05QezG0sxb1mRRHSaI=</dsig:DigestValue>
+        <dsig:DigestValue>iCl4ZEpaKzn1d4Jaj4RLy++ty3ke37NsgFAxXHtZvyk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -259,6 +259,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SuperSimpleTcp.dll" size="61440">
+      <assemblyIdentity name="SuperSimpleTcp" version="3.0.7.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>VZL4ymkmua7svoABzT2N9tGBEbiiiB/RAiX2LE+xqdI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SuperSocket.ClientEngine.Common.dll" size="16384">
       <assemblyIdentity name="SuperSocket.ClientEngine.Common" version="0.3.0.0" publicKeyToken="EE9AF13F57F00ACC" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -366,13 +378,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AMC Test.exe.config" size="3930">
+  <file name="AMC Test.exe.config" size="3886">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/+M5ChTzdEd4Onyi0ROaDdjq8b38PPOckcPdMtIjdN0=</dsig:DigestValue>
+      <dsig:DigestValue>69dyYL/LSZh3aaRkLmv7IL1ZNmS5JthhF80Hr4F7iwo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="amkor.ico" size="32478">
@@ -384,13 +396,13 @@
       <dsig:DigestValue>l9QS+DdYSGNu1Q0JF24yLOdu4I5Pikni1qw1f+wBpGs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\AREA.txt" size="133">
+  <file name="bin\Debug\Setting\AREA.txt" size="67">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WVRDE8uEQynlud6k7KvyR/YDdK6M6DnswxUf3fu8zxE=</dsig:DigestValue>
+      <dsig:DigestValue>2fN+rc0x+Bl6PdLZOlonYqCiZ2GnLUQM47GPnXad5aA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Setting\BUTTON.txt" size="152">
@@ -420,13 +432,13 @@
       <dsig:DigestValue>D3t9B3RuPMuVJU3maTmOsHRIIZQrgAr8445xb9H/n44=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\Setting.txt" size="443">
+  <file name="bin\Debug\Setting\Setting.txt" size="340">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WLIEZp6hKlVulwS6ZHo565IGSj0vTC28Bir+fTLUr7I=</dsig:DigestValue>
+      <dsig:DigestValue>Kh9HhBUOSnrGuw82nw36bxHFM13dM5U8HrD9jIgwoFc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Setting\SKYNET.txt" size="74">

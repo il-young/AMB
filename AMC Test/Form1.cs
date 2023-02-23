@@ -10,6 +10,8 @@ using System.Text;
 using System.Windows.Forms;
 using Modbus.Device;
 
+using SuperSimpleTcp;
+
 using SocketGlobal;
 using SocketGlobal.SendData;
 using SuperSocket.ClientEngine;
@@ -30,7 +32,7 @@ namespace AMC_Test
             public string LD_TYPE;
             public IPAddress LD_IP;
             public int LD_PORT;
-            public Socket LD_Client;
+            public SuperSimpleTcp.SimpleTcpClient LD_Client;
             public List<string> LD_GOAL;
             public bool LD_Is_connection;
             public LD_Status LD_ST;
@@ -69,6 +71,7 @@ namespace AMC_Test
             public double LD_LDS_CORREC_ANG;
 
             public bool Is_Deltaheading_Comp;
+            public bool LD_STANDBY;
 
             public string LD_Localizetion_Score;
 
@@ -198,7 +201,7 @@ namespace AMC_Test
         protected int ndeltaHeading_Task_cnt;
 
 
-        public Socket LDS_Client;
+        public SuperSimpleTcp.SimpleTcpClient LDS_Client;
         private CALARM_SRV ALARM_SRV = new CALARM_SRV();
 
         private const int LDS_Min_Distance = 50;    //mm
@@ -531,7 +534,7 @@ namespace AMC_Test
         DateTime Ready_CHK_TIMER;
 
 
-        private void Insert_Listbox(int index, string data, Socket LD_Socket)
+        private void Insert_Listbox(int index, string data, SuperSimpleTcp.SimpleTcpClient LD_Socket)
         {
             try
             {
@@ -569,8 +572,11 @@ namespace AMC_Test
 
                                 if (LD[0].LD_ST.LD_ST.Contains("Arrived"))
                                 {
-                                    Monitor.Stop_Sound();
-                                    Monitor.end_blink();
+                                    if (LD[0].LD_ST.LD_ST.Contains(Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length -1]) == true)
+                                    {
+                                        Monitor.Stop_Sound();
+                                        Monitor.end_blink();
+                                    }
 
                                     if (str_cmd_arr[0] == "GOGOAL")
                                     {
@@ -906,7 +912,7 @@ namespace AMC_Test
                                 {
                                     for (int j = 0; j < LD.Length; j++)
                                     {
-                                        if (LD[i].LD_Client.Connected == true)
+                                        if (LD[i].LD_Client.IsConnected == true)
                                         {
                                             byte[] _buf = new byte[10];
                                             byte[] buf = new byte[10];
@@ -918,7 +924,7 @@ namespace AMC_Test
                                             _buf[LD[0].LD_PW.Length] = 0x0D;
                                             _buf[LD[0].LD_PW.Length + 1] = 0x0A;
 
-                                            LD[i].LD_Client.Send(_buf, 0, 6, SocketFlags.None);
+                                            LD[i].LD_Client.Send(_buf);
 
                                             if (bg_LD_IO_ST.IsBusy == false)
                                             {
@@ -1134,6 +1140,25 @@ namespace AMC_Test
 
         string temp_area = "";
 
+        private string GetAreaNames()
+        {
+            string res = "";
+
+            for (int i = 0; i < AREAs.Count; i++)
+            {
+                if ((AREAs[i].P1.X > AREAs[i].P2.X ? AREAs[i].P1.X : AREAs[i].P2.X) > LD[0].LD_ST.LD_LOC.LD_X && (AREAs[i].P1.X < AREAs[i].P2.X ? AREAs[i].P1.X : AREAs[i].P2.X) < LD[0].LD_ST.LD_LOC.LD_X)
+                {
+                    if ((AREAs[i].P1.Y > AREAs[i].P2.Y ? AREAs[i].P1.Y : AREAs[i].P2.Y) > LD[0].LD_ST.LD_LOC.LD_Y && (AREAs[i].P1.Y < AREAs[i].P2.Y ? AREAs[i].P1.Y : AREAs[i].P2.Y) < LD[0].LD_ST.LD_LOC.LD_Y)
+                    {
+                        res += res==""? AREAs[i].AREA_NAME : "," + AREAs[i].AREA_NAME ;
+                    }
+                }
+            }
+
+            return res;
+        }
+
+
         private void Set_AREA()
         {
 
@@ -1166,14 +1191,20 @@ namespace AMC_Test
 
                             if (Get_Area_Action(temp_area) != null)
                             {
-                                string[] baction_temp = Get_Area_Action(temp_area).Split('|');
-                                if (baction_temp[2] == "ON" || baction_temp[2] == "OPEN")
+
+                                String a = Get_Area_Action(temp_area);
+                                if (a != "")
                                 {
-                                    DOOR_Open(baction_temp[0]);
-                                }
-                                else if (baction_temp[2] == "OFF" || baction_temp[2] == "CLOSE")
-                                {
-                                    DOOR_Close(baction_temp[0]);
+                                    string[] baction_temp = a.Split('|');
+
+                                    if (baction_temp[2] == "ON" || baction_temp[2] == "OPEN")
+                                    {
+                                        DOOR_Open(baction_temp[0]);
+                                    }
+                                    else if (baction_temp[2] == "OFF" || baction_temp[2] == "CLOSE")
+                                    {
+                                        DOOR_Close(baction_temp[0]);
+                                    }
                                 }
                             }
                         }
@@ -2189,7 +2220,15 @@ namespace AMC_Test
                         bg_reseve.RunWorkerAsync();
                     }
 
-                    bSkynet_connected = skynet.Skynet_Connect(Skynet_Param.IP);
+                    if(Skynet_Param.IP == "0.0.0.0")
+                    {
+                        bSkynet_connected = false;
+                    }
+                    else
+                    {
+                        bSkynet_connected = skynet.Skynet_Connect(Skynet_Param.IP);
+                    }
+                    
 
 
                     //if (bg_modbus.IsBusy == false)
@@ -2240,9 +2279,10 @@ namespace AMC_Test
                     bg_Display.RunWorkerAsync();
                 }
 
-                if (LD[0].LD_Client.Connected == false)
+                if (LD[0].LD_Client.IsConnected == false)
                 {
-                    LD[0].LD_Client.Connect(new IPEndPoint(LD[0].LD_IP, LD[0].LD_PORT));
+                    LD[0].LD_Client.Connect();
+                        //LD[0].LD_IP.ToString(), LD[0].LD_PORT);
 
                     //LD[0].LD_Client.BeginConnect(new IPEndPoint(LD[0].LD_IP, 7171), new AsyncCallback(ConnectCallback), LD[0].LD_Client);
                 }
@@ -2433,7 +2473,7 @@ namespace AMC_Test
                 _buf[msg.Length] = 0x0D;
                 _buf[msg.Length + 1] = 0x0A;
 
-                if (LD[0].LD_Client.Connected == true)
+                if (LD[0].LD_Client.IsConnected == true)
                 {
                     LD[0].LD_Client.Send(_buf);
                 }
@@ -2445,7 +2485,7 @@ namespace AMC_Test
             }
         }
 
-        public void Send_string(Socket ld_socket, string data)
+        public void Send_string(SuperSimpleTcp.SimpleTcpClient ld_socket, string data)
         {
             try
             {
@@ -2461,7 +2501,7 @@ namespace AMC_Test
                 _buf[data.Length] = 0x0D;
                 _buf[data.Length + 1] = 0x0A;
 
-                if (ld_socket.Connected == true)
+                if (ld_socket.IsConnected == true)
                 {
                     ld_socket.Send(_buf);
                 }
@@ -2621,7 +2661,7 @@ namespace AMC_Test
             lb_cmd.Items.Clear();
             lb_cmd.Items.AddRange(cmd_temp);
         }
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -2634,14 +2674,14 @@ namespace AMC_Test
             colors[6] = Color.LightGoldenrodYellow;
             colors[7] = Color.DarkSeaGreen;
 
-            LD[0].LD_Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            
             LD[0].LD_GOAL = new List<string>();
             LD[0].LD_ST.LD_ST = "IDLE";
             //string[] ports = SerialPort.GetPortNames();
             INPUT_DATA = new bool[2, 16 * DI_BOARD_DEV_NUM.Length];
             OUTPUT_DATA = new bool[2, 16 * DO_BOARD_DEV_NUM.Length];
 
-            Monitor.add_alarm_event += Monitor_add_alarm_event;   
+            Monitor.add_alarm_event += Monitor_add_alarm_event;
 
             Read_Setting_Text();
             Read_AREA();
@@ -2649,7 +2689,9 @@ namespace AMC_Test
             Read_Skynet();
             ERR_QUEUE.Read_Err_list();
 
-            if(AMC_SRV.SRV_IP == "NONE")
+            LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP.ToString(), LD[0].LD_PORT); //(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            LD[0].LD_Client.Events.DataReceived += Events_DataReceived;
+            if (AMC_SRV.SRV_IP == "NONE")
             {
                 AMC_Client = null;
             }
@@ -2668,7 +2710,7 @@ namespace AMC_Test
                 AMC_Client.SendingQueueSize = 0xffff;
             }
 
-            if(LD[0].ZIGBEE_PORT != "COM0")
+            if (LD[0].ZIGBEE_PORT != "COM0")
             {
                 Zigbee.PortName = LD[0].ZIGBEE_PORT;
                 Zigbee.BaudRate = 9600;
@@ -2701,9 +2743,18 @@ namespace AMC_Test
                 bg_AGVLocation.RunWorkerAsync();
 
             int a = 0;
-            a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, "RECHARGE", LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
-            Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
-            Skynet_MSG_Send();
+
+            if (Skynet_Param.IP != "0.0.0.0")
+            {
+                a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, "RECHARGE", LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
+                Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
+                Skynet_MSG_Send();
+            }
+        }
+
+        private void Events_DataReceived(object sender, SuperSimpleTcp.DataReceivedEventArgs e)
+        {
+            Insert_Listbox(0, Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count), LD[0].LD_Client);
         }
 
         private void AGV_SQL_DataReceveEvent(string query, System.Data.DataSet ds)
@@ -2721,34 +2772,48 @@ namespace AMC_Test
                     {
                         if (ds.Tables[0].Rows[0]["AGV_NAME"].ToString() == AGVs[i].agvName)
                         {
-                            for (int j = 0; j < AGVs[i].Routes.Count; i++)
+                            for (int j = 0; j < AGVs[i].Routes.Count; j++)
                             {
-                                if (ds.Tables[0].Rows[i]["DESTINATION"].ToString() == AGVs[i].Routes[j])
-                                {
-                                    string[] node = Array.FindAll(AGVs[i].Nodes[j].Split(','), element => element == ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
+                                string[] areas = GetAreaNames().Split(',');
 
-                                    if(node.Length != 0)
+                                if (ds.Tables[0].Rows[i]["DESTINATION"].ToString() == AGVs[i].Routes[j] && areas[0] != "")
+                                {
+                                    //if (Array.IndexOf(areas, AGVs[i].Routes[j]) != -1)
                                     {
-                                        //Goal Name
-                                        AGVStandby = true;
-                                        AGVin = true;
-                                        Send_LD_String(AGVs[i].CMD[j]);
+                                        string[] node = Array.FindAll(AGVs[i].Nodes[j].Split(','), element => element == ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
+
+                                        if (node.Length != 0 && LD[0].LD_ST.LD_STANDBY == false)
+                                        {
+                                            //Goal Name                                            
+                                            AGVin = true;
+                                            LD[0].LD_ST.LD_STANDBY = true;
+                                            Send_LD_String(AGVs[i].CMD[j]);
+                                        }
+                                        else if(LD[0].LD_ST.LD_STANDBY == true && node.Length == 0)
+                                        {
+                                            LD[0].LD_ST.LD_STANDBY = false;
+                                            Monitor.MoveContinues();
+                                        }
                                     }
                                 }
+                    
                             }
                         }
                     }
 
-                    if (AGVin == false)
-                    {// move Again
-                        //Monitor.Get_where2go();
-                        Monitor.MoveContinues();
-                    }
+                    //if (AGVin == false   && LD[0].LD_ST.LD_ST.Contains(Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1]) == false && LD[0].LD_ST.LD_ST.Contains("arrived") == false)
+                    //{// move Again
+                    //    if(LD[0].LD_ST.LD_STANDBY == true)
+                    //    {
+                    //        Monitor.MoveContinues();
+                    //    }
+                    //    //Monitor.Get_where2go();                        
+                    //}
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
             
         }
@@ -2770,9 +2835,9 @@ namespace AMC_Test
                 {
                     for (int i = 0; i < LD.Length; i++)
                     {
-                        if (LD[0].LD_Client.Connected == true)
+                        if (LD[0].LD_Client.IsConnected == true)
                         {
-                            LD[0].LD_Client.Receive(_data);
+                            //LD[0].LD_Client.Receive(_data);
                             _buf = Encoding.Default.GetString(_data);
                             Insert_Listbox(0, _buf, LD[0].LD_Client);
                             Insert_Hex_Log(_buf);
@@ -3111,7 +3176,7 @@ namespace AMC_Test
             {
                 try
                 {
-                    if (LD[0].LD_Client.Connected == true)
+                    if (LD[0].LD_Client.IsConnected == true)
                     {
                         if (LD[0].LD_GOAL.Count != 0)
                         {
@@ -3219,11 +3284,14 @@ namespace AMC_Test
 
                         if (is_1st == false && LD[0].LD_ST.LD_CHARGE != "")
                         {
-                            a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
-                            Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
-                            Skynet_MSG_Send();
+                            if (Skynet_Param.IP != "0.0.0.0")
+                            {
+                                a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
+                                Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
+                                Skynet_MSG_Send();
 
-                            is_1st = true;
+                                is_1st = true;
+                            }
                         }
                         else
                         {
@@ -3234,20 +3302,23 @@ namespace AMC_Test
                     if((DateTime.Now.Minute % 10) == 0)
                     {
                         if(DateTime.Now.Second == 0)
-                        {                            
-                            a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
-                            Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
-                            Skynet_MSG_Send();
+                        {
+                            if (Skynet_Param.IP != "0.0.0.0")
+                            {
+                                a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
+                                Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
+                                Skynet_MSG_Send();
+                            }
                         }
                     }
                     
 
-                    if (bg_reseve.IsBusy == false)
-                    {
-                        Insert_ERR_Log("bg_reserve Restart");
-                        b_bg_terminator = true;
-                        bg_reseve.RunWorkerAsync();
-                    }
+                    //if (bg_reseve.IsBusy == false)
+                    //{
+                    //    Insert_ERR_Log("bg_reserve Restart");
+                    //    b_bg_terminator = true;
+                    //    bg_reseve.RunWorkerAsync();
+                    //}
 
                     if(bg_Display.IsBusy == false)
                     {
@@ -3269,31 +3340,47 @@ namespace AMC_Test
 
         static public void Skynet_MSG_Send()
         {
+
+            if (Skynet_Param.IP == "0.0.0.0")
+                return;
+
             if(Skynet_Param.B_STATUS_CODE != Skynet_Param.STATUS_CODE)
             {
                 string status = "";
 
                 if (Skynet_Param.STATUS_CODE == nSKYNET.SM_RUN)
                 {
-                    nSkynet_Res = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, Skynet_Param.SCR, Skynet_Param.DEST);                    
-                    status = "RUN";                    
+                    if (Skynet_Param.IP != "0.0.0.0")
+                    {
+                        nSkynet_Res = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, Skynet_Param.SCR, Skynet_Param.DEST);
+                        status = "RUN";
+                    }
                 }
                 else if (Skynet_Param.STATUS_CODE == nSKYNET.SM_IDLE)
                 {
+                    if (Skynet_Param.IP != "0.0.0.0")
+                    {
                         nSkynet_Res = skynet.Skynet_SM_Send_Idle(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS);
                         status = "IDLE";
+                    }
                 }
                 else if (Skynet_Param.STATUS_CODE == nSKYNET.SM_ALARM)
                 {
                     if (Skynet_Param.STATUS == "SETUP")
                     {
-                        nSkynet_Res = skynet.Skynet_SM_Send_Setup(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, "SETUP");
+                        if (Skynet_Param.IP != "0.0.0.0")
+                        {
+                            nSkynet_Res = skynet.Skynet_SM_Send_Setup(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, "SETUP");
+                        }
                     }
                     else
                     {
-                        skynet.Skynet_SM_Send_Alarm(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS);
-                        skynet.Skynet_EM_DataSend(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.ERR_CODE, Skynet_Param.ERR_TYPE, Skynet_Param.ERR_NAME, Skynet_Param.ERR_DESCRIPT, Skynet_Param.ERR_SOLUTION);
-                        status = "ALARM";
+                        if (Skynet_Param.IP != "0.0.0.0")
+                        {
+                            skynet.Skynet_SM_Send_Alarm(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS);
+                            skynet.Skynet_EM_DataSend(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.ERR_CODE, Skynet_Param.ERR_TYPE, Skynet_Param.ERR_NAME, Skynet_Param.ERR_DESCRIPT, Skynet_Param.ERR_SOLUTION);
+                            status = "ALARM";
+                        }
                     }                    
                 }
 
@@ -3829,7 +3916,7 @@ namespace AMC_Test
                         this.Close();
                     }
 
-                    if(LD[0].LD_Client.Connected == false)
+                    if(LD[0].LD_Client.IsConnected == false)
                     {
                         Insert_ERR_Log("LD Client reConnect");
                         BeginConnect2(LD[0].LD_IP.ToString(), 7171);
@@ -3851,13 +3938,10 @@ namespace AMC_Test
         {
             IPAddress[] IPs = Dns.GetHostAddresses(host);
 
-            LD[0].LD_Client = new Socket(AddressFamily.InterNetwork,
-                SocketType.Stream,
-                ProtocolType.Tcp);
+            LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP,LD[0].LD_PORT);
 
             
-            LD[0].LD_Client.BeginConnect(IPs, port,
-                new AsyncCallback(ConnectCallback1), LD[0].LD_Client);
+            LD[0].LD_Client.Connect();
                       
         }
 
@@ -5315,9 +5399,9 @@ namespace AMC_Test
                 IO_SerialPort.Dispose();
             }
 
-            if (LD[0].LD_Client.Connected == true)
+            if (LD[0].LD_Client.IsConnected == true)
             {
-                LD[0].LD_Client.Disconnect(false);
+                LD[0].LD_Client.Disconnect();
             }
 
             LD[0].LD_Client.Dispose();
@@ -6036,7 +6120,7 @@ namespace AMC_Test
                             }
                         }
                         LD[0] = LD_Temp;
-                        LD[0].LD_Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                        LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP, LD[0].LD_PORT);
                         LD[0].LD_GOAL = new List<string>();
 
                     }
@@ -7494,7 +7578,7 @@ namespace AMC_Test
         {
             while(true)
             {
-                AGV_SQL.AddQuery("select [DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '29호기'");
+                AGV_SQL.AddQuery("select [AGV_NAME],[DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '77호기'");
 
                 System.Threading.Thread.Sleep(1000);
             }

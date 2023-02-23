@@ -28,3 +28,4 @@ D:\Project\AMB\Source\AMC Test\obj\Debug\AMB.csproj.CopyComplete
 D:\Project\AMB\Source\AMC Test\obj\Debug\AMC Test.exe
 D:\Project\AMB\Source\AMC Test\obj\Debug\AMC Test.pdb
 D:\Project\AMB\Source\AMC Test\obj\Debug\AMB.csprojAssemblyReference.cache
+D:\Project\AMB\Source\AMC Test\bin\Debug\SuperSimpleTcp.dll

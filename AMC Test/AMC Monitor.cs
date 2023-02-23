@@ -715,7 +715,7 @@ namespace AMC_Test
         }
 
         string start_Area = "";
-        Button clicked_btn = new Button();
+        public Button clicked_btn = new Button();
 
         private void btn_Click_Event(object sender, EventArgs e)
         {   

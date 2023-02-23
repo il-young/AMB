@@ -113,7 +113,7 @@ namespace AMC_Test
 
             try
             {
-                using (SqlConnection c = new SqlConnection("server = 10.131.15.18; uid = autohwadm; pwd = Autohw123!; database = AUTOHW"))
+                using (SqlConnection c = new SqlConnection("server = 10.131.15.18; uid = autohwadm; pwd = AUTOhw123!; database = AUTOHW"))
                 {
                     c.Open();
 
