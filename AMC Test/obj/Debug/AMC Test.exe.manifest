@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="547840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMC Test.exe" size="550400">
       <assemblyIdentity name="AMC Test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iCl4ZEpaKzn1d4Jaj4RLy++ty3ke37NsgFAxXHtZvyk=</dsig:DigestValue>
+        <dsig:DigestValue>rJ8Tem0CHtOh73vFGI8+I+TGyg2Ui/zkY+sUTOcWkys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -396,22 +396,22 @@
       <dsig:DigestValue>l9QS+DdYSGNu1Q0JF24yLOdu4I5Pikni1qw1f+wBpGs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\AREA.txt" size="67">
+  <file name="bin\Debug\Setting\AREA.txt" size="68">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2fN+rc0x+Bl6PdLZOlonYqCiZ2GnLUQM47GPnXad5aA=</dsig:DigestValue>
+      <dsig:DigestValue>3G7COxSrz/VyM40fo0tAWnt6kx+azMTNKi+6NnHyPXE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\BUTTON.txt" size="152">
+  <file name="bin\Debug\Setting\BUTTON.txt" size="73">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+AkJYANk2/2iVQLqRw6XpkLS8deZ0ZWZeGsfhzJupaU=</dsig:DigestValue>
+      <dsig:DigestValue>XiIVHugyfvTQzK/87+3U83GjJJG3aMfrcl6h6KUoUHQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Setting\CAPCODE.txt" size="153">
@@ -432,22 +432,22 @@
       <dsig:DigestValue>D3t9B3RuPMuVJU3maTmOsHRIIZQrgAr8445xb9H/n44=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\Setting.txt" size="340">
+  <file name="bin\Debug\Setting\Setting.txt" size="666">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Kh9HhBUOSnrGuw82nw36bxHFM13dM5U8HrD9jIgwoFc=</dsig:DigestValue>
+      <dsig:DigestValue>270MkjAdRL0CeKV4+q7j9aSm0pgOBWv+IVsE7OPq8T4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Setting\SKYNET.txt" size="74">
+  <file name="bin\Debug\Setting\SKYNET.txt" size="68">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rFnjLGD6vclWNRoOi0WdKxZI33bEG9IxXRfEuAgsjg8=</dsig:DigestValue>
+      <dsig:DigestValue>OQyXyj5OQwAL00P/K+SVuld56KXaUZKIk9faxnFOspM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="INA_AZ_DLL.h" size="62250">

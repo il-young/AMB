@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="AMC Test.exe.manifest" size="25980">
+    <dependentAssembly dependencyType="install" codebase="AMC Test.exe.manifest" size="25979">
       <assemblyIdentity name="AMC Test.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gOpayn8shO1YagqyvLMF6u9IVurpqdnlAv5m3WXtRtI=</dsig:DigestValue>
+        <dsig:DigestValue>vs5/HGbxHYXUVhFDyRoU7CgPOiHJIzqhvfmJUcAHXPA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

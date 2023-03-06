@@ -451,6 +451,11 @@ namespace AMC_Test
                 pb_skynet_off.BringToFront();
         }
 
+        public string GetArea()
+        {
+            return tb_AREA.Text;
+        }
+
         string AREA_TEMP = "";
         public void Set_AREA(string area)
         {
@@ -721,6 +726,7 @@ namespace AMC_Test
         {   
             clicked_btn = (Button)sender;
 
+            Form1.LD[0].LD_ST.LD_STANDBY = false;
             if (tabControl1.Visible == true)
                 btn_OK_Click_1(sender, e);
 
@@ -736,6 +742,7 @@ namespace AMC_Test
         private void move_vehicle(Button  btn)
         {
             //Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
+
             sql_cmd cmd = new sql_cmd();
             cmd.Query = string.Format("insert into TB_OPERATION_HISTORY ([DATETIME], [LINE_CODE], [EQUIP_ID], [TYPE], [DEPARTURE], [ARRIVAL]) values('{0}','{1}','{2}','{3}','{4}','{5}')", 
                 DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff"),
@@ -749,6 +756,8 @@ namespace AMC_Test
             //if (s.Contains(tb_AREA.Text) == false || tb_AREA.Text == "")
             {
                 Form1.Conveyor_BW_stop();
+
+                
 
                 if (btn.Tag.ToString().Split(',')[0].ToUpper().Contains("A2A") == true)
                 {
@@ -765,7 +774,7 @@ namespace AMC_Test
                 blink_btn_str = btn.Text;
                 start_blink();
 
-                Where2go = btn.Tag.ToString().Split(' ').Length >= 2 ? btn.Tag.ToString().Split(' ')[1] : btn.Tag.ToString();
+                Where2go = btn.Tag.ToString().Split(' ').Length >= 2 ? btn.Tag.ToString().Split(' ')[1].Split(',')[0] : btn.Tag.ToString().Split(',')[0];
 
                 if (btn.Tag.ToString().Split(',')[1] == "Y")
                 {
