@@ -571,7 +571,7 @@ namespace AMC_Test
                     delegate ()
                     {
 
-                        Debug.WriteLine(data);
+                        //Debug.WriteLine(data);
 
                         string[] str_buf = new string[100];
 
@@ -1182,7 +1182,7 @@ namespace AMC_Test
                                         LD[0].LD_ST.LD_STANDBY = true;
 
                                         Debug.WriteLine(string.Format("{0} 실행", area.CMD[index[i]]));
-                                        Send_LD_String(area.CMD[i]);
+                                        Send_LD_String(area.CMD[index[i]]);
 
                                         break;
                                     }
@@ -2986,12 +2986,13 @@ namespace AMC_Test
                     Debug.WriteLine($"{agvname} 일치");
                     for(int i = 0; i < area.Dests.Count; i++)
                     {
-                        if (area.Dests[i] == Monitor.GetArea())
+                        if (area.Dests[i] == Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1])
                         {
                             Debug.WriteLine($"{area.Dests[i]} 일치");
                             if(Array.FindIndex(area.Nodes[i].Split(','), element => element == node) == -1)
                             {
                                 Debug.WriteLine($"{node} 없음");
+                                Monitor.MoveContinues();
                                 res = true;
                             }
                             else
@@ -4069,8 +4070,6 @@ namespace AMC_Test
                         Monitor.Set_Localize(LD[0].LD_ST.LD_Localizetion_Score);
                         Monitor.Set_Link(ERR_QUEUE.Get_now_err_manual());
 
-                       
-
                         Skynet_Param.ERR_CODE = ERR_QUEUE.Get_now_err_code().ToString();
                         Skynet_Param.ERR_NAME = ERR_QUEUE.Get_now_err_name();
                         Skynet_Param.ERR_TYPE = "0";
@@ -4081,7 +4080,6 @@ namespace AMC_Test
 
                         Monitor.Set_Alarm();
                         Set_Skynet_Status(nSKYNET.SM_ALARM, ERR_QUEUE.Get_now_err_msg());
-
                     }
                     else
                     {
@@ -7787,11 +7785,18 @@ namespace AMC_Test
         {
             while(true)
             {
-                foreach(stAGV agv in AGVs)
+                try
                 {
-                    AGV_SQL.AddQuery(string.Format("select [AGV_NAME],[DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '{0}'", agv.AGVName));
+                    foreach (stAGV agv in AGVs)
+                    {
+                        AGV_SQL.AddQuery(string.Format("select [AGV_NAME],[DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '{0}'", agv.AGVName));
+                    }
                 }
+                catch (Exception EX)
+                {
 
+                }
+               
                 System.Threading.Thread.Sleep(1000);
             }
         }
