@@ -15,6 +15,9 @@ namespace AMC_Test
 {
     public partial class AMC_Monitor : Form
     {
+        public delegate void FormClose();
+        public event FormClose FormCloseEvent;
+
         public struct sql_cmd
         {
             public string Query;
@@ -31,6 +34,8 @@ namespace AMC_Test
                 retry_cnt++;
             }
         }
+
+        Board brd = new Board();
 
         private bool bDisplay_T = false;
 
@@ -187,6 +192,8 @@ namespace AMC_Test
 
         private void AMC_Monitor_FormClosing(object sender, FormClosingEventArgs e)
         {
+            FormCloseEvent();
+            brd.Close();
             if (e.CloseReason != CloseReason.WindowsShutDown)
             {
                 this.Hide();
@@ -332,6 +339,8 @@ namespace AMC_Test
             if (bgw_alarm.IsBusy == false)
                 bgw_alarm.RunWorkerAsync();
         
+
+
 
             Load_boat_setting();
             bg_local.DoWork += Bg_local_DoWork;
@@ -787,14 +796,14 @@ namespace AMC_Test
 
                 if (btn.Tag.ToString().Split(',')[2] == "Y")
                 {
-                    Board brd = new Board();
+                    
                     
 
                     if (tb_AREA.Text != "")
                         start_Area = tb_AREA.Text;
 
-                    
 
+                    brd.Visible = false;
                     brd.Set_TEXT(start_Area + " => " + btn.Text.Split(' ')[btn.Text.Split(' ').Length - 1]);
                     brd.set_start(start_Area, btn.Text.Split(' ')[btn.Text.Split(' ').Length - 1]);
                     brd.ShowDialog();
@@ -806,6 +815,16 @@ namespace AMC_Test
                 //Run_area_checker();
                 
             }
+        }
+
+
+        public void AGVHide()
+        {
+            panel6.Hide();
+        }
+        public void BoardHide()
+        {
+            brd.Hide();
         }
 
         private void start_blink()
@@ -1597,6 +1616,26 @@ namespace AMC_Test
 
                 throw;
             }
+        }
+
+        public void SetAGVLocation(string node)
+        {
+            tb_AGVNode.Text = node;
+        }
+
+        public void SetAGVLocationRed()
+        {
+            tb_AGVNode.BackColor = Color.Red;
+        }
+
+        public void SetAGVLocationControl()
+        {
+            tb_AGVNode.BackColor = Color.LightSlateGray;
+        }
+
+        public void SetMs(String ms)
+        {
+            tb_ms.Text = ms;
         }
 
         private void mobilePlannerToolStripMenuItem_Click(object sender, EventArgs e)

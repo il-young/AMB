@@ -17,12 +17,17 @@ namespace AMC_Test
 
         public Board()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        public void SetParent()
+        {
+            this.Parent = AMC_Test.AMC_Monitor.ActiveForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
-            Close();
+        {
+            this.Hide();
         }
 
         public void Set_TEXT(string TEXT)

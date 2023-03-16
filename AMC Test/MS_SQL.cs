@@ -4,13 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AMC_Test
 {
     class MS_SQL
     {
-        public delegate void DataReceve(string query, System.Data.DataSet ds);
+        public delegate void DataReceve(string query, System.Data.DataSet ds, double delay);
         public event DataReceve DataReceveEvent;
+
+        
 
         int RetryMax = 5;
 
@@ -33,7 +36,7 @@ namespace AMC_Test
 
         private Queue<sql_cmd> Q = new Queue<sql_cmd>();
 
-        private System.Threading.Thread DBThread;
+        public System.Threading.Thread DBThread;
 
         public MS_SQL()
         {
@@ -59,7 +62,8 @@ namespace AMC_Test
 
                             if (ds != null)
                             {
-                                DataReceveEvent(temp.Query, ds);
+                                DataReceveEvent(temp.Query, ds, sw.Elapsed.TotalMilliseconds);
+                                sw.Reset();
                                 Q.Dequeue();
                             }
                             else
@@ -106,6 +110,7 @@ namespace AMC_Test
                 Q.Enqueue(temp);
             }
         }
+        Stopwatch sw = new Stopwatch();
 
         private System.Data.DataSet SearchData(string sql)
         {
@@ -113,7 +118,12 @@ namespace AMC_Test
 
             try
             {
-                using (SqlConnection c = new SqlConnection("server = 10.131.15.18; uid = autohwadm; pwd = AUTOhw123!; database = AUTOHW"))
+
+                sw.Start();
+                //strConnetionIP = "10.131.15.18";
+                string strConnetion = string.Format("server=10.131.15.18;database=AUTOHW;user id=autohwadm;password=AUTOhw123!;Pooling=true;Min Pool Size=20;Max Pool Size=100;Connection Timeout=10");
+
+                using (SqlConnection c = new SqlConnection(strConnetion))
                 {
                     c.Open();
 
@@ -125,6 +135,10 @@ namespace AMC_Test
                         }
                     }
                 }
+
+                sw.Stop();
+
+
             }
             catch (Exception ex)
             {

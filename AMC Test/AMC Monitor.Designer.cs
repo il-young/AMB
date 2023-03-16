@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AMC_Monitor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rFIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,7 @@
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangerModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mobilePlannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_ungrip1 = new System.Windows.Forms.Button();
@@ -180,9 +182,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.bgw_btn_blink = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mobilePlannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.tb_AGVNode = new System.Windows.Forms.TextBox();
+            this.tb_ms = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -229,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -258,6 +263,13 @@
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
             this.toolToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.toolToolStripMenuItem.Text = "&Tool";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem1.Text = "Mobile Planner";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // cameraToolStripMenuItem
             // 
@@ -321,16 +333,24 @@
             // mangerModeToolStripMenuItem
             // 
             this.mangerModeToolStripMenuItem.Name = "mangerModeToolStripMenuItem";
-            this.mangerModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mangerModeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.mangerModeToolStripMenuItem.Text = "Manger Mode";
             this.mangerModeToolStripMenuItem.Click += new System.EventHandler(this.mangerModeToolStripMenuItem_Click);
             // 
             // logDirectoryToolStripMenuItem
             // 
             this.logDirectoryToolStripMenuItem.Name = "logDirectoryToolStripMenuItem";
-            this.logDirectoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logDirectoryToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.logDirectoryToolStripMenuItem.Text = "Log Directory";
             this.logDirectoryToolStripMenuItem.Click += new System.EventHandler(this.logDirectoryToolStripMenuItem_Click);
+            // 
+            // mobilePlannerToolStripMenuItem
+            // 
+            this.mobilePlannerToolStripMenuItem.Name = "mobilePlannerToolStripMenuItem";
+            this.mobilePlannerToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.mobilePlannerToolStripMenuItem.Text = "&Mobile Planner";
+            this.mobilePlannerToolStripMenuItem.ToolTipText = "확장자까지 입력";
+            this.mobilePlannerToolStripMenuItem.Click += new System.EventHandler(this.mobilePlannerToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -787,6 +807,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.btn_stop_music);
             this.panel5.Controls.Add(this.btn_Fold);
             this.panel5.Controls.Add(this.btn_Unfold);
@@ -1893,24 +1914,51 @@
             this.timer1.Interval = 700;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
-            this.toolStripMenuItem1.Text = "Mobile Planner";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // mobilePlannerToolStripMenuItem
-            // 
-            this.mobilePlannerToolStripMenuItem.Name = "mobilePlannerToolStripMenuItem";
-            this.mobilePlannerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mobilePlannerToolStripMenuItem.Text = "&Mobile Planner";
-            this.mobilePlannerToolStripMenuItem.ToolTipText = "확장자까지 입력";
-            this.mobilePlannerToolStripMenuItem.Click += new System.EventHandler(this.mobilePlannerToolStripMenuItem_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tb_ms);
+            this.panel6.Controls.Add(this.tb_AGVNode);
+            this.panel6.Controls.Add(this.label40);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 466);
+            this.panel6.TabIndex = 27;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label40.Location = new System.Drawing.Point(9, 11);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(116, 21);
+            this.label40.TabIndex = 27;
+            this.label40.Text = "AGV Node:";
+            // 
+            // tb_AGVNode
+            // 
+            this.tb_AGVNode.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_AGVNode.Location = new System.Drawing.Point(12, 36);
+            this.tb_AGVNode.Name = "tb_AGVNode";
+            this.tb_AGVNode.ReadOnly = true;
+            this.tb_AGVNode.Size = new System.Drawing.Size(213, 35);
+            this.tb_AGVNode.TabIndex = 27;
+            this.tb_AGVNode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_ms
+            // 
+            this.tb_ms.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_ms.Location = new System.Drawing.Point(164, 74);
+            this.tb_ms.Name = "tb_ms";
+            this.tb_ms.ReadOnly = true;
+            this.tb_ms.Size = new System.Drawing.Size(61, 22);
+            this.tb_ms.TabIndex = 28;
+            this.tb_ms.Text = "10000ms";
+            this.tb_ms.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AMC_Monitor
             // 
@@ -1988,6 +2036,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2148,5 +2198,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mobilePlannerToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox tb_AGVNode;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox tb_ms;
     }
 }

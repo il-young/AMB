@@ -313,6 +313,7 @@ namespace AMC_Test
         static SoundPlayer low_batt_sound = new SoundPlayer(System.Environment.CurrentDirectory + "\\Setting\\low_batt.wav");
 
         private MS_SQL AGV_SQL = new MS_SQL();
+        private string AGVLocation = "";
 
 
 
@@ -603,10 +604,13 @@ namespace AMC_Test
 
                                 if (LD[0].LD_ST.LD_ST.Contains("Arrived"))
                                 {
-                                    if (LD[0].LD_ST.LD_ST.Contains(Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length -1]) == true)
+                                    if (Monitor.clicked_btn != null)
                                     {
-                                        Monitor.Stop_Sound();
-                                        Monitor.end_blink();
+                                        if (LD[0].LD_ST.LD_ST.Contains(Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1]) == true)
+                                        {
+                                            Monitor.Stop_Sound();
+                                            Monitor.end_blink();
+                                        }
                                     }
 
                                     if (str_cmd_arr[0] == "GOGOAL")
@@ -704,12 +708,18 @@ namespace AMC_Test
                                 if (str_aa[0] == "IN")
                                 {
                                     LD[0].LD_ST.LD_AREA = str_aa[1];
+                                    Monitor.Set_AREA(str_aa[1]);
+
                                     InAreaAction(str_buf[i]);
                                 }
                                 else
                                 {
                                     LD[0].LD_ST.LD_AREA = "";
                                 }
+                            }
+                            else if (str_buf[i].Contains("Arrived at")== true)
+                            {
+                                
                             }
 
 
@@ -1179,10 +1189,20 @@ namespace AMC_Test
 
                                     if (res != -1)
                                     {
+                                        Monitor.SetAGVLocationRed();
                                         LD[0].LD_ST.LD_STANDBY = true;
 
                                         Debug.WriteLine(string.Format("{0} 실행", area.CMD[index[i]]));
                                         Send_LD_String(area.CMD[index[i]]);
+
+                                        Monitor.BoardHide();
+
+                                        brd.Set_TEXT($"AGV 이동 대기 중\nAGV 위치 : {AGVLocation}");
+                                        brd.TopMost = true;
+                                        brd.TopLevel = true;
+                                        brd.Show();                                   
+
+                                       
 
                                         break;
                                     }
@@ -2805,6 +2825,7 @@ namespace AMC_Test
             OUTPUT_DATA = new bool[2, 16 * DO_BOARD_DEV_NUM.Length];
 
             Monitor.add_alarm_event += Monitor_add_alarm_event;
+            Monitor.FormCloseEvent += Monitor_FormCloseEvent;
 
             Read_Setting_Text();
             Read_AREA();
@@ -2842,6 +2863,11 @@ namespace AMC_Test
                 Chk_Serial_Port();
             }
 
+            if (AGVAreas.Count == 0)
+            {
+                Monitor.AGVHide();
+            }
+
             Port_init();
             HMI.Show();
             HMI.Hide();
@@ -2875,6 +2901,11 @@ namespace AMC_Test
             }
         }
 
+        private void Monitor_FormCloseEvent()
+        {
+            Close();
+        }
+
         private void Events_DataReceived(object sender, SuperSimpleTcp.DataReceivedEventArgs e)
         {
             Insert_Listbox(0, Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count), LD[0].LD_Client);
@@ -2883,12 +2914,15 @@ namespace AMC_Test
 
         Board brd = new Board();
 
-        private void AGV_SQL_DataReceveEvent(string query, System.Data.DataSet ds)
+        private void AGV_SQL_DataReceveEvent(string query, System.Data.DataSet ds, double ms)
         {
             try
             {
+                Monitor.SetMs(ms.ToString());
+
                 if (ds.Tables.Count == 0)
                     return;
+
 
                 if (query.ToUpper().Contains("TBL_AGV_STATUS_LIST") == true)
                 {
@@ -2901,6 +2935,8 @@ namespace AMC_Test
                         {
                             if(ds.Tables[0].Rows[i]["AGV_NAME"].ToString() == AGVs[j].AGVName)
                             {
+                                Monitor.SetAGVLocation($"{AGVs[j].AGVName} : {ds.Tables[0].Rows[i]["CURRENT_NODE"]}");
+                                AGVLocation = ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString();
                                 stAGV temp = new stAGV(AGVs[j].AGVName);
                                 temp.SetValue(ds.Tables[0].Rows[i]["DESTINATION"].ToString(), ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString(), ds.Tables[0].Rows[i]["STATUS"].ToString());
 
@@ -2908,63 +2944,13 @@ namespace AMC_Test
 
                                 if (LD[0].LD_ST.LD_STANDBY == true)
                                 {
+                                    brd.Set_TEXT($"AGV 이동 대기 중\nAGV 위치 : {AGVLocation}");
                                     CheckAGVOut(ds.Tables[0].Rows[i]["AGV_NAME"].ToString(), ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
+                                    Monitor.SetAGVLocationControl();
                                 }
                             }
                         }
                     }
-
-                    
-                    
-                    
-                    //bool AGVin = false;
-                    //for (int i = 0; i < AGVs.Count; i++)
-                    //{
-                    //    if (ds.Tables[0].Rows[0]["AGV_NAME"].ToString() == AGVAreas[i].agvName)
-                    //    {
-                    //        for (int j = 0; j < AGVAreas[i].Routes.Count; j++)
-                    //        {
-                    //            string[] areas = GetAreaNames().Split(',');
-
-                    //            if (ds.Tables[0].Rows[i]["DESTINATION"].ToString() == AGVAreas[i].Routes[j] && areas[0] != "")
-                    //            {
-                    //                //if (Array.IndexOf(areas, AGVs[i].Routes[j]) != -1)
-                    //                {
-                    //                    string[] node = Array.FindAll(AGVAreas[i].Nodes[j].Split(','), element => element == ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
-
-                    //                    if (node.Length != 0 && LD[0].LD_ST.LD_STANDBY == false)
-                    //                    {
-                    //                        //Goal Name                                            
-                    //                        AGVin = true;
-                    //                        LD[0].LD_ST.LD_STANDBY = true;
-
-                    //                        Debug.WriteLine(string.Format("{0} 실행", AGVAreas[i].CMD[j]));
-                    //                        Send_LD_String(AGVAreas[i].CMD[j]);
-                    //                        //brd.Set_TEXT(string.Format("{0}가 지나가기를 기다리고 있습니다.", AGVs[i].agvName));
-                    //                        //brd.Show();
-                    //                    }
-                    //                    else if(LD[0].LD_ST.LD_STANDBY == true && node.Length == 0)
-                    //                    {
-                    //                        brd.Hide();
-                    //                        LD[0].LD_ST.LD_STANDBY = false;
-                    //                        Debug.WriteLine("Move Contoues 실행");
-                    //                        Monitor.MoveContinues();
-                    //                    }
-                    //                }
-                    //            }
-                    
-                    //        }
-                    //    }
-                    //}
-
-                    //if (AGVin == false   && LD[0].LD_ST.LD_ST.Contains(Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1]) == false && LD[0].LD_ST.LD_ST.Contains("arrived") == false)
-                    //{// move Again
-                    //    if(LD[0].LD_ST.LD_STANDBY == true)
-                    //    {
-                    //        Monitor.MoveContinues();
-                    //    }
-                    //    //Monitor.Get_where2go();                        
-                    //}
                 }
             }
             catch (Exception ex)
@@ -2986,22 +2972,35 @@ namespace AMC_Test
                     Debug.WriteLine($"{agvname} 일치");
                     for(int i = 0; i < area.Dests.Count; i++)
                     {
-                        if (area.Dests[i] == Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1])
+                        if (area.AGVDests[i] == Monitor.clicked_btn.Text.Split(' ')[Monitor.clicked_btn.Text.Split(' ').Length - 1])
                         {
-                            Debug.WriteLine($"{area.Dests[i]} 일치");
-                            if(Array.FindIndex(area.Nodes[i].Split(','), element => element == node) == -1)
+                            if (area.Dests[i] == Monitor.GetArea())
                             {
-                                Debug.WriteLine($"{node} 없음");
-                                Monitor.MoveContinues();
-                                res = true;
-                            }
-                            else
-                            {
-                                Debug.WriteLine($"{node} 있음");
+                                Debug.WriteLine($"{area.Dests[i]} 일치");
+                                if (Array.FindIndex(area.Nodes[i].Split(','), element => element == node) == -1)
+                                {
+
+                                    res = true;
+                                }
+                                else
+                                {
+                                    Debug.WriteLine($"{node} 있음");
+                                }
                             }
                         }
                     }
                 }
+            }
+
+            if(res == true)
+            {
+                Debug.WriteLine($"{node} 없음");
+                if (Monitor.clicked_btn != null)
+                {
+                    brd.Hide();
+                    Monitor.MoveContinues();
+                }
+                    
             }
 
             Debug.WriteLine($"return {res}");
@@ -3517,6 +3516,11 @@ namespace AMC_Test
                         Insert_ERR_Log("bg_Display Restart");
                         bDISPLAY_T = true;
                         bg_Display.RunWorkerAsync();
+                    }
+
+                    if(bg_AGVLocation.IsBusy == false)
+                    {
+                        bg_AGVLocation.RunWorkerAsync();
                     }
 
                     System.Threading.Thread.Sleep(500);
@@ -7791,6 +7795,12 @@ namespace AMC_Test
                     {
                         AGV_SQL.AddQuery(string.Format("select [AGV_NAME],[DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '{0}'", agv.AGVName));
                     }
+
+                    if (bg_st.IsBusy == false)
+                        bg_st.RunWorkerAsync();
+
+                    if (AGV_SQL.DBThread.ThreadState != System.Threading.ThreadState.Running)
+                        AGV_SQL.DBThread.Start();
                 }
                 catch (Exception EX)
                 {
