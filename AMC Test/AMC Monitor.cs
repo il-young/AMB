@@ -1710,5 +1710,21 @@ namespace AMC_Test
                 }
             }
         }
+
+        private void menuStrip1_DoubleClick(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+                WindowState = FormWindowState.Maximized;
+        }
+
+        private void menuStrip1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -314,7 +314,7 @@ namespace AMC_Test
 
         private MS_SQL AGV_SQL = new MS_SQL();
         private string AGVLocation = "";
-
+        private int ReStartcnt = -1;
 
 
         /***************************************************************************************/
@@ -1197,7 +1197,9 @@ namespace AMC_Test
 
                                         Monitor.BoardHide();
 
-                                        brd.Set_TEXT($"AGV 이동 대기 중\nAGV 위치 : {AGVLocation}");
+                                        ReStartcnt = area.Nodes.Count - res;
+
+                                        brd.Set_TEXT($"나르미 이동 대기 중\n {ReStartcnt} 남음");
                                         brd.TopMost = true;
                                         brd.TopLevel = true;
                                         brd.Show();                                   
@@ -2944,7 +2946,9 @@ namespace AMC_Test
 
                                 if (LD[0].LD_ST.LD_STANDBY == true)
                                 {
-                                    brd.Set_TEXT($"AGV 이동 대기 중\nAGV 위치 : {AGVLocation}");
+                                    SetRestartcnt();
+
+                                    brd.Set_TEXT($"나르미 이동 대기 중\n{ReStartcnt} 남음");
                                     CheckAGVOut(ds.Tables[0].Rows[i]["AGV_NAME"].ToString(), ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
                                     Monitor.SetAGVLocationControl();
                                 }
@@ -2958,6 +2962,29 @@ namespace AMC_Test
                 //MessageBox.Show(ex.Message);
             }
             
+        }
+
+        public void SetRestartcnt()
+        {
+            int res = -1;
+            
+
+            foreach (stAGVArea area in AGVAreas)
+            {
+                List<int> index = area.Dests.Select((s, i) => new { Value = s, Index = i })
+                                                .Where(si => si.Value == Monitor.GetArea())
+                                                .Select(si => si.Index)
+                                                .ToList();
+
+                foreach (stAGV agv in AGVs)
+                {
+                    for(int i = 0; i< index.Count; i++)
+                    { 
+                        res = area.Nodes[index[i]].IndexOf(agv.AGVCurrentNode);
+                        ReStartcnt = area.Nodes.Count - res;
+                    }
+                }
+            }
         }
 
         public bool CheckAGVOut(string agvname, string node)

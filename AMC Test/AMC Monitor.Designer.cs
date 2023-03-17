@@ -86,6 +86,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bw_area_checker = new System.ComponentModel.BackgroundWorker();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tb_ms = new System.Windows.Forms.TextBox();
+            this.tb_AGVNode = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.btn_stop_music = new System.Windows.Forms.Button();
             this.btn_Fold = new System.Windows.Forms.Button();
             this.btn_Unfold = new System.Windows.Forms.Button();
@@ -183,10 +187,7 @@
             this.bgw_btn_blink = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.tb_AGVNode = new System.Windows.Forms.TextBox();
-            this.tb_ms = new System.Windows.Forms.TextBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -194,6 +195,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_alarm.SuspendLayout();
@@ -233,7 +235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -248,6 +249,8 @@
             this.menuStrip1.Size = new System.Drawing.Size(1280, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.DoubleClick += new System.EventHandler(this.menuStrip1_DoubleClick);
+            this.menuStrip1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDoubleClick);
             // 
             // toolToolStripMenuItem
             // 
@@ -818,6 +821,48 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(236, 643);
             this.panel5.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tb_ms);
+            this.panel6.Controls.Add(this.tb_AGVNode);
+            this.panel6.Controls.Add(this.label40);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 466);
+            this.panel6.TabIndex = 27;
+            // 
+            // tb_ms
+            // 
+            this.tb_ms.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_ms.Location = new System.Drawing.Point(164, 74);
+            this.tb_ms.Name = "tb_ms";
+            this.tb_ms.ReadOnly = true;
+            this.tb_ms.Size = new System.Drawing.Size(61, 22);
+            this.tb_ms.TabIndex = 28;
+            this.tb_ms.Text = "10000ms";
+            this.tb_ms.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_AGVNode
+            // 
+            this.tb_AGVNode.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_AGVNode.Location = new System.Drawing.Point(12, 36);
+            this.tb_AGVNode.Name = "tb_AGVNode";
+            this.tb_AGVNode.ReadOnly = true;
+            this.tb_AGVNode.Size = new System.Drawing.Size(213, 35);
+            this.tb_AGVNode.TabIndex = 27;
+            this.tb_AGVNode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label40.Location = new System.Drawing.Point(9, 11);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(116, 21);
+            this.label40.TabIndex = 27;
+            this.label40.Text = "AGV Node:";
             // 
             // btn_stop_music
             // 
@@ -1918,47 +1963,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel6
+            // notifyIcon1
             // 
-            this.panel6.Controls.Add(this.tb_ms);
-            this.panel6.Controls.Add(this.tb_AGVNode);
-            this.panel6.Controls.Add(this.label40);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(236, 466);
-            this.panel6.TabIndex = 27;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label40.Location = new System.Drawing.Point(9, 11);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(116, 21);
-            this.label40.TabIndex = 27;
-            this.label40.Text = "AGV Node:";
-            // 
-            // tb_AGVNode
-            // 
-            this.tb_AGVNode.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tb_AGVNode.Location = new System.Drawing.Point(12, 36);
-            this.tb_AGVNode.Name = "tb_AGVNode";
-            this.tb_AGVNode.ReadOnly = true;
-            this.tb_AGVNode.Size = new System.Drawing.Size(213, 35);
-            this.tb_AGVNode.TabIndex = 27;
-            this.tb_AGVNode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_ms
-            // 
-            this.tb_ms.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tb_ms.Location = new System.Drawing.Point(164, 74);
-            this.tb_ms.Name = "tb_ms";
-            this.tb_ms.ReadOnly = true;
-            this.tb_ms.Size = new System.Drawing.Size(61, 22);
-            this.tb_ms.TabIndex = 28;
-            this.tb_ms.Text = "10000ms";
-            this.tb_ms.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // AMC_Monitor
             // 
@@ -1979,7 +1989,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AMC_Monitor";
-            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AMC_Monitor";
@@ -1995,6 +2004,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.pn_alarm.ResumeLayout(false);
@@ -2036,8 +2047,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2202,5 +2211,6 @@
         private System.Windows.Forms.TextBox tb_AGVNode;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tb_ms;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
