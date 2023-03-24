@@ -17,12 +17,17 @@ namespace AMC_Test
 
         public Board()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        public void SetParent()
+        {
+            this.Parent = AMC_Test.AMC_Monitor.ActiveForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
-            Close();
+        {
+            this.Hide();
         }
 
         public void Set_TEXT(string TEXT)
@@ -34,6 +39,11 @@ namespace AMC_Test
         {
             start_area = st;
             target_area = ta;
+        }
+
+        public void SetBtn(bool val)
+        {
+            button1.Visible = val;
         }
 
         private void tb_text_TextChanged(object sender, EventArgs e)

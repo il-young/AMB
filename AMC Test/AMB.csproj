@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>AMC_Test</RootNamespace>
     <AssemblyName>AMC Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -190,6 +190,9 @@
     <Reference Include="SocketGlobal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\SocketGlobal.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSimpleTcp, Version=3.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSimpleTcp.3.0.7\lib\net48\SuperSimpleTcp.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.ClientEngine.Common, Version=0.3.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -389,6 +392,7 @@
     </EmbeddedResource>
     <None Include="AMC Test_TemporaryKey.pfx" />
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Pager_Message.xsc">
       <DependentUpon>Pager_Message.xsd</DependentUpon>
     </None>

@@ -15,6 +15,9 @@ namespace AMC_Test
 {
     public partial class AMC_Monitor : Form
     {
+        public delegate void FormClose();
+        public event FormClose FormCloseEvent;
+
         public struct sql_cmd
         {
             public string Query;
@@ -31,6 +34,8 @@ namespace AMC_Test
                 retry_cnt++;
             }
         }
+
+        Board brd = new Board();
 
         private bool bDisplay_T = false;
 
@@ -187,6 +192,8 @@ namespace AMC_Test
 
         private void AMC_Monitor_FormClosing(object sender, FormClosingEventArgs e)
         {
+            FormCloseEvent();
+            brd.Close();
             if (e.CloseReason != CloseReason.WindowsShutDown)
             {
                 this.Hide();
@@ -323,15 +330,13 @@ namespace AMC_Test
 
             CheckForIllegalCrossThreadCalls = false;
 
-            if (Properties.Settings.Default.CMD_LOG_DIRECTORY == "")
-            {
-                Properties.Settings.Default.CMD_LOG_DIRECTORY = Application.StartupPath;
-                Properties.Settings.Default.Save();
-            }
+            
 
             if (bgw_alarm.IsBusy == false)
                 bgw_alarm.RunWorkerAsync();
         
+
+
 
             Load_boat_setting();
             bg_local.DoWork += Bg_local_DoWork;
@@ -449,6 +454,11 @@ namespace AMC_Test
                 pb_skynet_on.BringToFront();
             else
                 pb_skynet_off.BringToFront();
+        }
+
+        public string GetArea()
+        {
+            return tb_AREA.Text;
         }
 
         string AREA_TEMP = "";
@@ -715,12 +725,21 @@ namespace AMC_Test
         }
 
         string start_Area = "";
-        Button clicked_btn = new Button();
+        public Button clicked_btn = new Button();
 
         private void btn_Click_Event(object sender, EventArgs e)
         {   
             clicked_btn = (Button)sender;
 
+            Form1.LD[0].LD_ST.LD_STANDBY = false;
+            if (tabControl1.Visible == true)
+                btn_OK_Click_1(sender, e);
+
+            move_vehicle(clicked_btn);
+        }
+
+        public void MoveContinues()
+        {
             move_vehicle(clicked_btn);
         }
 
@@ -729,12 +748,21 @@ namespace AMC_Test
         {
             Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
 
+            sql_cmd cmd = new sql_cmd();
+            cmd.Query = string.Format("insert into TB_OPERATION_HISTORY ([DATETIME], [LINE_CODE], [EQUIP_ID], [TYPE], [DEPARTURE], [ARRIVAL]) values('{0}','{1}','{2}','{3}','{4}','{5}')", 
+                DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff"),
+                Linecode, EquipmentID, btn.Text + " Click", tb_AREA.Text, clicked_btn.Text);
+            cmd.retry_cnt = 0;
+
+            SQL_Q.Enqueue(cmd);
 
             end_blink();
 
             //if (s.Contains(tb_AREA.Text) == false || tb_AREA.Text == "")
             {
                 Form1.Conveyor_BW_stop();
+
+                
 
                 if (btn.Tag.ToString().Split(',')[0].ToUpper().Contains("A2A") == true)
                 {
@@ -751,7 +779,7 @@ namespace AMC_Test
                 blink_btn_str = btn.Text;
                 start_blink();
 
-                Where2go = btn.Tag.ToString().Split(' ').Length >= 2 ? btn.Tag.ToString().Split(' ')[1] : btn.Tag.ToString();
+                Where2go = btn.Tag.ToString().Split(' ').Length >= 2 ? btn.Tag.ToString().Split(' ')[1].Split(',')[0] : btn.Tag.ToString().Split(',')[0];
 
                 if (btn.Tag.ToString().Split(',')[1] == "Y")
                 {
@@ -764,14 +792,14 @@ namespace AMC_Test
 
                 if (btn.Tag.ToString().Split(',')[2] == "Y")
                 {
-                    Board brd = new Board();
+                    
                     
 
                     if (tb_AREA.Text != "")
                         start_Area = tb_AREA.Text;
 
-                    
 
+                    brd.Visible = false;
                     brd.Set_TEXT(start_Area + " => " + btn.Text.Split(' ')[btn.Text.Split(' ').Length - 1]);
                     brd.set_start(start_Area, btn.Text.Split(' ')[btn.Text.Split(' ').Length - 1]);
                     brd.ShowDialog();
@@ -783,6 +811,16 @@ namespace AMC_Test
                 //Run_area_checker();
                 
             }
+        }
+
+
+        public void AGVHide()
+        {
+            panel6.Hide();
+        }
+        public void BoardHide()
+        {
+            brd.Hide();
         }
 
         private void start_blink()
@@ -1412,22 +1450,18 @@ namespace AMC_Test
                 //str_buf = System.IO.File.ReadAllText(log_dir);
 
                 string[] arr_str = msg.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                System.IO.StreamWriter st = System.IO.File.AppendText(log_dir);
-
-                for (int i = 0; i < arr_str.Length; i++)
+                using (System.IO.StreamWriter st = System.IO.File.AppendText(log_dir))
                 {
-                    if (arr_str[i].Trim('\0') != "")
+
+                    for (int i = 0; i < arr_str.Length; i++)
                     {
-                        str_temp = date + " " + arr_str[i];
-                        st.WriteLine(str_temp);
+                        if (arr_str[i].Trim('\0') != "")
+                        {
+                            str_temp = date + " " + arr_str[i];
+                            st.WriteLine(str_temp);
+                        }
                     }
                 }
-
-                st.Close();
-                st.Dispose();
-
-                
-
             }
             catch (Exception ex)
             {
@@ -1576,6 +1610,26 @@ namespace AMC_Test
             }
         }
 
+        public void SetAGVLocation(string node)
+        {
+            tb_AGVNode.Text = node;
+        }
+
+        public void SetAGVLocationRed()
+        {
+            tb_AGVNode.BackColor = Color.Red;
+        }
+
+        public void SetAGVLocationControl()
+        {
+            tb_AGVNode.BackColor = Color.LightSlateGray;
+        }
+
+        public void SetMs(String ms)
+        {
+            tb_ms.Text = ms;
+        }
+
         private void mobilePlannerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int nFileNameStartP = Properties.Settings.Default.MobilePlanner_Path.LastIndexOf("MobilePlanner.exe");
@@ -1647,6 +1701,33 @@ namespace AMC_Test
                     Process.Start(Properties.Settings.Default.MobilePlanner_Path);
                 }
             }
+        }
+
+        private void menuStrip1_DoubleClick(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+                WindowState = FormWindowState.Maximized;
+        }
+
+        private void menuStrip1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void tb_ms_MouseDown(object sender, MouseEventArgs e)
+        {
+            frm_Alarm al = new frm_Alarm();
+            al.Show();
+        }
+
+        private void ll_Manual_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
         }
     }
 }

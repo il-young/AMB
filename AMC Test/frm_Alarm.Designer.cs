@@ -34,10 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_Solution = new System.Windows.Forms.TextBox();
-            this.btn_OK = new System.Windows.Forms.Button();
-            this.ll_Manual = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_Loc_Score = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ll_Manual = new System.Windows.Forms.LinkLabel();
+            this.btn_OK = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -105,31 +107,6 @@
             this.tb_Solution.TabIndex = 5;
             this.tb_Solution.Text = "Solution Text";
             // 
-            // btn_OK
-            // 
-            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_OK.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_OK.Location = new System.Drawing.Point(674, 385);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(114, 53);
-            this.btn_OK.TabIndex = 6;
-            this.btn_OK.Text = "O K";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
-            // ll_Manual
-            // 
-            this.ll_Manual.AutoEllipsis = true;
-            this.ll_Manual.AutoSize = true;
-            this.ll_Manual.Font = new System.Drawing.Font("굴림", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ll_Manual.Location = new System.Drawing.Point(16, 385);
-            this.ll_Manual.Name = "ll_Manual";
-            this.ll_Manual.Size = new System.Drawing.Size(187, 35);
-            this.ll_Manual.TabIndex = 7;
-            this.ll_Manual.TabStop = true;
-            this.ll_Manual.Text = "linkLabel1";
-            this.ll_Manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_Manual_LinkClicked);
-            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -151,17 +128,49 @@
             this.lb_Loc_Score.Text = "100%";
             this.lb_Loc_Score.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_OK);
+            this.panel1.Controls.Add(this.ll_Manual);
+            this.panel1.Location = new System.Drawing.Point(12, 385);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 53);
+            this.panel1.TabIndex = 10;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            // 
+            // ll_Manual
+            // 
+            this.ll_Manual.AutoEllipsis = true;
+            this.ll_Manual.AutoSize = true;
+            this.ll_Manual.Font = new System.Drawing.Font("굴림", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ll_Manual.Location = new System.Drawing.Point(3, 7);
+            this.ll_Manual.Name = "ll_Manual";
+            this.ll_Manual.Size = new System.Drawing.Size(187, 35);
+            this.ll_Manual.TabIndex = 8;
+            this.ll_Manual.TabStop = true;
+            this.ll_Manual.Text = "linkLabel1";
+            // 
+            // btn_OK
+            // 
+            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_OK.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_OK.Location = new System.Drawing.Point(659, 0);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(114, 53);
+            this.btn_OK.TabIndex = 9;
+            this.btn_OK.Text = "O K";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
+            // 
             // frm_Alarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_OK;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_Loc_Score);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ll_Manual);
-            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.tb_Solution);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_Name);
@@ -176,6 +185,8 @@
             this.ShowInTaskbar = false;
             this.Text = "Alarm";
             this.TopMost = true;
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,9 +200,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_Solution;
-        private System.Windows.Forms.Button btn_OK;
-        private System.Windows.Forms.LinkLabel ll_Manual;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_Loc_Score;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_OK;
+        private System.Windows.Forms.LinkLabel ll_Manual;
     }
 }

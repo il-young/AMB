@@ -33,4 +33,7 @@
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <RemoteDebugMachine>10.141.226.37</RemoteDebugMachine>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+  </PropertyGroup>
 </Project>
