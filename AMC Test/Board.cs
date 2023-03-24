@@ -41,6 +41,11 @@ namespace AMC_Test
             target_area = ta;
         }
 
+        public void SetBtn(bool val)
+        {
+            button1.Visible = val;
+        }
+
         private void tb_text_TextChanged(object sender, EventArgs e)
         {
 

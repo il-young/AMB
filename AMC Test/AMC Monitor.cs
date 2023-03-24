@@ -330,11 +330,7 @@ namespace AMC_Test
 
             CheckForIllegalCrossThreadCalls = false;
 
-            if (Properties.Settings.Default.CMD_LOG_DIRECTORY == "")
-            {
-                Properties.Settings.Default.CMD_LOG_DIRECTORY = Application.StartupPath;
-                Properties.Settings.Default.Save();
-            }
+            
 
             if (bgw_alarm.IsBusy == false)
                 bgw_alarm.RunWorkerAsync();
@@ -750,7 +746,7 @@ namespace AMC_Test
 
         private void move_vehicle(Button  btn)
         {
-            //Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
+            Insert_CMD_Log(btn.Text + " " + btn.Tag.ToString() + " 버튼 클릭");
 
             sql_cmd cmd = new sql_cmd();
             cmd.Query = string.Format("insert into TB_OPERATION_HISTORY ([DATETIME], [LINE_CODE], [EQUIP_ID], [TYPE], [DEPARTURE], [ARRIVAL]) values('{0}','{1}','{2}','{3}','{4}','{5}')", 
@@ -1454,22 +1450,18 @@ namespace AMC_Test
                 //str_buf = System.IO.File.ReadAllText(log_dir);
 
                 string[] arr_str = msg.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                System.IO.StreamWriter st = System.IO.File.AppendText(log_dir);
-
-                for (int i = 0; i < arr_str.Length; i++)
+                using (System.IO.StreamWriter st = System.IO.File.AppendText(log_dir))
                 {
-                    if (arr_str[i].Trim('\0') != "")
+
+                    for (int i = 0; i < arr_str.Length; i++)
                     {
-                        str_temp = date + " " + arr_str[i];
-                        st.WriteLine(str_temp);
+                        if (arr_str[i].Trim('\0') != "")
+                        {
+                            str_temp = date + " " + arr_str[i];
+                            st.WriteLine(str_temp);
+                        }
                     }
                 }
-
-                st.Close();
-                st.Dispose();
-
-                
-
             }
             catch (Exception ex)
             {
@@ -1725,6 +1717,17 @@ namespace AMC_Test
         private void menuStrip1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void tb_ms_MouseDown(object sender, MouseEventArgs e)
+        {
+            frm_Alarm al = new frm_Alarm();
+            al.Show();
+        }
+
+        private void ll_Manual_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
         }
     }
 }

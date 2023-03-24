@@ -51,7 +51,7 @@
             this.tb_text.Font = new System.Drawing.Font("굴림", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_text.Location = new System.Drawing.Point(12, 67);
             this.tb_text.Name = "tb_text";
-            this.tb_text.Size = new System.Drawing.Size(776, 102);
+            this.tb_text.Size = new System.Drawing.Size(776, 259);
             this.tb_text.TabIndex = 2;
             this.tb_text.Text = "label1";
             this.tb_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

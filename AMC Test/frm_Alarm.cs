@@ -116,5 +116,20 @@ namespace AMC_Test
 
             frmLocalize.ShowDialog();
         }
+
+        private void ll_Manual_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
+        }
+
+        private void btn_OK_Click_1(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
+        }
     }
 }

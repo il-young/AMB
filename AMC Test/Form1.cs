@@ -1199,9 +1199,10 @@ namespace AMC_Test
 
                                         ReStartcnt = area.Nodes.Count - res;
 
-                                        brd.Set_TEXT($"나르미 이동 대기 중\n {ReStartcnt} 남음");
+                                        brd.Set_TEXT($"나르미 이동 대기 중\n나르미 통과 후 자동 출발합니다.\n조작 금지!!!!!!!!");
                                         brd.TopMost = true;
                                         brd.TopLevel = true;
+                                        brd.SetBtn(false);
                                         brd.Show();                                   
 
                                        
@@ -2426,7 +2427,8 @@ namespace AMC_Test
 
                 if (LD[0].LD_Client.IsConnected == false)
                 {
-                    LD[0].LD_Client.Connect();
+                    BeginConnect2();
+                    
                         //LD[0].LD_IP.ToString(), LD[0].LD_PORT);
 
                     //LD[0].LD_Client.BeginConnect(new IPEndPoint(LD[0].LD_IP, 7171), new AsyncCallback(ConnectCallback), LD[0].LD_Client);
@@ -2819,7 +2821,10 @@ namespace AMC_Test
             colors[6] = Color.LightGoldenrodYellow;
             colors[7] = Color.DarkSeaGreen;
 
-            
+           
+                Properties.Settings.Default.CMD_LOG_DIRECTORY = Application.StartupPath + @"\Log\CMD";
+                Properties.Settings.Default.Save();
+
             LD[0].LD_GOAL = new List<string>();
             LD[0].LD_ST.LD_ST = "IDLE";
             //string[] ports = SerialPort.GetPortNames();
@@ -2948,7 +2953,8 @@ namespace AMC_Test
                                 {
                                     SetRestartcnt();
 
-                                    brd.Set_TEXT($"나르미 이동 대기 중\n{ReStartcnt} 남음");
+                                    brd.Set_TEXT($"나르미 이동 대기 중\n나르미 통과 후 자동 출발합니다.\n조작 금지!!!!!!!!");
+                                    brd.SetBtn(false);
                                     CheckAGVOut(ds.Tables[0].Rows[i]["AGV_NAME"].ToString(), ds.Tables[0].Rows[i]["CURRENT_NODE"].ToString());
                                     Monitor.SetAGVLocationControl();
                                 }
@@ -3158,8 +3164,6 @@ namespace AMC_Test
                 }
 
                 Last_MSG = msg;
-                
-
             }
             catch (Exception)
             {
@@ -3563,7 +3567,6 @@ namespace AMC_Test
 
         static public void Skynet_MSG_Send()
         {
-
             if (Skynet_Param.IP == "0.0.0.0")
                 return;
 
@@ -4141,7 +4144,7 @@ namespace AMC_Test
                     if(LD[0].LD_Client.IsConnected == false)
                     {
                         Insert_ERR_Log("LD Client reConnect");
-                        BeginConnect2(LD[0].LD_IP.ToString(), 7171);
+                        BeginConnect2();
                         //LD[0].LD_Client.Connect(new IPEndPoint(LD[0].LD_IP, 7171));
                     }
 
@@ -4156,14 +4159,22 @@ namespace AMC_Test
 
         
 
-        public static void BeginConnect2(string host, int port)
+        public static void BeginConnect2()
         {
-            IPAddress[] IPs = Dns.GetHostAddresses(host);
+            try
+            {
+                IPAddress[] IPs = Dns.GetHostAddresses(host);
 
-            LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP,LD[0].LD_PORT);
+                LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP, LD[0].LD_PORT);
 
+
+                LD[0].LD_Client.Connect();
+            }
+            catch (Exception ex)
+            {
+
+            }
             
-            LD[0].LD_Client.Connect();
                       
         }
 
@@ -5281,7 +5292,7 @@ namespace AMC_Test
                 OUTPUT_DATA[0, OUT_NUM_CONVEYOR_DIRECTION] = false;
             }
 
-            Insert_System_Log("Conveyor stop");
+            //Insert_System_Log("Conveyor stop");
 
             //LD[0].LD_ST.LD_ST = "CONVEYOR_STOP";
             //Send_AMC_MSG("SEND", STB_NAME, CMD_NAME, GOAL_NAME, "CONVEYOR_STOP");
@@ -5873,7 +5884,7 @@ namespace AMC_Test
                 OUTPUT_DATA[0, OUT_NUM_GRIPER_RUN] = false;
             }
 
-            Insert_System_Log("Griper stop");
+            //Insert_System_Log("Griper stop");
         }
 
         private bool NGriper_RLimit()

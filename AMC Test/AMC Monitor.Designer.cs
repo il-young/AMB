@@ -1069,6 +1069,7 @@
             this.ll_Manual.TabIndex = 17;
             this.ll_Manual.TabStop = true;
             this.ll_Manual.Text = "linkLabel1";
+            this.ll_Manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_Manual_LinkClicked_1);
             // 
             // btn_OK
             // 
@@ -1137,6 +1138,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.pb_skynet_off);
             this.panel4.Controls.Add(this.tabControl1);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
@@ -1205,7 +1207,6 @@
             this.panel4.Controls.Add(this.pb_o2);
             this.panel4.Controls.Add(this.pb_o1);
             this.panel4.Controls.Add(this.pb_skynet_on);
-            this.panel4.Controls.Add(this.pb_skynet_off);
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(236, 157);
@@ -1984,12 +1985,11 @@
             this.Controls.Add(this.pn_boat_size);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "AMC_Monitor";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AMC_Monitor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
