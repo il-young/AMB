@@ -1198,12 +1198,13 @@ namespace AMC_Test
                                         Monitor.BoardHide();
 
                                         ReStartcnt = area.Nodes.Count - res;
-
+                                        Insert_CMD_Log(string.Format("{0} 실행", area.CMD[index[i]]));
+                                        Insert_CMD_Log("나르미 이동 대기 중\n나르미 통과 후 자동 출발합니다.");
                                         brd.Set_TEXT($"나르미 이동 대기 중\n나르미 통과 후 자동 출발합니다.\n조작 금지!!!!!!!!");
                                         brd.TopMost = true;
                                         brd.TopLevel = true;
                                         brd.SetBtn(false);
-                                        brd.Show();                                   
+                                        brd.ShowDialog();                                   
 
                                        
 
@@ -1367,8 +1368,8 @@ namespace AMC_Test
                     LD[0].LD_ST.LD_AREA = "";
                 }
             }
-
-            Monitor.Set_AREA(LD[0].LD_ST.LD_AREA);
+            if (LD[0].LD_ST.LD_AREA != "")
+                Monitor.Set_AREA(LD[0].LD_ST.LD_AREA);
 
             Debug.WriteLine(LD[0].LD_ST.LD_AREA);
 
@@ -2841,6 +2842,7 @@ namespace AMC_Test
             ERR_QUEUE.Read_Err_list();
 
             LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP.ToString(), LD[0].LD_PORT); //(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            LD[0].LD_Client.Events.Connected += Events_Connected;
             LD[0].LD_Client.Events.DataReceived += Events_DataReceived;
             if (AMC_SRV.SRV_IP == "NONE")
             {
@@ -2908,6 +2910,11 @@ namespace AMC_Test
             }
         }
 
+        private void Events_Connected(object sender, ConnectionEventArgs e)
+        {
+            
+        }
+
         private void Monitor_FormCloseEvent()
         {
             Close();
@@ -2969,6 +2976,8 @@ namespace AMC_Test
             }
             
         }
+
+
 
         public void SetRestartcnt()
         {
@@ -3071,8 +3080,9 @@ namespace AMC_Test
                         else
                         {
 
-                            //LD[0].LD_Client.BeginConnect(new IPEndPoint(IPAddress.Parse("192.168.0.10"), 7171));
-                            
+                            BeginConnect2();
+                            //LD[0].LD_Client(new IPEndPoint(IPAddress.Parse("192.168.0.10"), 7171));
+
                         }
 
                         if(bg_st.IsBusy == false)
@@ -4144,7 +4154,7 @@ namespace AMC_Test
                     if(LD[0].LD_Client.IsConnected == false)
                     {
                         Insert_ERR_Log("LD Client reConnect");
-                        BeginConnect2();
+                        //BeginConnect2();
                         //LD[0].LD_Client.Connect(new IPEndPoint(LD[0].LD_IP, 7171));
                     }
 
@@ -4163,9 +4173,9 @@ namespace AMC_Test
         {
             try
             {
-                IPAddress[] IPs = Dns.GetHostAddresses(host);
+                //IPAddress[] IPs = Dns.GetHostAddresses(host);
 
-                LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP, LD[0].LD_PORT);
+                //LD[0].LD_Client = new SuperSimpleTcp.SimpleTcpClient(LD[0].LD_IP, LD[0].LD_PORT);
 
 
                 LD[0].LD_Client.Connect();
@@ -7745,6 +7755,58 @@ namespace AMC_Test
             if (bg_latch.IsBusy == false)
             {
                 bg_latch.RunWorkerAsync();
+            }
+        }
+        public void Insert_CMD_Log(string msg)
+        {
+            string date = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
+            string str_temp = "";
+            string log_dir = Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + " CMD_" + Properties.Settings.Default.NAME + "_Log.txt";
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\");
+
+            try
+            {
+                if (di.Exists == false)
+                    di.Create();
+
+                
+
+
+                if (System.IO.File.Exists(log_dir) == false)
+                {
+                    string temp;
+                    di.Create();
+
+                    temp = "========================================================" + Environment.NewLine;
+                    temp += "=                                                                                                            =" + Environment.NewLine;
+                    temp += "=                                      AMB CMD Log File " + System.DateTime.Now.ToString("yyyy/MM/dd") + "                                    =" + Environment.NewLine;
+                    temp += "=                                                                                                            =" + Environment.NewLine;
+                    temp += "========================================================" + Environment.NewLine;
+
+                    System.IO.File.WriteAllText(log_dir, temp);
+                    Check_Log_date(Properties.Settings.Default.CMD_LOG_DIRECTORY + "\\" + System.DateTime.Now.ToString("yyyy-MM-dd") + "\\", 30);
+                }
+
+                //str_buf = System.IO.File.ReadAllText(log_dir);
+
+                string[] arr_str = msg.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                using (System.IO.StreamWriter st = System.IO.File.AppendText(log_dir))
+                {
+
+                    for (int i = 0; i < arr_str.Length; i++)
+                    {
+                        if (arr_str[i].Trim('\0') != "")
+                        {
+                            str_temp = date + " " + arr_str[i];
+                            st.WriteLine(str_temp);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //Insert_ERR_Log(ex.Message);
+                //Insert_Log(msg);
             }
         }
 

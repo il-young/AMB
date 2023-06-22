@@ -465,6 +465,8 @@ namespace AMC_Test
         public void Set_AREA(string area)
         {
             AREA_TEMP = tb_AREA.Text;
+            if (area == "")
+                return;
 
             if (area == "OFF")
             {
