@@ -672,8 +672,16 @@ namespace AMC_Test
 
             Size form_size = panel3.Size;
 
+            if (str_data.Length >= 7)
+            {
+                btn_Latch.Visible = false;
+                btn_Unlatch.Visible = false;
+                btn_Fold.Visible = false;
+                btn_Unfold.Visible = false;
+            }
+
             int h = (form_size.Height - 160 - (form_size.Height - 611)) / 4;
-            int w = form_size.Width / (str_data.Length > 6 ? (((int)str_data.Length -2) /4)+1 : 1);
+            int w = form_size.Width;// (str_data.Length > 6 ? (((int)str_data.Length -2) /4)+1 : 1);
 
             Button[] btn_CMD = new Button[str_data.Length];
 
@@ -711,16 +719,32 @@ namespace AMC_Test
                 {
                     if (str_data[i] != "EMPTY")
                     {
-                        btn_CMD[i] = new Button();
-                        btn_CMD[i].Click += new EventHandler(btn_Click_Event);
-                        btn_CMD[i].Text = str_temp[0];
-                        btn_CMD[i].Tag = str_temp[1] + "," + str_temp[2] + "," + str_temp[3];
-                        btn_CMD[i].Font = new Font("Arial", 22, FontStyle.Bold);
-                        btn_CMD[i].Height = h;
-                        btn_CMD[i].Width = w;
-                        btn_CMD[i].BackColor = colors[i % colors.Length];
-                        btn_CMD[i].Location = new System.Drawing.Point(((i - 1) / 4) * w, ((i - 1) % 4) * h + 160);
-                        panel3.Controls.Add(btn_CMD[i]);
+                        if (i < 5)
+                        {
+                            btn_CMD[i] = new Button();
+                            btn_CMD[i].Click += new EventHandler(btn_Click_Event);
+                            btn_CMD[i].Text = str_temp[0];
+                            btn_CMD[i].Tag = str_temp[1] + "," + str_temp[2] + "," + str_temp[3];
+                            btn_CMD[i].Font = new Font("Arial", 24, FontStyle.Bold);
+                            btn_CMD[i].Height = h;
+                            btn_CMD[i].Width = w;
+                            btn_CMD[i].BackColor = colors[i % colors.Length];
+                            btn_CMD[i].Location = new System.Drawing.Point(((i - 1) / 4) * w, ((i - 1) % 4) * h + 160);
+                            panel3.Controls.Add(btn_CMD[i]);
+                        }
+                        else
+                        {
+                            btn_CMD[i] = new Button();
+                            btn_CMD[i].Click += new EventHandler(btn_Click_Event);
+                            btn_CMD[i].Text = str_temp[0];
+                            btn_CMD[i].Tag = str_temp[1] + "," + str_temp[2] + "," + str_temp[3];
+                            btn_CMD[i].Font = new Font("Arial", 24, FontStyle.Bold);
+                            btn_CMD[i].Height = h;
+                            btn_CMD[i].Width = w;
+                            btn_CMD[i].BackColor = colors[i % colors.Length];
+                            btn_CMD[i].Location = new System.Drawing.Point(((i - 5) / 4) * w, ((i - 5) % 4) * h + 0);
+                            panel5.Controls.Add(btn_CMD[i]);
+                        }
                     }
                 }
             }

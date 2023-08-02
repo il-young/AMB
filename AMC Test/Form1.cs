@@ -2872,7 +2872,7 @@ namespace AMC_Test
                 Chk_Serial_Port();
             }
 
-            if (AGVAreas.Count == 0)
+            if (AGVAreas == null)
             {
                 Monitor.AGVHide();
             }
@@ -2922,7 +2922,8 @@ namespace AMC_Test
 
         private void Events_DataReceived(object sender, SuperSimpleTcp.DataReceivedEventArgs e)
         {
-            Insert_Listbox(0, Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count), LD[0].LD_Client);
+            if(e.Data != null&& e.Data.Array != null)
+                Insert_Listbox(0, Encoding.UTF8.GetString(e.Data.Array, 0, e.Data.Count), LD[0].LD_Client);
         }
 
 
@@ -7891,6 +7892,9 @@ namespace AMC_Test
             {
                 try
                 {
+                    if (AGVs == null)
+                        return;
+
                     foreach (stAGV agv in AGVs)
                     {
                         AGV_SQL.AddQuery(string.Format("select [AGV_NAME],[DATE],[DEPARTURE],[DESTINATION],[CURRENT_NODE],[STATUS],[NODE_LIST] from TBL_AGV_STATUS_LIST with(nolock) where [AGV_NAME] = '{0}'", agv.AGVName));
