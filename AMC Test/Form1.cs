@@ -299,6 +299,11 @@ namespace AMC_Test
         private bool OUT_JOB_END_ST = false;
         private bool in_job_finish = false;
 
+        public bool Call = false;
+        public bool MGZ = false;
+        public int DownTime = -1;
+        public DateTime dTime = new DateTime();
+
         static string CMD_NAME;
         string STB_NAME;
         string GOAL_NAME;
@@ -716,12 +721,37 @@ namespace AMC_Test
                                 {
                                     LD[0].LD_ST.LD_AREA = "";
                                 }
+
+                                if(str_aa.Length == 4)
+                                {
+                                    if (Call == true)
+                                    {
+                                        DownTime = int.Parse(str_aa[3]);
+                                        dTime = DateTime.Now;
+
+                                        
+                                        brd.Set_TEXT($"Call off after {(int)(DownTime - (DateTime.Now - dTime).TotalSeconds)}");
+                                        brd.Visible = false;
+                                        brd.TopMost = true;
+                                        brd.TopLevel = true;
+                                        brd.SetBtn(true);
+                                        timer1.Start();
+                                        brd.ShowDialog();
+                                    }
+                                    else
+                                    {
+                                        DownTime = -1;
+                                    }
+                                }
                             }
                             else if (str_buf[i].Contains("Arrived at")== true)
                             {
                                 
                             }
+                            else if(str_buf[i].Contains("Job") == true)
+                            {//Job Insert
 
+                            }
 
                             if (str_buf[i].Contains("LocalizationScore"))
                             {
@@ -932,8 +962,25 @@ namespace AMC_Test
                                     }
                                     else if (str_temp[0] == "Output:")
                                     {
-                                        LD_DO[1, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1] = LD_DO[0, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1];
-                                        LD_DO[0, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1] = (str_temp[2] == "off" ? false : true);
+                                        if (str_temp[1] == "CALL")
+                                        {
+                                            if (str_temp[2] == "on")
+                                                Call = true;
+                                            else
+                                                Call = false;
+                                        }
+                                        else if (str_temp[1] == "MGZ")
+                                        {
+                                            if (str_temp[2] == "on")
+                                                MGZ = true;
+                                            else
+                                                MGZ = false;
+                                        }
+                                        else
+                                        {
+                                            LD_DO[1, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1] = LD_DO[0, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1];
+                                            LD_DO[0, int.Parse(str_temp[1].Substring(1, str_temp[1].Length - 1)) - 1] = (str_temp[2] == "off" ? false : true);
+                                        }
                                     }
 
                                     
@@ -1165,6 +1212,8 @@ namespace AMC_Test
         {// "IN AreaName AREA"
             string[] temp = MSG.Split(':');
 
+            if (AGVAreas == null)
+                return;
 
             foreach(stAGVArea area in AGVAreas)
             {
@@ -7912,6 +7961,23 @@ namespace AMC_Test
                 }
                
                 System.Threading.Thread.Sleep(1000);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int sec = (int)(DownTime - (DateTime.Now - dTime).TotalSeconds);
+            brd.Set_TEXT($"Call off after {sec} sec");
+
+            if(sec <= 0)
+            {
+                brd.Hide();
+                timer1.Stop();
+                Send_LD_String("outputOff CALL");
+            }
+            else
+            {
+                
             }
         }
 

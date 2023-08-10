@@ -743,7 +743,15 @@ namespace AMC_Test
                             btn_CMD[i].Width = w;
                             btn_CMD[i].BackColor = colors[i % colors.Length];
                             btn_CMD[i].Location = new System.Drawing.Point(((i - 5) / 4) * w, ((i - 5) % 4) * h + 0);
-                            panel5.Controls.Add(btn_CMD[i]);
+
+                            if (panel6.Visible == false)
+                            {
+                                panel5.Controls.Add(btn_CMD[i]);
+                            }
+                            else
+                            {
+                                panel7.Controls.Add(btn_CMD[i]);
+                            }
                         }
                     }
                 }

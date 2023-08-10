@@ -99,6 +99,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pn_alarm = new System.Windows.Forms.Panel();
+            this.pb_skynet_off = new System.Windows.Forms.PictureBox();
             this.tb_Solution = new System.Windows.Forms.TextBox();
             this.lb_Loc_Score = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -109,6 +110,11 @@
             this.label39 = new System.Windows.Forms.Label();
             this.ll_Manual = new System.Windows.Forms.LinkLabel();
             this.btn_OK = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_JobInsert = new System.Windows.Forms.Button();
+            this.JobDelete = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.lb_Job = new System.Windows.Forms.ListBox();
             this.pn_boat_size = new System.Windows.Forms.Panel();
             this.lb_size = new System.Windows.Forms.Label();
             this.btn_del = new System.Windows.Forms.Button();
@@ -182,12 +188,12 @@
             this.pb_o2 = new System.Windows.Forms.PictureBox();
             this.pb_o1 = new System.Windows.Forms.PictureBox();
             this.pb_skynet_on = new System.Windows.Forms.PictureBox();
-            this.pb_skynet_off = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.bgw_btn_blink = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -199,6 +205,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_alarm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.pn_boat_size.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_i16)).BeginInit();
@@ -234,7 +242,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -824,6 +831,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.tb_ms);
             this.panel6.Controls.Add(this.tb_AGVNode);
             this.panel6.Controls.Add(this.label40);
@@ -938,6 +946,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -958,6 +967,7 @@
             // pn_alarm
             // 
             this.pn_alarm.BackColor = System.Drawing.SystemColors.Control;
+            this.pn_alarm.Controls.Add(this.pb_skynet_off);
             this.pn_alarm.Controls.Add(this.tb_Solution);
             this.pn_alarm.Controls.Add(this.lb_Loc_Score);
             this.pn_alarm.Controls.Add(this.label36);
@@ -973,6 +983,17 @@
             this.pn_alarm.Name = "pn_alarm";
             this.pn_alarm.Size = new System.Drawing.Size(788, 611);
             this.pn_alarm.TabIndex = 179;
+            // 
+            // pb_skynet_off
+            // 
+            this.pb_skynet_off.Image = global::AMC_Test.Properties.Resources.circle_grey;
+            this.pb_skynet_off.Location = new System.Drawing.Point(710, 12);
+            this.pb_skynet_off.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_skynet_off.Name = "pb_skynet_off";
+            this.pb_skynet_off.Size = new System.Drawing.Size(35, 32);
+            this.pb_skynet_off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_skynet_off.TabIndex = 175;
+            this.pb_skynet_off.TabStop = false;
             // 
             // tb_Solution
             // 
@@ -1083,6 +1104,59 @@
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btn_JobInsert);
+            this.tabPage1.Controls.Add(this.JobDelete);
+            this.tabPage1.Controls.Add(this.label41);
+            this.tabPage1.Controls.Add(this.lb_Job);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(794, 617);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Job";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_JobInsert
+            // 
+            this.btn_JobInsert.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_JobInsert.Location = new System.Drawing.Point(231, 85);
+            this.btn_JobInsert.Name = "btn_JobInsert";
+            this.btn_JobInsert.Size = new System.Drawing.Size(95, 27);
+            this.btn_JobInsert.TabIndex = 3;
+            this.btn_JobInsert.Text = "Insert";
+            this.btn_JobInsert.UseVisualStyleBackColor = true;
+            // 
+            // JobDelete
+            // 
+            this.JobDelete.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JobDelete.Location = new System.Drawing.Point(231, 52);
+            this.JobDelete.Name = "JobDelete";
+            this.JobDelete.Size = new System.Drawing.Size(95, 27);
+            this.JobDelete.TabIndex = 2;
+            this.JobDelete.Text = "Delete";
+            this.JobDelete.UseVisualStyleBackColor = true;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label41.Location = new System.Drawing.Point(9, 18);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(85, 21);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "Job List";
+            // 
+            // lb_Job
+            // 
+            this.lb_Job.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lb_Job.FormattingEnabled = true;
+            this.lb_Job.ItemHeight = 21;
+            this.lb_Job.Location = new System.Drawing.Point(11, 52);
+            this.lb_Job.Name = "lb_Job";
+            this.lb_Job.Size = new System.Drawing.Size(209, 151);
+            this.lb_Job.TabIndex = 0;
+            // 
             // pn_boat_size
             // 
             this.pn_boat_size.Controls.Add(this.lb_size);
@@ -1138,7 +1212,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.pb_skynet_off);
             this.panel4.Controls.Add(this.tabControl1);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
@@ -1927,17 +2000,6 @@
             this.pb_skynet_on.TabIndex = 176;
             this.pb_skynet_on.TabStop = false;
             // 
-            // pb_skynet_off
-            // 
-            this.pb_skynet_off.Image = global::AMC_Test.Properties.Resources.circle_grey;
-            this.pb_skynet_off.Location = new System.Drawing.Point(709, 25);
-            this.pb_skynet_off.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_skynet_off.Name = "pb_skynet_off";
-            this.pb_skynet_off.Size = new System.Drawing.Size(35, 32);
-            this.pb_skynet_off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_skynet_off.TabIndex = 175;
-            this.pb_skynet_off.TabStop = false;
-            // 
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1970,6 +2032,14 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 130);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 336);
+            this.panel7.TabIndex = 4;
             // 
             // AMC_Monitor
             // 
@@ -2010,6 +2080,9 @@
             this.tabPage2.ResumeLayout(false);
             this.pn_alarm.ResumeLayout(false);
             this.pn_alarm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.pn_boat_size.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -2046,7 +2119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2212,5 +2284,11 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tb_ms;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btn_JobInsert;
+        private System.Windows.Forms.Button JobDelete;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ListBox lb_Job;
+        private System.Windows.Forms.Panel panel7;
     }
 }

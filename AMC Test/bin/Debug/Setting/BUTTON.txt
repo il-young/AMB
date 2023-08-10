@@ -3,8 +3,8 @@ EMPTY
 a	goto Goal11	Y	Y
 b	goto Goal11	Y	Y
 C	goto Goal11	Y	Y
-D	goto Goal11	Y	Y
-E	goto Goal11	Y	Y
-F	goto Goal11	Y	Y
-G	goto Goal11	Y	Y
+EMPTY
+EMPTY
+MGZ On	outputOn MGZ	N	N
+MGZ Off	outputOff MGZ	N	N
 L/Able	goto Goal12	Y	Y
