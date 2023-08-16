@@ -299,8 +299,8 @@ namespace AMC_Test
         private bool OUT_JOB_END_ST = false;
         private bool in_job_finish = false;
 
-        public bool Call = false;
-        public bool MGZ = false;
+        static public bool Call = false;
+        static public bool MGZ = false;
         public int DownTime = -1;
         public DateTime dTime = new DateTime();
 
@@ -7726,16 +7726,16 @@ namespace AMC_Test
             {
                     Send_IO_ST();
 
-                    bool[] DI = new bool[16];
-                    bool[] DO = new bool[16];
+                bool[] DI = new bool[16];
+                bool[] DO = new bool[16];
 
-                    for (int i = 0; i < 16; i++)
-                    {
-                        DI[i] = LD_DI[0, i];
-                        DO[i] = LD_DO[0, i];
-                    }
+                for (int i = 0; i < 16; i++)
+                {
+                    DI[i] = LD_DI[0, i];
+                    DO[i] = LD_DO[0, i];
+                }
 
-                    Monitor.Set_LD_IO(DI, DO);
+                Monitor.Set_LD_IO(DI, DO);
 
                 if (LD[0].LD_TYPE != "AMB")
                 {

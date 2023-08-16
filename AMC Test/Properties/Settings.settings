@@ -82,5 +82,8 @@
     <Setting Name="MobilePlanner_Path" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files\Omron\MobilePlanner4\bin\MobilePlanner.exe</Value>
     </Setting>
+    <Setting Name="ModeCall" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

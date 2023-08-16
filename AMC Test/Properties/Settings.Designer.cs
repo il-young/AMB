@@ -321,5 +321,17 @@ namespace AMC_Test.Properties {
                 this["MobilePlanner_Path"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ModeCall {
+            get {
+                return ((bool)(this["ModeCall"]));
+            }
+            set {
+                this["ModeCall"] = value;
+            }
+        }
     }
 }

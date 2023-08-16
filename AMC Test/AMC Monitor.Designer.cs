@@ -87,6 +87,7 @@
             this.bw_area_checker = new System.ComponentModel.BackgroundWorker();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.tb_ms = new System.Windows.Forms.TextBox();
             this.tb_AGVNode = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -110,11 +111,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.ll_Manual = new System.Windows.Forms.LinkLabel();
             this.btn_OK = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_JobInsert = new System.Windows.Forms.Button();
-            this.JobDelete = new System.Windows.Forms.Button();
-            this.label41 = new System.Windows.Forms.Label();
-            this.lb_Job = new System.Windows.Forms.ListBox();
             this.pn_boat_size = new System.Windows.Forms.Panel();
             this.lb_size = new System.Windows.Forms.Label();
             this.btn_del = new System.Windows.Forms.Button();
@@ -193,7 +189,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.callModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -206,7 +202,6 @@
             this.tabPage2.SuspendLayout();
             this.pn_alarm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
-            this.tabPage1.SuspendLayout();
             this.pn_boat_size.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_i16)).BeginInit();
@@ -335,7 +330,8 @@
             this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mangerModeToolStripMenuItem,
             this.logDirectoryToolStripMenuItem,
-            this.mobilePlannerToolStripMenuItem});
+            this.mobilePlannerToolStripMenuItem,
+            this.callModeToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.settingToolStripMenuItem.Text = "&Setting";
@@ -841,6 +837,14 @@
             this.panel6.Size = new System.Drawing.Size(236, 466);
             this.panel6.TabIndex = 27;
             // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 130);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 336);
+            this.panel7.TabIndex = 4;
+            // 
             // tb_ms
             // 
             this.tb_ms.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -946,7 +950,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -1104,59 +1107,6 @@
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.btn_JobInsert);
-            this.tabPage1.Controls.Add(this.JobDelete);
-            this.tabPage1.Controls.Add(this.label41);
-            this.tabPage1.Controls.Add(this.lb_Job);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(794, 617);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Job";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btn_JobInsert
-            // 
-            this.btn_JobInsert.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_JobInsert.Location = new System.Drawing.Point(231, 85);
-            this.btn_JobInsert.Name = "btn_JobInsert";
-            this.btn_JobInsert.Size = new System.Drawing.Size(95, 27);
-            this.btn_JobInsert.TabIndex = 3;
-            this.btn_JobInsert.Text = "Insert";
-            this.btn_JobInsert.UseVisualStyleBackColor = true;
-            // 
-            // JobDelete
-            // 
-            this.JobDelete.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JobDelete.Location = new System.Drawing.Point(231, 52);
-            this.JobDelete.Name = "JobDelete";
-            this.JobDelete.Size = new System.Drawing.Size(95, 27);
-            this.JobDelete.TabIndex = 2;
-            this.JobDelete.Text = "Delete";
-            this.JobDelete.UseVisualStyleBackColor = true;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label41.Location = new System.Drawing.Point(9, 18);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(85, 21);
-            this.label41.TabIndex = 1;
-            this.label41.Text = "Job List";
-            // 
-            // lb_Job
-            // 
-            this.lb_Job.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lb_Job.FormattingEnabled = true;
-            this.lb_Job.ItemHeight = 21;
-            this.lb_Job.Location = new System.Drawing.Point(11, 52);
-            this.lb_Job.Name = "lb_Job";
-            this.lb_Job.Size = new System.Drawing.Size(209, 151);
-            this.lb_Job.TabIndex = 0;
-            // 
             // pn_boat_size
             // 
             this.pn_boat_size.Controls.Add(this.lb_size);
@@ -1212,7 +1162,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.tabControl1);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
@@ -1281,6 +1230,7 @@
             this.panel4.Controls.Add(this.pb_o1);
             this.panel4.Controls.Add(this.pb_skynet_on);
             this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.tabControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(236, 157);
             this.panel4.Name = "panel4";
@@ -2033,13 +1983,12 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
-            // panel7
+            // callModeToolStripMenuItem
             // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 130);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(236, 336);
-            this.panel7.TabIndex = 4;
+            this.callModeToolStripMenuItem.Name = "callModeToolStripMenuItem";
+            this.callModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callModeToolStripMenuItem.Text = "&Call Mode";
+            this.callModeToolStripMenuItem.Click += new System.EventHandler(this.callModeToolStripMenuItem_Click);
             // 
             // AMC_Monitor
             // 
@@ -2081,8 +2030,6 @@
             this.pn_alarm.ResumeLayout(false);
             this.pn_alarm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.pn_boat_size.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -2284,11 +2231,7 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tb_ms;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btn_JobInsert;
-        private System.Windows.Forms.Button JobDelete;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ListBox lb_Job;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ToolStripMenuItem callModeToolStripMenuItem;
     }
 }

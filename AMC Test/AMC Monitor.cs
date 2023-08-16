@@ -292,8 +292,17 @@ namespace AMC_Test
                 pb_i16.Image = LD_INPUT[15] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
 
 
-                pb_o1.Image = LD_OUTPUT[0] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
-                pb_o2.Image = LD_OUTPUT[1] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                if (Properties.Settings.Default.ModeCall == true)
+                {
+                    pb_o1.Image = Form1.Call == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                    pb_o2.Image = Form1.MGZ == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                }
+                else
+                {
+                    pb_o1.Image = LD_OUTPUT[0] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                    pb_o2.Image = LD_OUTPUT[1] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                }
+
                 pb_o3.Image = LD_OUTPUT[2] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
                 pb_o4.Image = LD_OUTPUT[3] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
                 pb_o5.Image = LD_OUTPUT[4] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
@@ -330,14 +339,15 @@ namespace AMC_Test
 
             CheckForIllegalCrossThreadCalls = false;
 
-            
+            if(Properties.Settings.Default.ModeCall == true)
+            {
+                label8.Text = "MGZ";
+                label9.Text = "CALL";
+            }
 
             if (bgw_alarm.IsBusy == false)
                 bgw_alarm.RunWorkerAsync();
         
-
-
-
             Load_boat_setting();
             bg_local.DoWork += Bg_local_DoWork;
 
@@ -1762,6 +1772,15 @@ namespace AMC_Test
         private void ll_Manual_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(Application.StartupPath + "\\Manual\\" + ll_Manual.Text);
+        }
+
+        private void callModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show($"Call Mode를 {!Properties.Settings.Default.ModeCall}로 변경하시겠습니까?", "Mode Change", MessageBoxButtons.YesNo))
+            {
+                Properties.Settings.Default.ModeCall = Properties.Settings.Default.ModeCall == false ? true : false;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }
