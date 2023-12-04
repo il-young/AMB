@@ -294,14 +294,39 @@ namespace AMC_Test
 
                 if (Properties.Settings.Default.ModeCall == true)
                 {
-                    pb_o1.Image = Form1.Call == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
-                    pb_o2.Image = Form1.MGZ == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+
+                    if (Form1.Call == true)
+                    {
+                        pb_o1_ON.BringToFront();
+                        pb_o1_OFF.SendToBack();
+                    }
+                    else
+                    {
+                        pb_o1_ON.SendToBack();
+                        pb_o1_OFF.BringToFront();
+                    }
+                    
+
+                    
+
+                    if (Form1.MGZ == true)
+                    {
+                        pb_o2_ON.BringToFront();
+                        pb_o2_OFF.SendToBack();
+                    }
+                    else
+                    {
+                        pb_o2_ON.SendToBack();
+                        pb_o2_OFF.BringToFront();
+                    }
                 }
                 else
                 {
-                    pb_o1.Image = LD_OUTPUT[0] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
-                    pb_o2.Image = LD_OUTPUT[1] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
+                    
+                    
                 }
+
+                
 
                 pb_o3.Image = LD_OUTPUT[2] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
                 pb_o4.Image = LD_OUTPUT[3] == true ? Properties.Resources.circle_green.Clone() as Image : Properties.Resources.circle_grey.Clone() as Image;
@@ -359,7 +384,7 @@ namespace AMC_Test
             if (DBThread.IsAlive == false)
                 DBThread.Start();
 
-            tabControl1.Visible = false;
+            //tabControl1.Visible = false;
         }
 
 
@@ -1781,6 +1806,11 @@ namespace AMC_Test
                 Properties.Settings.Default.ModeCall = Properties.Settings.Default.ModeCall == false ? true : false;
                 Properties.Settings.Default.Save();
             }
+        }
+
+        private void pb_o1_OFF_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

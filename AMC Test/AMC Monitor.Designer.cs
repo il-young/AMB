@@ -44,6 +44,7 @@
             this.mangerModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mobilePlannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.callModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_ungrip1 = new System.Windows.Forms.Button();
@@ -100,8 +101,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pn_alarm = new System.Windows.Forms.Panel();
+            this.pb_o2_ON = new System.Windows.Forms.PictureBox();
+            this.pb_o1_ON = new System.Windows.Forms.PictureBox();
             this.pb_skynet_off = new System.Windows.Forms.PictureBox();
-            this.tb_Solution = new System.Windows.Forms.TextBox();
             this.lb_Loc_Score = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -111,6 +113,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.ll_Manual = new System.Windows.Forms.LinkLabel();
             this.btn_OK = new System.Windows.Forms.Button();
+            this.tb_Solution = new System.Windows.Forms.TextBox();
             this.pn_boat_size = new System.Windows.Forms.Panel();
             this.lb_size = new System.Windows.Forms.Label();
             this.btn_del = new System.Windows.Forms.Button();
@@ -181,15 +184,14 @@
             this.pb_o5 = new System.Windows.Forms.PictureBox();
             this.pb_o4 = new System.Windows.Forms.PictureBox();
             this.pb_o3 = new System.Windows.Forms.PictureBox();
-            this.pb_o2 = new System.Windows.Forms.PictureBox();
-            this.pb_o1 = new System.Windows.Forms.PictureBox();
             this.pb_skynet_on = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.bgw_btn_blink = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.callModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pb_o1_OFF = new System.Windows.Forms.PictureBox();
+            this.pb_o2_OFF = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_griper_ccw)).BeginInit();
@@ -201,6 +203,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_alarm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o2_ON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o1_ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).BeginInit();
             this.pn_boat_size.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -234,9 +238,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_o2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o1_OFF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o2_OFF)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -357,6 +361,13 @@
             this.mobilePlannerToolStripMenuItem.Text = "&Mobile Planner";
             this.mobilePlannerToolStripMenuItem.ToolTipText = "확장자까지 입력";
             this.mobilePlannerToolStripMenuItem.Click += new System.EventHandler(this.mobilePlannerToolStripMenuItem_Click);
+            // 
+            // callModeToolStripMenuItem
+            // 
+            this.callModeToolStripMenuItem.Name = "callModeToolStripMenuItem";
+            this.callModeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.callModeToolStripMenuItem.Text = "&Call Mode";
+            this.callModeToolStripMenuItem.Click += new System.EventHandler(this.callModeToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -950,12 +961,12 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(334, 20);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(802, 643);
             this.tabControl1.TabIndex = 7;
+            this.tabControl1.Visible = false;
             // 
             // tabPage2
             // 
@@ -971,7 +982,6 @@
             // 
             this.pn_alarm.BackColor = System.Drawing.SystemColors.Control;
             this.pn_alarm.Controls.Add(this.pb_skynet_off);
-            this.pn_alarm.Controls.Add(this.tb_Solution);
             this.pn_alarm.Controls.Add(this.lb_Loc_Score);
             this.pn_alarm.Controls.Add(this.label36);
             this.pn_alarm.Controls.Add(this.label37);
@@ -981,11 +991,34 @@
             this.pn_alarm.Controls.Add(this.label39);
             this.pn_alarm.Controls.Add(this.ll_Manual);
             this.pn_alarm.Controls.Add(this.btn_OK);
+            this.pn_alarm.Controls.Add(this.tb_Solution);
             this.pn_alarm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_alarm.Location = new System.Drawing.Point(3, 3);
             this.pn_alarm.Name = "pn_alarm";
             this.pn_alarm.Size = new System.Drawing.Size(788, 611);
             this.pn_alarm.TabIndex = 179;
+            // 
+            // pb_o2_ON
+            // 
+            this.pb_o2_ON.Image = global::AMC_Test.Properties.Resources.circle_green;
+            this.pb_o2_ON.Location = new System.Drawing.Point(130, 393);
+            this.pb_o2_ON.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_o2_ON.Name = "pb_o2_ON";
+            this.pb_o2_ON.Size = new System.Drawing.Size(35, 32);
+            this.pb_o2_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_o2_ON.TabIndex = 178;
+            this.pb_o2_ON.TabStop = false;
+            // 
+            // pb_o1_ON
+            // 
+            this.pb_o1_ON.Image = global::AMC_Test.Properties.Resources.circle_green;
+            this.pb_o1_ON.Location = new System.Drawing.Point(34, 393);
+            this.pb_o1_ON.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_o1_ON.Name = "pb_o1_ON";
+            this.pb_o1_ON.Size = new System.Drawing.Size(35, 32);
+            this.pb_o1_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_o1_ON.TabIndex = 177;
+            this.pb_o1_ON.TabStop = false;
             // 
             // pb_skynet_off
             // 
@@ -997,20 +1030,6 @@
             this.pb_skynet_off.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_skynet_off.TabIndex = 175;
             this.pb_skynet_off.TabStop = false;
-            // 
-            // tb_Solution
-            // 
-            this.tb_Solution.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.tb_Solution.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
-            this.tb_Solution.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tb_Solution.Location = new System.Drawing.Point(7, 116);
-            this.tb_Solution.Multiline = true;
-            this.tb_Solution.Name = "tb_Solution";
-            this.tb_Solution.ReadOnly = true;
-            this.tb_Solution.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_Solution.Size = new System.Drawing.Size(776, 395);
-            this.tb_Solution.TabIndex = 15;
-            this.tb_Solution.Text = "Solution Text";
             // 
             // lb_Loc_Score
             // 
@@ -1107,6 +1126,21 @@
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
             // 
+            // tb_Solution
+            // 
+            this.tb_Solution.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tb_Solution.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
+            this.tb_Solution.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_Solution.Location = new System.Drawing.Point(-1, 47);
+            this.tb_Solution.Multiline = true;
+            this.tb_Solution.Name = "tb_Solution";
+            this.tb_Solution.ReadOnly = true;
+            this.tb_Solution.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_Solution.Size = new System.Drawing.Size(776, 395);
+            this.tb_Solution.TabIndex = 15;
+            this.tb_Solution.Text = "Solution Text";
+            this.tb_Solution.Visible = false;
+            // 
             // pn_boat_size
             // 
             this.pn_boat_size.Controls.Add(this.lb_size);
@@ -1162,7 +1196,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.pb_o2_OFF);
+            this.panel4.Controls.Add(this.pb_o1_OFF);
+            this.panel4.Controls.Add(this.pb_o2_ON);
             this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.pb_o1_ON);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label13);
@@ -1226,8 +1264,6 @@
             this.panel4.Controls.Add(this.pb_o5);
             this.panel4.Controls.Add(this.pb_o4);
             this.panel4.Controls.Add(this.pb_o3);
-            this.panel4.Controls.Add(this.pb_o2);
-            this.panel4.Controls.Add(this.pb_o1);
             this.panel4.Controls.Add(this.pb_skynet_on);
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Controls.Add(this.tabControl1);
@@ -1915,30 +1951,6 @@
             this.pb_o3.TabIndex = 92;
             this.pb_o3.TabStop = false;
             // 
-            // pb_o2
-            // 
-            this.pb_o2.Image = global::AMC_Test.Properties.Resources.circle_grey;
-            this.pb_o2.Location = new System.Drawing.Point(130, 393);
-            this.pb_o2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_o2.Name = "pb_o2";
-            this.pb_o2.Size = new System.Drawing.Size(35, 32);
-            this.pb_o2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_o2.TabIndex = 91;
-            this.pb_o2.TabStop = false;
-            this.pb_o2.Tag = "2";
-            // 
-            // pb_o1
-            // 
-            this.pb_o1.Image = global::AMC_Test.Properties.Resources.circle_grey;
-            this.pb_o1.Location = new System.Drawing.Point(34, 393);
-            this.pb_o1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_o1.Name = "pb_o1";
-            this.pb_o1.Size = new System.Drawing.Size(35, 32);
-            this.pb_o1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_o1.TabIndex = 90;
-            this.pb_o1.TabStop = false;
-            this.pb_o1.Tag = "1";
-            // 
             // pb_skynet_on
             // 
             this.pb_skynet_on.Image = global::AMC_Test.Properties.Resources.circle_green;
@@ -1983,12 +1995,28 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
-            // callModeToolStripMenuItem
+            // pb_o1_OFF
             // 
-            this.callModeToolStripMenuItem.Name = "callModeToolStripMenuItem";
-            this.callModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.callModeToolStripMenuItem.Text = "&Call Mode";
-            this.callModeToolStripMenuItem.Click += new System.EventHandler(this.callModeToolStripMenuItem_Click);
+            this.pb_o1_OFF.Image = global::AMC_Test.Properties.Resources.circle_grey;
+            this.pb_o1_OFF.Location = new System.Drawing.Point(34, 393);
+            this.pb_o1_OFF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_o1_OFF.Name = "pb_o1_OFF";
+            this.pb_o1_OFF.Size = new System.Drawing.Size(35, 32);
+            this.pb_o1_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_o1_OFF.TabIndex = 179;
+            this.pb_o1_OFF.TabStop = false;
+            this.pb_o1_OFF.Click += new System.EventHandler(this.pb_o1_OFF_Click);
+            // 
+            // pb_o2_OFF
+            // 
+            this.pb_o2_OFF.Image = global::AMC_Test.Properties.Resources.circle_grey;
+            this.pb_o2_OFF.Location = new System.Drawing.Point(130, 393);
+            this.pb_o2_OFF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_o2_OFF.Name = "pb_o2_OFF";
+            this.pb_o2_OFF.Size = new System.Drawing.Size(35, 32);
+            this.pb_o2_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_o2_OFF.TabIndex = 180;
+            this.pb_o2_OFF.TabStop = false;
             // 
             // AMC_Monitor
             // 
@@ -2029,6 +2057,8 @@
             this.tabPage2.ResumeLayout(false);
             this.pn_alarm.ResumeLayout(false);
             this.pn_alarm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o2_ON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o1_ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_off)).EndInit();
             this.pn_boat_size.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -2063,9 +2093,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_o5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_o3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_o2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_o1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_skynet_on)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o1_OFF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_o2_OFF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2142,7 +2172,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.LinkLabel ll_Manual;
         private System.Windows.Forms.Button btn_OK;
-        private System.Windows.Forms.TextBox tb_Solution;
         private System.Windows.Forms.Panel pn_boat_size;
         private System.Windows.Forms.Label lb_size;
         private System.Windows.Forms.Button btn_del;
@@ -2213,8 +2242,6 @@
         public System.Windows.Forms.PictureBox pb_o5;
         public System.Windows.Forms.PictureBox pb_o4;
         public System.Windows.Forms.PictureBox pb_o3;
-        public System.Windows.Forms.PictureBox pb_o2;
-        public System.Windows.Forms.PictureBox pb_o1;
         private System.Windows.Forms.PictureBox pb_skynet_on;
         private System.Windows.Forms.PictureBox pb_skynet_off;
         private System.Windows.Forms.TextBox textBox3;
@@ -2233,5 +2260,10 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.ToolStripMenuItem callModeToolStripMenuItem;
+        private System.Windows.Forms.TextBox tb_Solution;
+        public System.Windows.Forms.PictureBox pb_o2_ON;
+        public System.Windows.Forms.PictureBox pb_o1_ON;
+        public System.Windows.Forms.PictureBox pb_o2_OFF;
+        public System.Windows.Forms.PictureBox pb_o1_OFF;
     }
 }

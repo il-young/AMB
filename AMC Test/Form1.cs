@@ -3054,8 +3054,10 @@ namespace AMC_Test
 
         public bool CheckAGVOut(string agvname, string node)
         {
-            bool res = false;            
+            bool res = false;
 
+            if ( node == "0")
+                return false;
 
             foreach(stAGVArea area in AGVAreas)
             {
@@ -3084,7 +3086,7 @@ namespace AMC_Test
                 }
             }
 
-            if(res == true)
+            if(res == true )
             {
                 Debug.WriteLine($"{node} 없음");
                 if (Monitor.clicked_btn != null)
