@@ -2422,7 +2422,8 @@ namespace AMC_Test
                     }
                     else
                     {
-                        bSkynet_connected = skynet.Skynet_Connect(Skynet_Param.IP);
+                        System.Threading.Thread skynetTh = new System.Threading.Thread(skynetConnect);
+                        skynetTh.Start();
                     }
                     
 
@@ -2503,6 +2504,11 @@ namespace AMC_Test
             }
         }
 
+        private void skynetConnect()
+        {
+            bSkynet_connected = skynet.Skynet_Connect(Skynet_Param.IP);
+        }
+        
         private void AMC_Client_START()
         {
             retry_cnt = 0;
@@ -3569,12 +3575,18 @@ namespace AMC_Test
 
                         if (is_1st == false && LD[0].LD_ST.LD_CHARGE != "")
                         {
-                            
+                            if (skynetConnect == true)
+                            {
                                 a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
                                 Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
                                 Skynet_MSG_Send();
 
                                 is_1st = true;
+                            }
+                            else
+                            {
+                                Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : Disconnect");
+                            }
                             
                         }
                         else
