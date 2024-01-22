@@ -719,7 +719,7 @@ namespace AMC_Test
                                 }
                                 else
                                 {
-                                    LD[0].LD_ST.LD_AREA = "";
+                                    Monitor.Set_AREA("");
                                 }
 
                                 if(str_aa.Length == 4)
@@ -3575,7 +3575,7 @@ namespace AMC_Test
 
                         if (is_1st == false && LD[0].LD_ST.LD_CHARGE != "")
                         {
-                            if (skynetConnect == true)
+                            if (bSkynet_connected == true)
                             {
                                 a = skynet.Skynet_SM_Send_Run(Skynet_Param.LINE_CODE, Skynet_Param.PROCEESS_CODE, Skynet_Param.EQUIPMENT_ID, Skynet_Param.STATUS, LD[0].LD_ST.LD_CHARGE, LD[0].LD_ST.LD_AREA);
                                 Write_Skynet_Log("Status_code : " + "CHARGE" + ", Line_code : " + Skynet_Param.LINE_CODE + ", Process_code : " + Skynet_Param.PROCEESS_CODE + ", Equipment_ID : " + Skynet_Param.EQUIPMENT_ID + ", Status : " + Skynet_Param.STATUS + ", Res : " + a);
