@@ -1287,9 +1287,9 @@ namespace AMC_Test
 
         private void tb_AREA_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //frmLocalize frmLocalize = new frmLocalize(Goals);
+            frmLocalize frmLocalize = new frmLocalize(Goals);
 
-            //frmLocalize.ShowDialog();
+            frmLocalize.ShowDialog();
         }
 
         private void textBox3_DoubleClick(object sender, EventArgs e)
